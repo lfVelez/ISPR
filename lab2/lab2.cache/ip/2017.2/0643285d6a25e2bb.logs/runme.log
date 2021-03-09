@@ -1,0 +1,87 @@
+
+*** Running vivado
+    with args -log system_system_ila_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_system_ila_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_system_ila_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1228.230 ; gain = 88.000 ; free physical = 453 ; free virtual = 3594
+INFO: [Synth 8-638] synthesizing module 'system_system_ila_0_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/synth/system_system_ila_0_0.v:206]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/hdl/bd_d5b8.v:13]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_g_inst_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_1/synth/bd_d5b8_g_inst_0.v:116]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_g_inst_0_gigantic_mux' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_1/bd_d5b8_g_inst_0_gigantic_mux.v:63]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_g_inst_0_gigantic_mux' (2#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_1/bd_d5b8_g_inst_0_gigantic_mux.v:63]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_g_inst_0' (3#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_1/synth/bd_d5b8_g_inst_0.v:116]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_ila_lib_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_0/synth/bd_d5b8_ila_lib_0.v:84]
+INFO: [Synth 8-638] synthesizing module 'CFGLUT5' [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:998]
+INFO: [Synth 8-256] done synthesizing module 'CFGLUT5' (11#1) [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:998]
+INFO: [Synth 8-638] synthesizing module 'CARRY4' [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:961]
+INFO: [Synth 8-256] done synthesizing module 'CARRY4' (12#1) [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:961]
+INFO: [Synth 8-638] synthesizing module 'SRLC32E' [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43823]
+INFO: [Synth 8-256] done synthesizing module 'SRLC32E' (22#1) [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43823]
+INFO: [Synth 8-638] synthesizing module 'SRL16E' [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43673]
+INFO: [Synth 8-256] done synthesizing module 'SRL16E' (24#1) [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43673]
+INFO: [Synth 8-638] synthesizing module 'SRLC16E' [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43762]
+INFO: [Synth 8-256] done synthesizing module 'SRLC16E' (26#1) [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43762]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (31#1) [/opt/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_ila_lib_0' (49#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_0/synth/bd_d5b8_ila_lib_0.v:84]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_slot_0_ar_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_5/synth/bd_d5b8_slot_0_ar_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ipshared/73b7/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (50#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ipshared/73b7/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_slot_0_ar_0' (51#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_5/synth/bd_d5b8_slot_0_ar_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_slot_0_aw_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_2/synth/bd_d5b8_slot_0_aw_0.v:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_slot_0_aw_0' (52#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_2/synth/bd_d5b8_slot_0_aw_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_slot_0_b_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_4/synth/bd_d5b8_slot_0_b_0.v:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_slot_0_b_0' (53#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_4/synth/bd_d5b8_slot_0_b_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_slot_0_r_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_6/synth/bd_d5b8_slot_0_r_0.v:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_slot_0_r_0' (54#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_6/synth/bd_d5b8_slot_0_r_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_d5b8_slot_0_w_0' [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_3/synth/bd_d5b8_slot_0_w_0.v:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8_slot_0_w_0' (55#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_3/synth/bd_d5b8_slot_0_w_0.v:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_d5b8' (56#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/hdl/bd_d5b8.v:13]
+INFO: [Synth 8-256] done synthesizing module 'system_system_ila_0_0' (57#1) [/home/lf-securitas/Documentos/ISPR/lab2/lab2.srcs/sources_1/bd/system/ip/system_system_ila_0_0/synth/system_system_ila_0_0.v:206]
+Finished RTL Elaboration : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1548.770 ; gain = 408.539 ; free physical = 1115 ; free virtual = 4197
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 1548.770 ; gain = 408.539 ; free physical = 1162 ; free virtual = 4244
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1690.977 ; gain = 0.000 ; free physical = 909 ; free virtual = 3990
+Finished Constraint Validation : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 948 ; free virtual = 4031
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 948 ; free virtual = 4031
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 950 ; free virtual = 4033
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 838 ; free virtual = 3921
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1433 ; free virtual = 4527
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1312 ; free virtual = 4406
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1310 ; free virtual = 4405
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1306 ; free virtual = 4401
+Finished IO Insertion : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1306 ; free virtual = 4401
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1306 ; free virtual = 4401
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1308 ; free virtual = 4403
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1308 ; free virtual = 4403
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1308 ; free virtual = 4403
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1308 ; free virtual = 4403
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    43|
+|2     |CFGLUT5  |   118|
+|3     |LUT1     |    41|
+|4     |LUT2     |    57|
+|5     |LUT3     |    96|
+|6     |LUT4     |   197|
+|7     |LUT5     |   122|
+|8     |LUT6     |   578|
+|9     |MUXF7    |    35|
+|10    |RAMB36E1 |     3|
+|11    |SRL16E   |   110|
+|12    |SRLC16E  |     2|
+|13    |SRLC32E  |    17|
+|14    |FDRE     |  1898|
+|15    |FDSE     |     9|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1690.977 ; gain = 550.746 ; free physical = 1308 ; free virtual = 4403
+synth_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 1690.977 ; gain = 563.328 ; free physical = 1339 ; free virtual = 4434

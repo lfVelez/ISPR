@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Mar  1 23:28:15 2021
+# Process ID: 34374
+# Current directory: /home/lf-securitas/Documentos/ISPR/lab1/lab1.runs/system_axi_gpio_0_0_synth_1
+# Command line: vivado -log system_axi_gpio_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_gpio_0_0.tcl
+# Log file: /home/lf-securitas/Documentos/ISPR/lab1/lab1.runs/system_axi_gpio_0_0_synth_1/system_axi_gpio_0_0.vds
+# Journal file: /home/lf-securitas/Documentos/ISPR/lab1/lab1.runs/system_axi_gpio_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_axi_gpio_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1142.184 ; gain = 63.000 ; free physical = 121 ; free virtual = 3344
+INFO: [Synth 8-638] synthesizing module 'system_axi_gpio_0_0' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd:1257]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (6#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd:177]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (7#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd:1257]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_gpio_0_0' (8#1) [/home/lf-securitas/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd:84]
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1184.684 ; gain = 105.500 ; free physical = 149 ; free virtual = 3223
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1184.684 ; gain = 105.500 ; free physical = 144 ; free virtual = 3218
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1541.484 ; gain = 0.000 ; free physical = 127 ; free virtual = 2106
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 129 ; free virtual = 2089
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 129 ; free virtual = 2089
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 128 ; free virtual = 2089
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 140 ; free virtual = 2096
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 182 ; free virtual = 2142
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 125 ; free virtual = 1677
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 134 ; free virtual = 1655
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 131 ; free virtual = 1624
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 131 ; free virtual = 1408
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 132 ; free virtual = 1407
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 131 ; free virtual = 1407
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 131 ; free virtual = 1407
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 130 ; free virtual = 1406
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 130 ; free virtual = 1406
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     5|
+|3     |LUT3 |     4|
+|4     |LUT4 |     7|
+|5     |LUT5 |    11|
+|6     |LUT6 |    10|
+|7     |FDR  |    16|
+|8     |FDRE |    41|
+|9     |FDSE |     4|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1541.484 ; gain = 462.301 ; free physical = 130 ; free virtual = 1406
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1541.484 ; gain = 474.883 ; free physical = 206 ; free virtual = 1199
