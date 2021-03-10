@@ -1,0 +1,155 @@
+
+*** Running vivado
+    with args -log system_axi_cdma_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_cdma_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_axi_cdma_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1145.188 ; gain = 66.000 ; free physical = 515 ; free virtual = 3714
+INFO: [Synth 8-638] synthesizing module 'system_axi_cdma_0_0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/synth/system_axi_cdma_0_0.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:15312]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_simple_wrap' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:8718]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_reset' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:984]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen' (1#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen__parameterized0' (1#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen__parameterized1' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen__parameterized1' (1#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_reset' (2#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:984]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_reg_module' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:5308]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_lite_if' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:2173]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_lite_if' (3#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:2173]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_register' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:3808]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_register' (4#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:3808]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_reg_module' (5#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:5308]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_simple_cntlr' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:7695]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_simple_cntlr' (6#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:7695]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:55410]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:53548]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (7#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:2693]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (8#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (8#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (9#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:2693]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:13741]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (10#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:13741]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:7411]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (11#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (11#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:4337]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (12#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:7411]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (13#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (14#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (15#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (16#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (16#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (17#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:12180]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:10676]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (18#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:10676]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (18#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (18#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (18#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (18#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (19#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:12180]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:53548]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:49982]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:17697]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (20#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:17697]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:7411]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc__parameterized0' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:7411]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:9995]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:15669]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (21#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (22#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:15669]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:18990]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:14112]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (23#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:14112]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (24#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:18990]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (25#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:49982]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (26#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/43a6/hdl/axi_datamover_v5_1_vh_rfs.vhd:55410]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_simple_wrap' (27#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:8718]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma' (28#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ipshared/476e/hdl/axi_cdma_v4_1_vh_rfs.vhd:15312]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_cdma_0_0' (29#1) [/home/lf-securitas/Documentos/ISPR/lab4/lab4.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/synth/system_axi_cdma_0_0.vhd:114]
+Finished RTL Elaboration : Time (s): cpu = 00:04:55 ; elapsed = 00:04:55 . Memory (MB): peak = 1298.688 ; gain = 219.500 ; free physical = 999 ; free virtual = 4305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:55 ; elapsed = 00:04:56 . Memory (MB): peak = 1298.688 ; gain = 219.500 ; free physical = 1003 ; free virtual = 4309
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1568.902 ; gain = 0.000 ; free physical = 744 ; free virtual = 4050
+Finished Constraint Validation : Time (s): cpu = 00:05:03 ; elapsed = 00:05:04 . Memory (MB): peak = 1568.902 ; gain = 489.715 ; free physical = 832 ; free virtual = 4138
+Finished Loading Part and Timing Information : Time (s): cpu = 00:05:03 ; elapsed = 00:05:04 . Memory (MB): peak = 1568.902 ; gain = 489.715 ; free physical = 832 ; free virtual = 4138
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:05:03 ; elapsed = 00:05:04 . Memory (MB): peak = 1568.902 ; gain = 489.715 ; free physical = 832 ; free virtual = 4138
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:05 ; elapsed = 00:05:07 . Memory (MB): peak = 1568.902 ; gain = 489.715 ; free physical = 823 ; free virtual = 4129
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:10 ; elapsed = 00:05:11 . Memory (MB): peak = 1568.902 ; gain = 489.715 ; free physical = 788 ; free virtual = 4096
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:15 ; elapsed = 00:05:17 . Memory (MB): peak = 1568.902 ; gain = 489.715 ; free physical = 655 ; free virtual = 3969
+Finished Timing Optimization : Time (s): cpu = 00:05:18 ; elapsed = 00:05:20 . Memory (MB): peak = 1570.934 ; gain = 491.746 ; free physical = 627 ; free virtual = 3937
+Finished Technology Mapping : Time (s): cpu = 00:05:20 ; elapsed = 00:05:21 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 626 ; free virtual = 3933
+Finished IO Insertion : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    30|
+|2     |LUT1   |    61|
+|3     |LUT2   |   115|
+|4     |LUT3   |   213|
+|5     |LUT4   |   143|
+|6     |LUT5   |   131|
+|7     |LUT6   |   311|
+|8     |MUXF7  |    10|
+|9     |SRL16E |   129|
+|10    |FDRE   |  1079|
+|11    |FDSE   |    34|
++------+-------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1586.949 ; gain = 507.762 ; free physical = 628 ; free virtual = 3935
+synth_design: Time (s): cpu = 00:05:22 ; elapsed = 00:05:24 . Memory (MB): peak = 1618.965 ; gain = 552.359 ; free physical = 684 ; free virtual = 3992
