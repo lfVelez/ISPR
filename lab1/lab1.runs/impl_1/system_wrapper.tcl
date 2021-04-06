@@ -51,18 +51,18 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.xpr [current_project]
-  set_property ip_output_repo C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/lfvelez/Documentos/ISPR/lab1/lab1.cache/wt [current_project]
+  set_property parent.project_path /home/lfvelez/Documentos/ISPR/lab1/lab1.xpr [current_project]
+  set_property ip_output_repo /home/lfvelez/Documentos/ISPR/lab1/lab1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.runs/synth_1/system_wrapper.dcp
+  add_files -quiet /home/lfvelez/Documentos/ISPR/lab1/lab1.runs/synth_1/system_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -suppress
   set_param project.isImplRun true
-  add_files C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.srcs/sources_1/bd/system/system.bd
-  set_property is_locked true [get_files C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.srcs/sources_1/bd/system/system.bd]
+  add_files /home/lfvelez/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/system.bd
+  set_property is_locked true [get_files /home/lfvelez/Documentos/ISPR/lab1/lab1.srcs/sources_1/bd/system/system.bd]
   set_param project.isImplRun false
-  read_xdc C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.srcs/constrs_1/imports/src/lab1_zybo.xdc
+  read_xdc /home/lfvelez/Documentos/ISPR/lab1/lab1.srcs/constrs_1/imports/src/lab1_zybo.xdc
   set_param project.isImplRun true
   link_design -top system_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false

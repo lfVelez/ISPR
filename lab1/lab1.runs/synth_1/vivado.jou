@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2017.1 (64-bit)
-# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Tue Feb 23 00:32:23 2021
-# Process ID: 1200
-# Current directory: C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.runs/synth_1
-# Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
-# Log file: C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.runs/synth_1/system_wrapper.vds
-# Journal file: C:/Users/luisf/Documents/TELECO/MUIT/SEGUNDO/SEGUNDOSEMESTRE/ISPR/Repo/ISPR/lab1/lab1.runs/synth_1\vivado.jou
+# Start of session at: Tue Apr  6 15:19:23 2021
+# Process ID: 40255
+# Current directory: /home/lfvelez/Documentos/ISPR/lab1/lab1.runs/synth_1
+# Command line: vivado -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file: /home/lfvelez/Documentos/ISPR/lab1/lab1.runs/synth_1/system_wrapper.vds
+# Journal file: /home/lfvelez/Documentos/ISPR/lab1/lab1.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace

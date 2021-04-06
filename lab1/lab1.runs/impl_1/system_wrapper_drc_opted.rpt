@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Tue Feb 23 00:33:44 2021
-| Host         : DESKTOP-0VN1C2G running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Tue Apr  6 15:21:07 2021
+| Host         : lfvelez-Latitude-7290 running 64-bit Ubuntu 20.04.2 LTS
 | Command      : report_drc -file system_wrapper_drc_opted.rpt
 | Design       : system_wrapper
 | Device       : xc7z010clg400-1
