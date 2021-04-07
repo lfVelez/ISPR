@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/lfvelez/Documentos/ISPR/lab5/lab5.sdk/zynq_fsbl/Debug/zynq_fsbl.elf
+	/home/lfvelez/Documentos/ISPR/lab5/lab5.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+	/home/lfvelez/Documentos/ISPR/lab5/lab5.sdk/hello_world/Debug/hello_world.elf
+}

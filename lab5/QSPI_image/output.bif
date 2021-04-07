@@ -1,0 +1,8 @@
+//arch = zynq; split = false; format = MCS
+the_ROM_image:
+{
+	[bootloader]/home/lfvelez/Documentos/ISPR/lab5/lab5.sdk/zynq_fsbl/Debug/zynq_fsbl.elf
+	/home/lfvelez/Documentos/ISPR/lab5/lab5.sdk/lab5_qspi/Debug/lab5_qspi.elf
+	[offset = 0x400000]/home/lfvelez/Documentos/MASTER/ISPR/Lab5/lab5/lab5/zybo/QSPI/lab1.bin
+	[offset = 0x800000]/home/lfvelez/Documentos/MASTER/ISPR/Lab5/lab5/lab5/zybo/QSPI/lab3.bin
+}
