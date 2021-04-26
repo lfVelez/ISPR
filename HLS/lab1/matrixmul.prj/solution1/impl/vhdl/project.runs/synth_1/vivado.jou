@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Apr 26 16:20:43 2021
+# Process ID: 26462
+# Current directory: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/impl/vhdl/project.runs/synth_1
+# Command line: vivado -log matrixmul.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrixmul.tcl
+# Log file: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/impl/vhdl/project.runs/synth_1/matrixmul.vds
+# Journal file: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/impl/vhdl/project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source matrixmul.tcl -notrace

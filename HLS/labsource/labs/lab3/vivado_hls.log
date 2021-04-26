@@ -1,0 +1,100 @@
+@I [LIC-101] Checked out feature [ap_sdsoc]
+@I [HLS-10] Running 'C:/Xilinx/Vivado_HLS/2015.2/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'parimalp' on host 'xsjparimalp31' (Windows NT_amd64 version 6.1) on Wed Sep 23 09:07:38 -0700 2015
+            in directory 'C:/xup/hls/labs/lab3'
+@I [HLS-10] Opening project 'C:/xup/hls/labs/lab3/dct.prj'.
+@I [HLS-10] Adding design file 'dct.c' to the project
+@I [HLS-10] Adding test bench file 'dct_test.c' to the project
+@I [HLS-10] Adding test bench file 'in.dat' to the project
+@I [HLS-10] Adding test bench file 'out.golden.dat' to the project
+@I [HLS-10] Opening solution 'C:/xup/hls/labs/lab3/dct.prj/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [SYN-201] Setting up clock 'default' with an uncertainty of 0.75ns.
+@I [LIC-101] Checked out feature [ap_sdsoc]
+@I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Analyzing design file 'dct.c' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-602] Inlining function 'read_data' into 'dct' (dct.c:85) automatically.
+@I [XFORM-602] Inlining function 'write_data' into 'dct' (dct.c:90) automatically.
+@I [XFORM-602] Inlining function 'read_data' into 'dct' (dct.c:85) automatically.
+@I [XFORM-602] Inlining function 'write_data' into 'dct' (dct.c:90) automatically.
+@I [HLS-111] Elapsed time: 7.436 seconds; current memory usage: 90.1 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'dct' ...
+@W [SYN-107] Renaming port name 'dct/input' to 'dct/input_r' to avoid the conflict with HDL keywords or other object names.
+@W [SYN-107] Renaming port name 'dct/output' to 'dct/output_r' to avoid the conflict with HDL keywords or other object names.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_dct_1d' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.061 seconds; current memory usage: 91.3 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_dct_1d' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 91.4 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct_dct_2d' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.082 seconds; current memory usage: 92.2 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct_dct_2d' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.041 seconds; current memory usage: 92.3 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dct' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 92.6 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dct' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.064 seconds; current memory usage: 92.6 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_dct_1d' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'dct_mac_muladd_16s_15s_32ns_32_1': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'dct_dct_1d'.
+@I [HLS-111] Elapsed time: 0.127 seconds; current memory usage: 92.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct_dct_2d' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'dct_dct_2d'.
+@I [HLS-111] Elapsed time: 0.278 seconds; current memory usage: 92.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dct' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'dct/input_r' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'dct/output_r' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on function 'dct' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'dct'.
+@I [HLS-111] Elapsed time: 0.392 seconds; current memory usage: 93 MB.
+@I [RTMG-279] Implementing memory 'dct_dct_1d_dct_coeff_table_rom' using distributed ROMs.
+@I [RTMG-278] Implementing memory 'dct_dct_2d_row_outbuf_ram' using block RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'dct'.
+@I [WVHDL-304] Generating RTL VHDL for 'dct'.
+@I [WVLOG-307] Generating RTL Verilog for 'dct'.
+@I [HLS-112] Total elapsed time: 9.661 seconds; peak memory usage: 93 MB.
+@I [LIC-101] Checked in feature [ap_sdsoc]

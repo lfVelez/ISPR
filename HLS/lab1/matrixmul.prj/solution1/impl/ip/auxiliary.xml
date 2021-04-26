@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="matrixmul" xd:componentRef="matrixmul" xd:initiationInterval="107" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="a_q0" xd:originalName="a_q0" xd:direction="in" xd:interfaceRef="a_q0" xd:busTypeRef="ap_memory" xd:arraySize="9" xd:dataWidth="8"/>
+  <xd:arg xd:name="b_q0" xd:originalName="b_q0" xd:direction="in" xd:interfaceRef="b_q0" xd:busTypeRef="ap_memory" xd:arraySize="9" xd:dataWidth="8"/>
+  <xd:arg xd:name="res_d0" xd:originalName="res_d0" xd:direction="out" xd:interfaceRef="res_d0" xd:busTypeRef="ap_memory" xd:arraySize="9" xd:dataWidth="16"/>
+  <xd:latencyEstimates xd:best-case="106" xd:worst-case="106" xd:average-case="106"/>
+  <xd:resourceEstimates xd:LUT="168" xd:FF="61" xd:BRAM="0" xd:DSP="1"/>
+</xd:acceleratorMap>

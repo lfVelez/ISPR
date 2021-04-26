@@ -1,0 +1,299 @@
+#pragma line 1 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.cpp" ::: -10
+#pragma line 1 "<interno>" ::: -9
+#pragma line 1 "<línea-de-órdenes>" ::: -8
+#pragma line 1 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.cpp" ::: -7
+#pragma line 67 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.cpp" ::: -6
+#pragma line 1 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.h" 1 ::: -5
+#pragma line 69 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.h" ::: -4
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3 ::: -3
+#pragma line 41 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: -2
+#pragma line 42 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 0
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3 ::: 2
+#pragma line 153 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3 ::: 3
+#pragma line 393 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3 ::: 13
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 1 3 ::: 14
+#pragma line 40 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 3 ::: 15
+#pragma line 1 "/usr/include/features.h" 1 3 4 ::: 16
+#pragma line 439 "/usr/include/features.h" 3 4 ::: 17
+#pragma line 1 "/usr/include/stdc-predef.h" 1 3 4 ::: 18
+#pragma line 440 "/usr/include/features.h" 2 3 4 ::: 19
+#pragma line 461 "/usr/include/features.h" 3 4 ::: 20
+#pragma line 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4 ::: 21
+#pragma line 452 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4 ::: 22
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 23
+#pragma line 453 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4 ::: 24
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4 ::: 25
+#pragma line 454 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4 ::: 26
+#pragma line 462 "/usr/include/features.h" 2 3 4 ::: 27
+#pragma line 485 "/usr/include/features.h" 3 4 ::: 28
+#pragma line 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4 ::: 29
+#pragma line 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4 ::: 30
+#pragma line 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4 ::: 31
+#pragma line 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4 ::: 32
+#pragma line 486 "/usr/include/features.h" 2 3 4 ::: 33
+#pragma line 41 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 2 3 ::: 34
+#pragma line 394 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3 ::: 35
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/cpu_defines.h" 1 3 ::: 38
+#pragma line 397 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3 ::: 39
+#pragma line 44 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3 ::: 40
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3 ::: 41
+#pragma line 36 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3 ::: 42
+#pragma line 37 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3 ::: 44
+#pragma line 69 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3 ::: 45
+#pragma line 199 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3 ::: 158
+#pragma line 422 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3 ::: 369
+#pragma line 45 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3 ::: 372
+#pragma line 1 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3 ::: 373
+#pragma line 33 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3 ::: 374
+#pragma line 34 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3 ::: 376
+#pragma line 46 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3 ::: 556
+#pragma line 1 "/usr/include/math.h" 1 3 4 ::: 557
+#pragma line 27 "/usr/include/math.h" 3 4 ::: 558
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4 ::: 559
+#pragma line 28 "/usr/include/math.h" 2 3 4 ::: 560
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4 ::: 570
+#pragma line 27 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4 ::: 571
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 572
+#pragma line 28 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4 ::: 573
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/timesize.h" 1 3 4 ::: 574
+#pragma line 29 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4 ::: 575
+#pragma line 141 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4 ::: 621
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/typesizes.h" 1 3 4 ::: 622
+#pragma line 142 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4 ::: 623
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/time64.h" 1 3 4 ::: 624
+#pragma line 143 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4 ::: 625
+#pragma line 38 "/usr/include/math.h" 2 3 4 ::: 698
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 1 3 4 ::: 701
+#pragma line 25 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 3 4 ::: 702
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h" 1 3 4 ::: 703
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/math-vector.h" 2 3 4 ::: 704
+#pragma line 41 "/usr/include/math.h" 2 3 4 ::: 705
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 1 3 4 ::: 708
+#pragma line 75 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4 ::: 709
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4 ::: 711
+#pragma line 120 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4 ::: 713
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 1 3 4 ::: 714
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4 ::: 715
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4 ::: 716
+#pragma line 25 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 2 3 4 ::: 717
+#pragma line 214 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4 ::: 718
+#pragma line 251 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4 ::: 720
+#pragma line 268 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4 ::: 722
+#pragma line 285 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4 ::: 724
+#pragma line 121 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 2 3 4 ::: 726
+#pragma line 44 "/usr/include/math.h" 2 3 4 ::: 727
+#pragma line 138 "/usr/include/math.h" 3 4 ::: 728
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h" 1 3 4 ::: 729
+#pragma line 139 "/usr/include/math.h" 2 3 4 ::: 730
+#pragma line 149 "/usr/include/math.h" 3 4 ::: 731
+#pragma line 190 "/usr/include/math.h" 3 4 ::: 734
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/fp-logb.h" 1 3 4 ::: 735
+#pragma line 191 "/usr/include/math.h" 2 3 4 ::: 736
+#pragma line 233 "/usr/include/math.h" 3 4 ::: 737
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/fp-fast.h" 1 3 4 ::: 738
+#pragma line 234 "/usr/include/math.h" 2 3 4 ::: 739
+#pragma line 289 "/usr/include/math.h" 3 4 ::: 761
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 1 3 4 ::: 762
+#pragma line 21 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 3 4 ::: 763
+#pragma line 290 "/usr/include/math.h" 2 3 4 ::: 787
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 788
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 789
+#pragma line 177 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 906
+#pragma line 211 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 932
+#pragma line 291 "/usr/include/math.h" 2 3 4 ::: 1123
+#pragma line 306 "/usr/include/math.h" 3 4 ::: 1124
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 1 3 4 ::: 1125
+#pragma line 21 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 3 4 ::: 1126
+#pragma line 307 "/usr/include/math.h" 2 3 4 ::: 1150
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 1151
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1152
+#pragma line 177 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1269
+#pragma line 211 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1295
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1431
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1434
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1442
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1445
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1454
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1457
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1466
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1469
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1487
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1495
+#pragma line 308 "/usr/include/math.h" 2 3 4 ::: 1516
+#pragma line 349 "/usr/include/math.h" 3 4 ::: 1517
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 1 3 4 ::: 1518
+#pragma line 21 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 3 4 ::: 1519
+#pragma line 350 "/usr/include/math.h" 2 3 4 ::: 1543
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 1544
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1545
+#pragma line 177 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1662
+#pragma line 211 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1688
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1824
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1827
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1835
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1838
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1847
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1850
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1859
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1862
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1880
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1888
+#pragma line 351 "/usr/include/math.h" 2 3 4 ::: 1909
+#pragma line 389 "/usr/include/math.h" 3 4 ::: 1910
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 1911
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 1912
+#pragma line 196 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2029
+#pragma line 217 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2036
+#pragma line 249 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2056
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2154
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2157
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2165
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2168
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2177
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2180
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2189
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2192
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2210
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2218
+#pragma line 390 "/usr/include/math.h" 2 3 4 ::: 2231
+#pragma line 406 "/usr/include/math.h" 3 4 ::: 2232
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 2233
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2234
+#pragma line 196 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2351
+#pragma line 217 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2358
+#pragma line 249 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2378
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2476
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2479
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2487
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2490
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2499
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2502
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2511
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2514
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2532
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2540
+#pragma line 407 "/usr/include/math.h" 2 3 4 ::: 2553
+#pragma line 420 "/usr/include/math.h" 3 4 ::: 2554
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 1 3 4 ::: 2555
+#pragma line 21 "/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h" 3 4 ::: 2556
+#pragma line 421 "/usr/include/math.h" 2 3 4 ::: 2580
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 2583
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2584
+#pragma line 196 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2701
+#pragma line 217 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2708
+#pragma line 249 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2728
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2826
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2829
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2837
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2840
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2849
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2852
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2861
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2864
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2882
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2890
+#pragma line 424 "/usr/include/math.h" 2 3 4 ::: 2903
+#pragma line 440 "/usr/include/math.h" 3 4 ::: 2904
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 2905
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 2906
+#pragma line 196 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3023
+#pragma line 217 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3030
+#pragma line 249 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3050
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3148
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3151
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3159
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3162
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3171
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3174
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3183
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3186
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3204
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3212
+#pragma line 441 "/usr/include/math.h" 2 3 4 ::: 3225
+#pragma line 457 "/usr/include/math.h" 3 4 ::: 3226
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 1 3 4 ::: 3227
+#pragma line 53 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3228
+#pragma line 196 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3345
+#pragma line 217 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3352
+#pragma line 249 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3372
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3470
+#pragma line 344 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3473
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3481
+#pragma line 349 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3484
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3493
+#pragma line 355 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3496
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3505
+#pragma line 361 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3508
+#pragma line 376 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3526
+#pragma line 381 "/usr/include/x86_64-linux-gnu/bits/mathcalls.h" 3 4 ::: 3534
+#pragma line 458 "/usr/include/math.h" 2 3 4 ::: 3547
+#pragma line 503 "/usr/include/math.h" 3 4 ::: 3548
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3549
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3550
+#pragma line 504 "/usr/include/math.h" 2 3 4 ::: 3561
+#pragma line 517 "/usr/include/math.h" 3 4 ::: 3562
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3563
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3564
+#pragma line 518 "/usr/include/math.h" 2 3 4 ::: 3575
+#pragma line 537 "/usr/include/math.h" 3 4 ::: 3576
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3577
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3578
+#pragma line 538 "/usr/include/math.h" 2 3 4 ::: 3589
+#pragma line 616 "/usr/include/math.h" 3 4 ::: 3590
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3591
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3592
+#pragma line 617 "/usr/include/math.h" 2 3 4 ::: 3603
+#pragma line 626 "/usr/include/math.h" 3 4 ::: 3604
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3605
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3606
+#pragma line 627 "/usr/include/math.h" 2 3 4 ::: 3617
+#pragma line 636 "/usr/include/math.h" 3 4 ::: 3618
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3619
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3620
+#pragma line 637 "/usr/include/math.h" 2 3 4 ::: 3631
+#pragma line 646 "/usr/include/math.h" 3 4 ::: 3632
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3633
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3634
+#pragma line 647 "/usr/include/math.h" 2 3 4 ::: 3645
+#pragma line 666 "/usr/include/math.h" 3 4 ::: 3646
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3647
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3648
+#pragma line 667 "/usr/include/math.h" 2 3 4 ::: 3659
+#pragma line 676 "/usr/include/math.h" 3 4 ::: 3660
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3661
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3662
+#pragma line 677 "/usr/include/math.h" 2 3 4 ::: 3673
+#pragma line 686 "/usr/include/math.h" 3 4 ::: 3674
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3675
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3676
+#pragma line 687 "/usr/include/math.h" 2 3 4 ::: 3687
+#pragma line 706 "/usr/include/math.h" 3 4 ::: 3688
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3689
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3690
+#pragma line 707 "/usr/include/math.h" 2 3 4 ::: 3701
+#pragma line 716 "/usr/include/math.h" 3 4 ::: 3702
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3703
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3704
+#pragma line 717 "/usr/include/math.h" 2 3 4 ::: 3715
+#pragma line 736 "/usr/include/math.h" 3 4 ::: 3716
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 1 3 4 ::: 3717
+#pragma line 24 "/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h" 3 4 ::: 3718
+#pragma line 737 "/usr/include/math.h" 2 3 4 ::: 3729
+#pragma line 773 "/usr/include/math.h" 3 4 ::: 3730
+#pragma line 853 "/usr/include/math.h" 3 4 ::: 3732
+#pragma line 973 "/usr/include/math.h" 3 4 ::: 3751
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/iscanonical.h" 1 3 4 ::: 3752
+#pragma line 23 "/usr/include/x86_64-linux-gnu/bits/iscanonical.h" 3 4 ::: 3753
+#pragma line 46 "/usr/include/x86_64-linux-gnu/bits/iscanonical.h" 3 4 ::: 3756
+#pragma line 974 "/usr/include/math.h" 2 3 4 ::: 3765
+#pragma line 985 "/usr/include/math.h" 3 4 ::: 3766
+#pragma line 1016 "/usr/include/math.h" 3 4 ::: 3785
+#pragma line 1047 "/usr/include/math.h" 3 4 ::: 3787
+#pragma line 1278 "/usr/include/math.h" 3 4 ::: 3795
+#pragma line 47 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3 ::: 3857
+#pragma line 77 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 3858
+#pragma line 481 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 4245
+#pragma line 731 "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 4249
+#pragma line 70 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.h" 2 ::: 4363
+#pragma line 80 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.h" ::: 4365
+#pragma line 68 "/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab1/matrixmul.cpp" 2 ::: 4375

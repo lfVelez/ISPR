@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.1
+Project:             matrixmul.prj
+Solution:            solution1
+Device target:       xc7z010clg400-1
+Report date:         Mon Apr 26 16:23:06 CEST 2021
+
+#=== Post-Implementation Resource usage ===
+SLICE:           11
+LUT:             34
+FF:              28
+DSP:              1
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    8.000
+CP achieved post-synthesis:    3.019
+CP achieved post-implementation:    3.716
+Timing met

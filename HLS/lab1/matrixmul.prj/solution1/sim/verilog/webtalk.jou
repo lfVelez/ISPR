@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Apr 26 15:39:51 2021
+# Process ID: 22101
+# Current directory: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/webtalk.log
+# Journal file: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/xsim.dir/matrixmul/webtalk/xsim_webtalk.tcl -notrace

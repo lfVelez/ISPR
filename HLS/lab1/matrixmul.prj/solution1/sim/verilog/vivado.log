@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Apr 26 16:09:57 2021
+# Process ID: 25679
+# Current directory: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/vivado.log
+# Journal file: /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.1/data/ip'.
+# open_wave_database matrixmul.wdb
+open_wave_config /home/lfvelez/Documentos/ISPR/HLS/lab1/matrixmul.prj/solution1/sim/verilog/matrixmul.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 26 16:14:58 2021...
