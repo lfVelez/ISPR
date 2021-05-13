@@ -1,0 +1,19 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="yuv_scale" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="yuv_scale" label="YUV_SCALE_LOOP_Y" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="yuv2rgb" label="YUV2RGB_LOOP_Y" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="rgb2yuv" label="RGB2YUV_LOOP_Y" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

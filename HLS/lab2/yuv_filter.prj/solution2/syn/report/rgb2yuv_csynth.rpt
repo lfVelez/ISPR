@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vivado HLS Report for 'rgb2yuv'
+================================================================
+* Date:           Thu May 13 18:22:39 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        yuv_filter.prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.34|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |  min  |   max   |  min  |   max   |   Type  |
+    +-------+---------+-------+---------+---------+
+    |  40012|  2457612|  40012|  2457612|   none  |
+    +-------+---------+-------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+        |                                 |     Latency     | Iteration|  Initiation Interval  |       Trip      |          |
+        |            Loop Name            |  min  |   max   |  Latency |  achieved |   target  |      Count      | Pipelined|
+        +---------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+        |- RGB2YUV_LOOP_X_RGB2YUV_LOOP_Y  |  40010|  2457610|        12|          1|          1| 40000 ~ 2457600 |    yes   |
+        +---------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      4|      -|      -|
+|Expression       |        -|      -|      0|    466|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      0|    136|    144|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|     84|
+|Register         |        -|      -|    660|    160|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      4|    796|    854|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      5|      2|      4|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+----+----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF | LUT|
+    +-------------------------+----------------------+---------+-------+----+----+
+    |yuv_filter_mul_8ncud_U2  |yuv_filter_mul_8ncud  |        0|      0|  68|  72|
+    |yuv_filter_mul_8sbkb_U1  |yuv_filter_mul_8sbkb  |        0|      0|  68|  72|
+    +-------------------------+----------------------+---------+-------+----+----+
+    |Total                    |                      |        0|      0| 136| 144|
+    +-------------------------+----------------------+---------+-------+----+----+
+
+    * DSP48: 
+    +-------------------------+----------------------+--------------+
+    |         Instance        |        Module        |  Expression  |
+    +-------------------------+----------------------+--------------+
+    |yuv_filter_mac_mueOg_U4  |yuv_filter_mac_mueOg  | i0 + i1 * i2 |
+    |yuv_filter_mac_mufYi_U5  |yuv_filter_mac_mufYi  | i0 * i1 + i2 |
+    |yuv_filter_mac_mug8j_U6  |yuv_filter_mac_mug8j  | i0 + i1 * i2 |
+    |yuv_filter_mul_mudEe_U3  |yuv_filter_mul_mudEe  |    i0 * i1   |
+    +-------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |indvar_flatten_next_fu_236_p2  |     +    |      0|  0|  39|          32|           1|
+    |out_channels_ch1_d0            |     +    |      0|  0|  15|           5|           8|
+    |tmp1_fu_389_p2                 |     +    |      0|  0|  23|          16|          16|
+    |tmp2_fu_379_p2                 |     +    |      0|  0|  22|          15|          15|
+    |tmp4_fu_337_p2                 |     +    |      0|  0|  16|           8|           9|
+    |tmp6_fu_491_p2                 |     +    |      0|  0|  23|           8|          16|
+    |tmp8_fu_476_p2                 |     +    |      0|  0|  23|           8|          14|
+    |tmp_20_fu_300_p2               |     +    |      0|  0|  23|          23|          23|
+    |tmp_23_fu_401_p2               |     +    |      0|  0|  23|          16|          16|
+    |tmp_28_fu_496_p2               |     +    |      0|  0|  23|          16|          16|
+    |tmp_33_fu_514_p2               |     +    |      0|  0|  23|          16|          16|
+    |tmp_s_fu_291_p2                |     +    |      0|  0|  23|          23|          23|
+    |x_3_fu_242_p2                  |     +    |      0|  0|  23|           1|          16|
+    |y_3_fu_306_p2                  |     +    |      0|  0|  23|           1|          16|
+    |p_neg_fu_449_p2                |     -    |      0|  0|  20|           1|          13|
+    |tmp_27_fu_443_p2               |     -    |      0|  0|  23|          16|          16|
+    |tmp_32_fu_470_p2               |     -    |      0|  0|  23|          14|          14|
+    |exitcond9_fu_248_p2            |   icmp   |      0|  0|   8|          16|          16|
+    |exitcond_flatten_fu_231_p2     |   icmp   |      0|  0|  16|          32|          32|
+    |tmp_mid2_v_fu_261_p3           |  select  |      0|  0|  16|           1|          16|
+    |y_mid2_fu_253_p3               |  select  |      0|  0|  16|           1|           1|
+    |ap_enable_pp0                  |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1        |    xor   |      0|  0|   2|           1|           2|
+    |out_channels_ch2_d0            |    xor   |      0|  0|   9|           8|           9|
+    |out_channels_ch3_d0            |    xor   |      0|  0|   9|           8|           9|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |Total                          |          |      0|  0| 466|         287|         335|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter11  |   9|          2|    1|          2|
+    |indvar_flatten_reg_190    |   9|          2|   32|         64|
+    |x_phi_fu_205_p4           |   9|          2|   16|         32|
+    |x_reg_201                 |   9|          2|   16|         32|
+    |y_phi_fu_216_p4           |   9|          2|   16|         32|
+    |y_reg_212                 |   9|          2|   16|         32|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  84|         18|   99|        200|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |B_reg_686                 |   8|   0|    8|          0|
+    |G_reg_668                 |   8|   0|    8|          0|
+    |R_reg_660                 |   8|   0|    8|          0|
+    |ap_CS_fsm                 |   3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter0   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9   |   1|   0|    1|          0|
+    |bound_reg_592             |  32|   0|   32|          0|
+    |exitcond_flatten_reg_597  |   1|   0|    1|          0|
+    |indvar_flatten_reg_190    |  32|   0|   32|          0|
+    |tmp4_reg_694              |   9|   0|    9|          0|
+    |tmp8_reg_719              |  13|   0|   14|          1|
+    |tmp_20_reg_627            |  23|   0|   23|          0|
+    |tmp_21_reg_622            |  15|   0|   15|          0|
+    |tmp_24_reg_699            |   8|   0|    8|          0|
+    |tmp_26_reg_704            |  16|   0|   16|          0|
+    |tmp_27_reg_709            |  12|   0|   16|          4|
+    |tmp_29_reg_734            |   8|   0|    8|          0|
+    |tmp_30_reg_714            |  16|   0|   16|          0|
+    |tmp_34_reg_739            |   8|   0|    8|          0|
+    |tmp_42_cast1_reg_680      |   8|   0|   16|          8|
+    |tmp_42_cast_reg_637       |  23|   0|   64|         41|
+    |tmp_mid2_v_reg_612        |  16|   0|   16|          0|
+    |tmp_reg_617               |  13|   0|   13|          0|
+    |x_reg_201                 |  16|   0|   16|          0|
+    |y_mid2_reg_606            |  16|   0|   16|          0|
+    |y_reg_212                 |  16|   0|   16|          0|
+    |G_reg_668                 |  64|  32|    8|          0|
+    |R_reg_660                 |  64|  32|    8|          0|
+    |exitcond_flatten_reg_597  |  64|  32|    1|          0|
+    |tmp_42_cast1_reg_680      |  64|  32|   16|          8|
+    |tmp_42_cast_reg_637       |  64|  32|   64|         41|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 660| 160|  491|        103|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_done                    | out |    1| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_return_0                | out |   16| ap_ctrl_hs |      rgb2yuv     | return value |
+|ap_return_1                | out |   16| ap_ctrl_hs |      rgb2yuv     | return value |
+|in_channels_ch1_address0   | out |   22|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_ce0        | out |    1|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_q0         |  in |    8|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch2_address0   | out |   22|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_ce0        | out |    1|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_q0         |  in |    8|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch3_address0   | out |   22|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_ce0        | out |    1|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_q0         |  in |    8|  ap_memory |  in_channels_ch3 |     array    |
+|in_width_read              |  in |   16|   ap_none  |   in_width_read  |    scalar    |
+|in_height_read             |  in |   16|   ap_none  |  in_height_read  |    scalar    |
+|out_channels_ch1_address0  | out |   22|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_ce0       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_we0       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_d0        | out |    8|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch2_address0  | out |   22|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_ce0       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_we0       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_d0        | out |    8|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch3_address0  | out |   22|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_ce0       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_we0       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_d0        | out |    8|  ap_memory | out_channels_ch3 |     array    |
++---------------------------+-----+-----+------------+------------------+--------------+
+

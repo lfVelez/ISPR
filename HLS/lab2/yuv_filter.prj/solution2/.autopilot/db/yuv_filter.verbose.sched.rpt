@@ -1,0 +1,267 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter'
+================================================================
+* Date:           Thu May 13 18:22:38 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        yuv_filter.prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.40|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+---------+--------+---------+---------+
+    |      Latency     |     Interval     | Pipeline|
+    |   min  |   max   |   min  |   max   |   Type  |
+    +--------+---------+--------+---------+---------+
+    |  120041|  7372841|  120042|  7372842|   none  |
+    +--------+---------+--------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 6.38ns
+ST_1: p_yuv_channels_ch1 (31)  [1/1] 0.00ns  loc: yuv_filter.c:17
+:17  %p_yuv_channels_ch1 = alloca [2457600 x i8], align 1
+
+ST_1: p_yuv_channels_ch2 (32)  [1/1] 0.00ns  loc: yuv_filter.c:17
+:18  %p_yuv_channels_ch2 = alloca [2457600 x i8], align 1
+
+ST_1: p_yuv_channels_ch3 (33)  [1/1] 0.00ns  loc: yuv_filter.c:17
+:19  %p_yuv_channels_ch3 = alloca [2457600 x i8], align 1
+
+ST_1: p_scale_channels_ch1 (34)  [1/1] 0.00ns  loc: yuv_filter.c:18
+:20  %p_scale_channels_ch1 = alloca [2457600 x i8], align 1
+
+ST_1: p_scale_channels_ch2 (35)  [1/1] 0.00ns  loc: yuv_filter.c:18
+:21  %p_scale_channels_ch2 = alloca [2457600 x i8], align 1
+
+ST_1: p_scale_channels_ch3 (36)  [1/1] 0.00ns  loc: yuv_filter.c:18
+:22  %p_scale_channels_ch3 = alloca [2457600 x i8], align 1
+
+ST_1: in_width_read (37)  [1/1] 0.00ns  loc: yuv_filter.c:23
+:23  %in_width_read = call i16 @_ssdm_op_Read.ap_auto.i16P(i16* %in_width)
+
+ST_1: in_height_read (38)  [1/1] 0.00ns  loc: yuv_filter.c:23
+:24  %in_height_read = call i16 @_ssdm_op_Read.ap_auto.i16P(i16* %in_height)
+
+ST_1: call_ret (39)  [2/2] 6.38ns  loc: yuv_filter.c:23
+:25  %call_ret = call fastcc { i16, i16 } @rgb2yuv([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16 %in_width_read, i16 %in_height_read, [2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3)
+
+
+ <State 2>: 0.00ns
+ST_2: call_ret (39)  [1/2] 0.00ns  loc: yuv_filter.c:23
+:25  %call_ret = call fastcc { i16, i16 } @rgb2yuv([2457600 x i8]* %in_channels_ch1, [2457600 x i8]* %in_channels_ch2, [2457600 x i8]* %in_channels_ch3, i16 %in_width_read, i16 %in_height_read, [2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3)
+
+ST_2: p_yuv_width (40)  [1/1] 0.00ns  loc: yuv_filter.c:23
+:26  %p_yuv_width = extractvalue { i16, i16 } %call_ret, 0
+
+ST_2: p_yuv_height (41)  [1/1] 0.00ns  loc: yuv_filter.c:23
+:27  %p_yuv_height = extractvalue { i16, i16 } %call_ret, 1
+
+
+ <State 3>: 6.38ns
+ST_3: V_scale_read (28)  [1/1] 0.00ns
+:14  %V_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %V_scale)
+
+ST_3: U_scale_read (29)  [1/1] 0.00ns
+:15  %U_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %U_scale)
+
+ST_3: Y_scale_read (30)  [1/1] 0.00ns
+:16  %Y_scale_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %Y_scale)
+
+ST_3: call_ret3 (42)  [2/2] 6.38ns  loc: yuv_filter.c:24
+:28  %call_ret3 = call fastcc { i16, i16 } @yuv_scale([2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3, i16 %p_yuv_width, i16 %p_yuv_height, [2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i8 %Y_scale_read, i8 %U_scale_read, i8 %V_scale_read)
+
+
+ <State 4>: 0.00ns
+ST_4: call_ret3 (42)  [1/2] 0.00ns  loc: yuv_filter.c:24
+:28  %call_ret3 = call fastcc { i16, i16 } @yuv_scale([2457600 x i8]* %p_yuv_channels_ch1, [2457600 x i8]* %p_yuv_channels_ch2, [2457600 x i8]* %p_yuv_channels_ch3, i16 %p_yuv_width, i16 %p_yuv_height, [2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i8 %Y_scale_read, i8 %U_scale_read, i8 %V_scale_read)
+
+ST_4: p_scale_width (43)  [1/1] 0.00ns  loc: yuv_filter.c:24
+:29  %p_scale_width = extractvalue { i16, i16 } %call_ret3, 0
+
+ST_4: p_scale_height (44)  [1/1] 0.00ns  loc: yuv_filter.c:24
+:30  %p_scale_height = extractvalue { i16, i16 } %call_ret3, 1
+
+
+ <State 5>: 6.38ns
+ST_5: call_ret1 (45)  [2/2] 6.38ns  loc: yuv_filter.c:25
+:31  %call_ret1 = call fastcc { i16, i16 } @yuv2rgb([2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i16 %p_scale_width, i16 %p_scale_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3)
+
+
+ <State 6>: 0.00ns
+ST_6: StgValue_27 (14)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch1), !map !13
+
+ST_6: StgValue_28 (15)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch2), !map !20
+
+ST_6: StgValue_29 (16)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %in_channels_ch3), !map !24
+
+ST_6: StgValue_30 (17)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_width), !map !28
+
+ST_6: StgValue_31 (18)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i16* %in_height), !map !34
+
+ST_6: StgValue_32 (19)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch1), !map !38
+
+ST_6: StgValue_33 (20)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch2), !map !42
+
+ST_6: StgValue_34 (21)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap([2457600 x i8]* %out_channels_ch3), !map !46
+
+ST_6: StgValue_35 (22)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_width), !map !50
+
+ST_6: StgValue_36 (23)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i16* %out_height), !map !54
+
+ST_6: StgValue_37 (24)  [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i8 %Y_scale), !map !58
+
+ST_6: StgValue_38 (25)  [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i8 %U_scale), !map !64
+
+ST_6: StgValue_39 (26)  [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i8 %V_scale), !map !68
+
+ST_6: StgValue_40 (27)  [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @yuv_filter_str) nounwind
+
+ST_6: call_ret1 (45)  [1/2] 0.00ns  loc: yuv_filter.c:25
+:31  %call_ret1 = call fastcc { i16, i16 } @yuv2rgb([2457600 x i8]* %p_scale_channels_ch1, [2457600 x i8]* %p_scale_channels_ch2, [2457600 x i8]* %p_scale_channels_ch3, i16 %p_scale_width, i16 %p_scale_height, [2457600 x i8]* %out_channels_ch1, [2457600 x i8]* %out_channels_ch2, [2457600 x i8]* %out_channels_ch3)
+
+ST_6: out_width_ret (46)  [1/1] 0.00ns  loc: yuv_filter.c:25
+:32  %out_width_ret = extractvalue { i16, i16 } %call_ret1, 0
+
+ST_6: StgValue_43 (47)  [1/1] 0.00ns  loc: yuv_filter.c:25
+:33  call void @_ssdm_op_Write.ap_auto.i16P(i16* %out_width, i16 %out_width_ret)
+
+ST_6: out_height_ret (48)  [1/1] 0.00ns  loc: yuv_filter.c:25
+:34  %out_height_ret = extractvalue { i16, i16 } %call_ret1, 1
+
+ST_6: StgValue_45 (49)  [1/1] 0.00ns  loc: yuv_filter.c:25
+:35  call void @_ssdm_op_Write.ap_auto.i16P(i16* %out_height, i16 %out_height_ret)
+
+ST_6: StgValue_46 (50)  [1/1] 0.00ns  loc: yuv_filter.c:26
+:36  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 6.38ns
+The critical path consists of the following:
+	'alloca' operation ('_yuv.channels.ch1', yuv_filter.c:17) [31]  (0 ns)
+	'call' operation ('call_ret', yuv_filter.c:23) to 'rgb2yuv' [39]  (6.38 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 6.38ns
+The critical path consists of the following:
+	wire read on port 'V_scale' [28]  (0 ns)
+	'call' operation ('call_ret3', yuv_filter.c:24) to 'yuv_scale' [42]  (6.38 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 6.38ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', yuv_filter.c:25) to 'yuv2rgb' [45]  (6.38 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

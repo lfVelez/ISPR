@@ -1,0 +1,175 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'yuv_filter'" level="0">
+<item name = "Date">Thu May 13 18:22:40 2021
+</item>
+<item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
+<item name = "Project">yuv_filter.prj</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">8.00, 9.63, 1.00</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">120041, 7372841, 120042, 7372842, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_rgb2yuv_fu_114">rgb2yuv, 40012, 2457612, 40012, 2457612, none</column>
+<column name="grp_yuv_scale_fu_134">yuv_scale, 40011, 2457611, 40011, 2457611, none</column>
+<column name="grp_yuv2rgb_fu_152">yuv2rgb, 40013, 2457613, 40013, 2457613, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 9, 2040, 2014</column>
+<column name="Memory">12288, -, 96, 0</column>
+<column name="Multiplexer">-, -, -, 272</column>
+<column name="Register">-, -, 73, -</column>
+<specialColumn name="Available">120, 80, 35200, 17600</specialColumn>
+<specialColumn name="Utilization (%)">10240, 11, 6, 12</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_rgb2yuv_fu_114">rgb2yuv, 0, 4, 796, 854</column>
+<column name="grp_yuv2rgb_fu_152">yuv2rgb, 0, 4, 623, 605</column>
+<column name="grp_yuv_scale_fu_134">yuv_scale, 0, 1, 621, 555</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="p_yuv_channels_ch1_U">yuv_filter_p_yuv_mb6, 2048, 16, 0, 2457600, 8, 1, 19660800</column>
+<column name="p_yuv_channels_ch2_U">yuv_filter_p_yuv_mb6, 2048, 16, 0, 2457600, 8, 1, 19660800</column>
+<column name="p_yuv_channels_ch3_U">yuv_filter_p_yuv_mb6, 2048, 16, 0, 2457600, 8, 1, 19660800</column>
+<column name="p_scale_channels_ch1_U">yuv_filter_p_yuv_mb6, 2048, 16, 0, 2457600, 8, 1, 19660800</column>
+<column name="p_scale_channels_ch2_U">yuv_filter_p_yuv_mb6, 2048, 16, 0, 2457600, 8, 1, 19660800</column>
+<column name="p_scale_channels_ch3_U">yuv_filter_p_yuv_mb6, 2048, 16, 0, 2457600, 8, 1, 19660800</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">38, 7, 1, 7</column>
+<column name="p_scale_channels_ch1_address0">15, 3, 22, 66</column>
+<column name="p_scale_channels_ch1_ce0">15, 3, 1, 3</column>
+<column name="p_scale_channels_ch1_we0">9, 2, 1, 2</column>
+<column name="p_scale_channels_ch2_address0">15, 3, 22, 66</column>
+<column name="p_scale_channels_ch2_ce0">15, 3, 1, 3</column>
+<column name="p_scale_channels_ch2_we0">9, 2, 1, 2</column>
+<column name="p_scale_channels_ch3_address0">15, 3, 22, 66</column>
+<column name="p_scale_channels_ch3_ce0">15, 3, 1, 3</column>
+<column name="p_scale_channels_ch3_we0">9, 2, 1, 2</column>
+<column name="p_yuv_channels_ch1_address0">15, 3, 22, 66</column>
+<column name="p_yuv_channels_ch1_ce0">15, 3, 1, 3</column>
+<column name="p_yuv_channels_ch1_we0">9, 2, 1, 2</column>
+<column name="p_yuv_channels_ch2_address0">15, 3, 22, 66</column>
+<column name="p_yuv_channels_ch2_ce0">15, 3, 1, 3</column>
+<column name="p_yuv_channels_ch2_we0">9, 2, 1, 2</column>
+<column name="p_yuv_channels_ch3_address0">15, 3, 22, 66</column>
+<column name="p_yuv_channels_ch3_ce0">15, 3, 1, 3</column>
+<column name="p_yuv_channels_ch3_we0">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="ap_reg_grp_rgb2yuv_fu_114_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_yuv2rgb_fu_152_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_yuv_scale_fu_134_ap_start">1, 0, 1, 0</column>
+<column name="p_scale_height_reg_233">16, 0, 16, 0</column>
+<column name="p_scale_width_reg_228">16, 0, 16, 0</column>
+<column name="p_yuv_height_reg_208">16, 0, 16, 0</column>
+<column name="p_yuv_width_reg_203">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, yuv_filter, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, yuv_filter, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, yuv_filter, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, yuv_filter, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, yuv_filter, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, yuv_filter, return value</column>
+<column name="in_channels_ch1_address0">out, 22, ap_memory, in_channels_ch1, array</column>
+<column name="in_channels_ch1_ce0">out, 1, ap_memory, in_channels_ch1, array</column>
+<column name="in_channels_ch1_q0">in, 8, ap_memory, in_channels_ch1, array</column>
+<column name="in_channels_ch2_address0">out, 22, ap_memory, in_channels_ch2, array</column>
+<column name="in_channels_ch2_ce0">out, 1, ap_memory, in_channels_ch2, array</column>
+<column name="in_channels_ch2_q0">in, 8, ap_memory, in_channels_ch2, array</column>
+<column name="in_channels_ch3_address0">out, 22, ap_memory, in_channels_ch3, array</column>
+<column name="in_channels_ch3_ce0">out, 1, ap_memory, in_channels_ch3, array</column>
+<column name="in_channels_ch3_q0">in, 8, ap_memory, in_channels_ch3, array</column>
+<column name="in_width">in, 16, ap_none, in_width, pointer</column>
+<column name="in_height">in, 16, ap_none, in_height, pointer</column>
+<column name="out_channels_ch1_address0">out, 22, ap_memory, out_channels_ch1, array</column>
+<column name="out_channels_ch1_ce0">out, 1, ap_memory, out_channels_ch1, array</column>
+<column name="out_channels_ch1_we0">out, 1, ap_memory, out_channels_ch1, array</column>
+<column name="out_channels_ch1_d0">out, 8, ap_memory, out_channels_ch1, array</column>
+<column name="out_channels_ch2_address0">out, 22, ap_memory, out_channels_ch2, array</column>
+<column name="out_channels_ch2_ce0">out, 1, ap_memory, out_channels_ch2, array</column>
+<column name="out_channels_ch2_we0">out, 1, ap_memory, out_channels_ch2, array</column>
+<column name="out_channels_ch2_d0">out, 8, ap_memory, out_channels_ch2, array</column>
+<column name="out_channels_ch3_address0">out, 22, ap_memory, out_channels_ch3, array</column>
+<column name="out_channels_ch3_ce0">out, 1, ap_memory, out_channels_ch3, array</column>
+<column name="out_channels_ch3_we0">out, 1, ap_memory, out_channels_ch3, array</column>
+<column name="out_channels_ch3_d0">out, 8, ap_memory, out_channels_ch3, array</column>
+<column name="out_width">out, 16, ap_vld, out_width, pointer</column>
+<column name="out_width_ap_vld">out, 1, ap_vld, out_width, pointer</column>
+<column name="out_height">out, 16, ap_vld, out_height, pointer</column>
+<column name="out_height_ap_vld">out, 1, ap_vld, out_height, pointer</column>
+<column name="Y_scale">in, 8, ap_none, Y_scale, scalar</column>
+<column name="U_scale">in, 8, ap_none, U_scale, scalar</column>
+<column name="V_scale">in, 8, ap_none, V_scale, scalar</column>
+</table>
+</item>
+</section>
+</profile>

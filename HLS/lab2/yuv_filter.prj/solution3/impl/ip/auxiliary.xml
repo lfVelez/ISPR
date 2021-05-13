@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="yuv_filter" xd:componentRef="yuv_filter" xd:initiationInterval="2457623" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="in-&gt;width" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_width" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
+  <xd:arg xd:name="in-&gt;height" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_height" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
+  <xd:arg xd:name="out-&gt;width" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_width" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="1"/>
+  <xd:arg xd:name="out-&gt;height" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_height" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="1"/>
+  <xd:arg xd:name="Y_scale" xd:originalName="Y_scale" xd:direction="in" xd:interfaceRef="Y_scale" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:arg xd:name="U_scale" xd:originalName="U_scale" xd:direction="in" xd:interfaceRef="U_scale" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:arg xd:name="V_scale" xd:originalName="V_scale" xd:direction="in" xd:interfaceRef="V_scale" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:arg xd:name="in_channels_ch1_d0" xd:originalName="in_channels_ch1_d0" xd:direction="out" xd:interfaceRef="in_channels_ch1_d0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch1_q0" xd:originalName="in_channels_ch1_q0" xd:direction="in" xd:interfaceRef="in_channels_ch1_q0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch1_d1" xd:originalName="in_channels_ch1_d1" xd:direction="out" xd:interfaceRef="in_channels_ch1_d1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch1_q1" xd:originalName="in_channels_ch1_q1" xd:direction="in" xd:interfaceRef="in_channels_ch1_q1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch2_d0" xd:originalName="in_channels_ch2_d0" xd:direction="out" xd:interfaceRef="in_channels_ch2_d0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch2_q0" xd:originalName="in_channels_ch2_q0" xd:direction="in" xd:interfaceRef="in_channels_ch2_q0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch2_d1" xd:originalName="in_channels_ch2_d1" xd:direction="out" xd:interfaceRef="in_channels_ch2_d1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch2_q1" xd:originalName="in_channels_ch2_q1" xd:direction="in" xd:interfaceRef="in_channels_ch2_q1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch3_d0" xd:originalName="in_channels_ch3_d0" xd:direction="out" xd:interfaceRef="in_channels_ch3_d0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch3_q0" xd:originalName="in_channels_ch3_q0" xd:direction="in" xd:interfaceRef="in_channels_ch3_q0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch3_d1" xd:originalName="in_channels_ch3_d1" xd:direction="out" xd:interfaceRef="in_channels_ch3_d1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_channels_ch3_q1" xd:originalName="in_channels_ch3_q1" xd:direction="in" xd:interfaceRef="in_channels_ch3_q1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch1_d0" xd:originalName="out_channels_ch1_d0" xd:direction="out" xd:interfaceRef="out_channels_ch1_d0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch1_q0" xd:originalName="out_channels_ch1_q0" xd:direction="in" xd:interfaceRef="out_channels_ch1_q0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch1_d1" xd:originalName="out_channels_ch1_d1" xd:direction="out" xd:interfaceRef="out_channels_ch1_d1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch1_q1" xd:originalName="out_channels_ch1_q1" xd:direction="in" xd:interfaceRef="out_channels_ch1_q1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch2_d0" xd:originalName="out_channels_ch2_d0" xd:direction="out" xd:interfaceRef="out_channels_ch2_d0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch2_q0" xd:originalName="out_channels_ch2_q0" xd:direction="in" xd:interfaceRef="out_channels_ch2_q0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch2_d1" xd:originalName="out_channels_ch2_d1" xd:direction="out" xd:interfaceRef="out_channels_ch2_d1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch2_q1" xd:originalName="out_channels_ch2_q1" xd:direction="in" xd:interfaceRef="out_channels_ch2_q1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch3_d0" xd:originalName="out_channels_ch3_d0" xd:direction="out" xd:interfaceRef="out_channels_ch3_d0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch3_q0" xd:originalName="out_channels_ch3_q0" xd:direction="in" xd:interfaceRef="out_channels_ch3_q0" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch3_d1" xd:originalName="out_channels_ch3_d1" xd:direction="out" xd:interfaceRef="out_channels_ch3_d1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_channels_ch3_q1" xd:originalName="out_channels_ch3_q1" xd:direction="in" xd:interfaceRef="out_channels_ch3_q1" xd:busTypeRef="ap_memory" xd:arraySize="2457600" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="40022" xd:worst-case="2457622" xd:average-case="784422"/>
+  <xd:resourceEstimates xd:LUT="1918" xd:FF="1634" xd:BRAM="0" xd:DSP="11"/>
+</xd:acceleratorMap>

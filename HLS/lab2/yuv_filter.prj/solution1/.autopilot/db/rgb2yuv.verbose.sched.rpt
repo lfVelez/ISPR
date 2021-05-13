@@ -1,0 +1,550 @@
+
+
+================================================================
+== Vivado HLS Report for 'rgb2yuv'
+================================================================
+* Date:           Thu May 13 17:32:27 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        yuv_filter.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.34|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+----------+--------+----------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min  |    max   |   min  |    max   |   Type  |
+    +--------+----------+--------+----------+---------+
+    |  400401|  24579841|  400401|  24579841|   none  |
+    +--------+----------+--------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+--------+----------+--------------+-----------+-----------+------------+----------+
+        |                   |      Latency      |   Iteration  |  Initiation Interval  |    Trip    |          |
+        |     Loop Name     |   min  |    max   |    Latency   |  achieved |   target  |    Count   | Pipelined|
+        +-------------------+--------+----------+--------------+-----------+-----------+------------+----------+
+        |- RGB2YUV_LOOP_X   |  400400|  24579840| 2002 ~ 12802 |          -|          -| 200 ~ 1920 |    no    |
+        | + RGB2YUV_LOOP_Y  |    2000|     12800|            10|          -|          -| 200 ~ 1280 |    no    |
+        +-------------------+--------+----------+--------------+-----------+-----------+------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 12
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	2  / (exitcond)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 1.77ns
+ST_1: in_height_read_2 (9)  [1/1] 0.00ns
+:0  %in_height_read_2 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_height_read)
+
+ST_1: in_width_read_2 (10)  [1/1] 0.00ns
+:1  %in_width_read_2 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %in_width_read)
+
+ST_1: StgValue_15 (11)  [1/1] 1.77ns  loc: yuv_filter.c:49
+:2  br label %1
+
+
+ <State 2>: 3.17ns
+ST_2: x (13)  [1/1] 0.00ns
+:0  %x = phi i16 [ 0, %0 ], [ %x_2, %5 ]
+
+ST_2: exitcond1 (14)  [1/1] 3.03ns  loc: yuv_filter.c:49
+:1  %exitcond1 = icmp eq i16 %x, %in_width_read_2
+
+ST_2: x_2 (15)  [1/1] 2.96ns  loc: yuv_filter.c:49
+:2  %x_2 = add i16 %x, 1
+
+ST_2: StgValue_19 (16)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:3  br i1 %exitcond1, label %6, label %2
+
+ST_2: StgValue_20 (18)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:0  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str) nounwind
+
+ST_2: tmp_s (19)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:1  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str)
+
+ST_2: StgValue_22 (20)  [1/1] 0.00ns  loc: yuv_filter.c:50
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 200, i32 1920, i32 1060, [1 x i8]* @p_str1) nounwind
+
+ST_2: tmp (21)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:3  %tmp = trunc i16 %x to i13
+
+ST_2: p_shl_cast (22)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:4  %p_shl_cast = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %tmp, i10 0)
+
+ST_2: tmp_21 (23)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:5  %tmp_21 = trunc i16 %x to i15
+
+ST_2: p_shl7_cast (24)  [1/1] 0.00ns  loc: yuv_filter.c:54
+:6  %p_shl7_cast = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %tmp_21, i8 0)
+
+ST_2: tmp_22 (25)  [1/1] 3.17ns  loc: yuv_filter.c:54
+:7  %tmp_22 = add i23 %p_shl_cast, %p_shl7_cast
+
+ST_2: StgValue_28 (26)  [1/1] 1.77ns  loc: yuv_filter.c:52
+:8  br label %3
+
+ST_2: mrv (106)  [1/1] 0.00ns  loc: yuv_filter.c:65
+:0  %mrv = insertvalue { i16, i16 } undef, i16 %in_width_read_2, 0
+
+ST_2: mrv_1 (107)  [1/1] 0.00ns  loc: yuv_filter.c:65
+:1  %mrv_1 = insertvalue { i16, i16 } %mrv, i16 %in_height_read_2, 1
+
+ST_2: StgValue_31 (108)  [1/1] 0.00ns  loc: yuv_filter.c:65
+:2  ret { i16, i16 } %mrv_1
+
+
+ <State 3>: 6.42ns
+ST_3: y (28)  [1/1] 0.00ns
+:0  %y = phi i16 [ 0, %2 ], [ %y_2, %4 ]
+
+ST_3: exitcond (29)  [1/1] 3.03ns  loc: yuv_filter.c:52
+:1  %exitcond = icmp eq i16 %y, %in_height_read_2
+
+ST_3: y_2 (30)  [1/1] 2.96ns  loc: yuv_filter.c:52
+:2  %y_2 = add i16 %y, 1
+
+ST_3: StgValue_35 (31)  [1/1] 0.00ns  loc: yuv_filter.c:52
+:3  br i1 %exitcond, label %5, label %4
+
+ST_3: tmp_cast (36)  [1/1] 0.00ns  loc: yuv_filter.c:54
+:3  %tmp_cast = zext i16 %y to i23
+
+ST_3: tmp_24 (37)  [1/1] 3.17ns  loc: yuv_filter.c:54
+:4  %tmp_24 = add i23 %tmp_cast, %tmp_22
+
+ST_3: tmp_24_cast (38)  [1/1] 0.00ns  loc: yuv_filter.c:54
+:5  %tmp_24_cast = zext i23 %tmp_24 to i64
+
+ST_3: in_channels_ch1_addr (39)  [1/1] 0.00ns  loc: yuv_filter.c:54
+:6  %in_channels_ch1_addr = getelementptr [2457600 x i8]* %in_channels_ch1, i64 0, i64 %tmp_24_cast
+
+ST_3: in_channels_ch2_addr (40)  [1/1] 0.00ns  loc: yuv_filter.c:55
+:7  %in_channels_ch2_addr = getelementptr [2457600 x i8]* %in_channels_ch2, i64 0, i64 %tmp_24_cast
+
+ST_3: R (45)  [4/4] 3.25ns  loc: yuv_filter.c:54
+:12  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_3: G (46)  [4/4] 3.25ns  loc: yuv_filter.c:55
+:13  %G = load i8* %in_channels_ch2_addr, align 1
+
+ST_3: empty_17 (103)  [1/1] 0.00ns  loc: yuv_filter.c:64
+:0  %empty_17 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str, i32 %tmp_s)
+
+ST_3: StgValue_44 (104)  [1/1] 0.00ns  loc: yuv_filter.c:49
+:1  br label %1
+
+
+ <State 4>: 3.25ns
+ST_4: R (45)  [3/4] 3.25ns  loc: yuv_filter.c:54
+:12  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_4: G (46)  [3/4] 3.25ns  loc: yuv_filter.c:55
+:13  %G = load i8* %in_channels_ch2_addr, align 1
+
+
+ <State 5>: 3.25ns
+ST_5: in_channels_ch3_addr (41)  [1/1] 0.00ns  loc: yuv_filter.c:56
+:8  %in_channels_ch3_addr = getelementptr [2457600 x i8]* %in_channels_ch3, i64 0, i64 %tmp_24_cast
+
+ST_5: R (45)  [2/4] 3.25ns  loc: yuv_filter.c:54
+:12  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_5: G (46)  [2/4] 3.25ns  loc: yuv_filter.c:55
+:13  %G = load i8* %in_channels_ch2_addr, align 1
+
+ST_5: B (47)  [4/4] 3.25ns  loc: yuv_filter.c:56
+:14  %B = load i8* %in_channels_ch3_addr, align 1
+
+
+ <State 6>: 3.25ns
+ST_6: R (45)  [1/4] 3.25ns  loc: yuv_filter.c:54
+:12  %R = load i8* %in_channels_ch1_addr, align 1
+
+ST_6: G (46)  [1/4] 3.25ns  loc: yuv_filter.c:55
+:13  %G = load i8* %in_channels_ch2_addr, align 1
+
+ST_6: B (47)  [3/4] 3.25ns  loc: yuv_filter.c:56
+:14  %B = load i8* %in_channels_ch3_addr, align 1
+
+
+ <State 7>: 5.51ns
+ST_7: B (47)  [2/4] 3.25ns  loc: yuv_filter.c:56
+:14  %B = load i8* %in_channels_ch3_addr, align 1
+
+ST_7: tmp_33_cast1 (48)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:15  %tmp_33_cast1 = zext i8 %R to i16
+
+ST_7: tmp_35_cast1 (54)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:21  %tmp_35_cast1 = zext i8 %G to i16
+
+ST_7: tmp_29 (72)  [3/3] 5.51ns  loc: yuv_filter.c:58
+:39  %tmp_29 = mul i16 %tmp_35_cast1, -74
+
+ST_7: tmp_33 (84)  [3/3] 5.51ns  loc: yuv_filter.c:59
+:51  %tmp_33 = mul i16 %tmp_33_cast1, 122
+
+
+ <State 8>: 5.51ns
+ST_8: B (47)  [1/4] 3.25ns  loc: yuv_filter.c:56
+:14  %B = load i8* %in_channels_ch3_addr, align 1
+
+ST_8: tmp_35_cast2 (55)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:22  %tmp_35_cast2 = zext i8 %G to i9
+
+ST_8: tmp4 (63)  [1/1] 2.82ns  loc: yuv_filter.c:57
+:30  %tmp4 = add i9 %tmp_35_cast2, 128
+
+ST_8: tmp_29 (72)  [2/3] 5.51ns  loc: yuv_filter.c:58
+:39  %tmp_29 = mul i16 %tmp_35_cast1, -74
+
+ST_8: tmp_33 (84)  [2/3] 5.51ns  loc: yuv_filter.c:59
+:51  %tmp_33 = mul i16 %tmp_33_cast1, 122
+
+
+ <State 9>: 8.33ns
+ST_9: p_shl5 (50)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:17  %p_shl5 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %R, i6 0)
+
+ST_9: p_shl5_cast (51)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:18  %p_shl5_cast = zext i14 %p_shl5 to i15
+
+ST_9: p_shl6 (52)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:19  %p_shl6 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %R, i1 false)
+
+ST_9: p_shl6_cast (53)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:20  %p_shl6_cast = zext i9 %p_shl6 to i15
+
+ST_9: p_shl4 (56)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:23  %p_shl4 = call i15 @_ssdm_op_BitConcatenate.i15.i8.i7(i8 %G, i7 0)
+
+ST_9: p_shl4_cast (57)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:24  %p_shl4_cast = zext i15 %p_shl4 to i16
+
+ST_9: tmp_37_cast1 (58)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:25  %tmp_37_cast1 = zext i8 %B to i13
+
+ST_9: tmp_25 (59)  [1/1] 3.36ns  loc: yuv_filter.c:57
+:26  %tmp_25 = mul i13 %tmp_37_cast1, 25
+
+ST_9: tmp2 (60)  [1/1] 2.92ns  loc: yuv_filter.c:57
+:27  %tmp2 = add i15 %p_shl6_cast, %p_shl5_cast
+
+ST_9: tmp2_cast (61)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:28  %tmp2_cast = zext i15 %tmp2 to i16
+
+ST_9: tmp1 (62)  [1/1] 1.95ns  loc: yuv_filter.c:57
+:29  %tmp1 = add i16 %tmp2_cast, %p_shl4_cast
+
+ST_9: tmp4_cast (64)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:31  %tmp4_cast = zext i9 %tmp4 to i13
+
+ST_9: tmp3 (65)  [1/1] 3.02ns  loc: yuv_filter.c:57
+:32  %tmp3 = add i13 %tmp4_cast, %tmp_25
+
+ST_9: tmp3_cast (66)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:33  %tmp3_cast = zext i13 %tmp3 to i16
+
+ST_9: tmp_26 (67)  [1/1] 1.95ns  loc: yuv_filter.c:57
+:34  %tmp_26 = add i16 %tmp3_cast, %tmp1
+
+ST_9: tmp_27 (68)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:35  %tmp_27 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %tmp_26, i32 8, i32 15)
+
+ST_9: tmp_29 (72)  [1/3] 5.51ns  loc: yuv_filter.c:58
+:39  %tmp_29 = mul i16 %tmp_35_cast1, -74
+
+ST_9: p_shl2 (73)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:40  %p_shl2 = call i15 @_ssdm_op_BitConcatenate.i15.i8.i7(i8 %B, i7 0)
+
+ST_9: p_shl2_cast (74)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:41  %p_shl2_cast = zext i15 %p_shl2 to i16
+
+ST_9: p_shl3 (75)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:42  %p_shl3 = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %B, i4 0)
+
+ST_9: p_shl3_cast9 (76)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:43  %p_shl3_cast9 = zext i12 %p_shl3 to i13
+
+ST_9: p_shl3_cast (77)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:44  %p_shl3_cast = zext i12 %p_shl3 to i16
+
+ST_9: tmp_30 (78)  [1/1] 2.94ns  loc: yuv_filter.c:58
+:45  %tmp_30 = sub i16 %p_shl2_cast, %p_shl3_cast
+
+ST_9: tmp_33 (84)  [1/3] 5.51ns  loc: yuv_filter.c:59
+:51  %tmp_33 = mul i16 %tmp_33_cast1, 122
+
+ST_9: p_neg (86)  [1/1] 2.88ns  loc: yuv_filter.c:58
+:53  %p_neg = sub i13 0, %p_shl3_cast9
+
+ST_9: p_neg_cast (87)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:54  %p_neg_cast = sext i13 %p_neg to i14
+
+ST_9: p_shl1 (88)  [1/1] 0.00ns  loc: yuv_filter.c:59
+:55  %p_shl1 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %B, i1 false)
+
+ST_9: p_shl1_cast (89)  [1/1] 0.00ns  loc: yuv_filter.c:59
+:56  %p_shl1_cast = zext i9 %p_shl1 to i14
+
+ST_9: tmp_35 (90)  [1/1] 1.92ns  loc: yuv_filter.c:59
+:57  %tmp_35 = sub i14 %p_neg_cast, %p_shl1_cast
+
+ST_9: tmp8 (92)  [1/1] 1.92ns  loc: yuv_filter.c:59
+:59  %tmp8 = add i14 %tmp_35, 128
+
+
+ <State 10>: 9.34ns
+ST_10: out_channels_ch1_add (42)  [1/1] 0.00ns  loc: yuv_filter.c:60
+:9  %out_channels_ch1_add = getelementptr [2457600 x i8]* %out_channels_ch1, i64 0, i64 %tmp_24_cast
+
+ST_10: tmp_33_cast2 (49)  [1/1] 0.00ns  loc: yuv_filter.c:57
+:16  %tmp_33_cast2 = zext i8 %R to i15
+
+ST_10: Y (69)  [1/1] 2.80ns  loc: yuv_filter.c:57
+:36  %Y = add i8 %tmp_27, 16
+
+ST_10: tmp_28 (70)  [1/1] 3.36ns  loc: yuv_filter.c:58
+:37  %tmp_28 = mul i15 %tmp_33_cast2, -38
+
+ST_10: tmp_44_cast (71)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:38  %tmp_44_cast = sext i15 %tmp_28 to i16
+
+ST_10: tmp5 (79)  [1/1] 3.02ns  loc: yuv_filter.c:58
+:46  %tmp5 = add i16 %tmp_44_cast, %tmp_29
+
+ST_10: tmp6 (80)  [1/1] 1.95ns  loc: yuv_filter.c:58
+:47  %tmp6 = add i16 %tmp_30, 128
+
+ST_10: tmp_31 (81)  [1/1] 1.95ns  loc: yuv_filter.c:58
+:48  %tmp_31 = add i16 %tmp6, %tmp5
+
+ST_10: tmp_32 (82)  [1/1] 0.00ns  loc: yuv_filter.c:58
+:49  %tmp_32 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %tmp_31, i32 8, i32 15)
+
+ST_10: tmp_34 (85)  [1/1] 3.36ns  loc: yuv_filter.c:59
+:52  %tmp_34 = mul i16 %tmp_35_cast1, -94
+
+ST_10: tmp7 (91)  [1/1] 3.02ns  loc: yuv_filter.c:59
+:58  %tmp7 = add i16 %tmp_33, %tmp_34
+
+ST_10: tmp8_cast (93)  [1/1] 0.00ns  loc: yuv_filter.c:59
+:60  %tmp8_cast = sext i14 %tmp8 to i16
+
+ST_10: tmp_36 (94)  [1/1] 2.96ns  loc: yuv_filter.c:59
+:61  %tmp_36 = add i16 %tmp8_cast, %tmp7
+
+ST_10: tmp_37 (95)  [1/1] 0.00ns  loc: yuv_filter.c:59
+:62  %tmp_37 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %tmp_36, i32 8, i32 15)
+
+ST_10: StgValue_108 (97)  [2/2] 3.25ns  loc: yuv_filter.c:60
+:64  store i8 %Y, i8* %out_channels_ch1_add, align 1
+
+
+ <State 11>: 5.32ns
+ST_11: out_channels_ch2_add (43)  [1/1] 0.00ns  loc: yuv_filter.c:61
+:10  %out_channels_ch2_add = getelementptr [2457600 x i8]* %out_channels_ch2, i64 0, i64 %tmp_24_cast
+
+ST_11: out_channels_ch3_add (44)  [1/1] 0.00ns  loc: yuv_filter.c:62
+:11  %out_channels_ch3_add = getelementptr [2457600 x i8]* %out_channels_ch3, i64 0, i64 %tmp_24_cast
+
+ST_11: U (83)  [1/1] 2.07ns  loc: yuv_filter.c:58
+:50  %U = xor i8 %tmp_32, -128
+
+ST_11: V (96)  [1/1] 2.07ns  loc: yuv_filter.c:59
+:63  %V = xor i8 %tmp_37, -128
+
+ST_11: StgValue_113 (97)  [1/2] 3.25ns  loc: yuv_filter.c:60
+:64  store i8 %Y, i8* %out_channels_ch1_add, align 1
+
+ST_11: StgValue_114 (98)  [2/2] 3.25ns  loc: yuv_filter.c:61
+:65  store i8 %U, i8* %out_channels_ch2_add, align 1
+
+ST_11: StgValue_115 (99)  [2/2] 3.25ns  loc: yuv_filter.c:62
+:66  store i8 %V, i8* %out_channels_ch3_add, align 1
+
+
+ <State 12>: 3.25ns
+ST_12: StgValue_116 (33)  [1/1] 0.00ns  loc: yuv_filter.c:52
+:0  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str2) nounwind
+
+ST_12: tmp_23 (34)  [1/1] 0.00ns  loc: yuv_filter.c:52
+:1  %tmp_23 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str2)
+
+ST_12: StgValue_118 (35)  [1/1] 0.00ns  loc: yuv_filter.c:53
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 200, i32 1280, i32 740, [1 x i8]* @p_str1) nounwind
+
+ST_12: StgValue_119 (98)  [1/2] 3.25ns  loc: yuv_filter.c:61
+:65  store i8 %U, i8* %out_channels_ch2_add, align 1
+
+ST_12: StgValue_120 (99)  [1/2] 3.25ns  loc: yuv_filter.c:62
+:66  store i8 %V, i8* %out_channels_ch3_add, align 1
+
+ST_12: empty (100)  [1/1] 0.00ns  loc: yuv_filter.c:63
+:67  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str2, i32 %tmp_23)
+
+ST_12: StgValue_122 (101)  [1/1] 0.00ns  loc: yuv_filter.c:52
+:68  br label %3
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('x') with incoming values : ('x', yuv_filter.c:49) [13]  (1.77 ns)
+
+ <State 2>: 3.17ns
+The critical path consists of the following:
+	'phi' operation ('x') with incoming values : ('x', yuv_filter.c:49) [13]  (0 ns)
+	'add' operation ('tmp_22', yuv_filter.c:54) [25]  (3.17 ns)
+
+ <State 3>: 6.42ns
+The critical path consists of the following:
+	'phi' operation ('y') with incoming values : ('y', yuv_filter.c:52) [28]  (0 ns)
+	'add' operation ('tmp_24', yuv_filter.c:54) [37]  (3.17 ns)
+	'getelementptr' operation ('in_channels_ch1_addr', yuv_filter.c:54) [39]  (0 ns)
+	'load' operation ('R', yuv_filter.c:54) on array 'in_channels_ch1' [45]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('R', yuv_filter.c:54) on array 'in_channels_ch1' [45]  (3.25 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('in_channels_ch3_addr', yuv_filter.c:56) [41]  (0 ns)
+	'load' operation ('B', yuv_filter.c:56) on array 'in_channels_ch3' [47]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('R', yuv_filter.c:54) on array 'in_channels_ch1' [45]  (3.25 ns)
+
+ <State 7>: 5.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_33', yuv_filter.c:59) [84]  (5.51 ns)
+
+ <State 8>: 5.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_29', yuv_filter.c:58) [72]  (5.51 ns)
+
+ <State 9>: 8.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_25', yuv_filter.c:57) [59]  (3.36 ns)
+	'add' operation ('tmp3', yuv_filter.c:57) [65]  (3.02 ns)
+	'add' operation ('tmp_26', yuv_filter.c:57) [67]  (1.95 ns)
+
+ <State 10>: 9.34ns
+The critical path consists of the following:
+	'mul' operation ('tmp_34', yuv_filter.c:59) [85]  (3.36 ns)
+	'add' operation ('tmp7', yuv_filter.c:59) [91]  (3.02 ns)
+	'add' operation ('tmp_36', yuv_filter.c:59) [94]  (2.96 ns)
+
+ <State 11>: 5.32ns
+The critical path consists of the following:
+	'xor' operation ('U', yuv_filter.c:58) [83]  (2.07 ns)
+	'store' operation (yuv_filter.c:61) of variable 'U', yuv_filter.c:58 on array 'out_channels_ch2' [98]  (3.25 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'store' operation (yuv_filter.c:61) of variable 'U', yuv_filter.c:58 on array 'out_channels_ch2' [98]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1620919948000">
+  <ports id="1" name="in_channels_ch1" type="PortType" originalName="in.channels.ch1" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="2457600">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="in_channels_ch2" type="PortType" originalName="in.channels.ch2" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="2457600">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="in_channels_ch3" type="PortType" originalName="in.channels.ch3" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="2457600">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="in_width" type="PortType" originalName="in.width" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="in_height" type="PortType" originalName="in.height" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="out_channels_ch1" type="PortType" originalName="out.channels.ch1" coreName="RAM" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="2457600">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="7" name="out_channels_ch2" type="PortType" originalName="out.channels.ch2" coreName="RAM" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="2457600">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="8" name="out_channels_ch3" type="PortType" originalName="out.channels.ch3" coreName="RAM" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="2457600">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="out_width" type="PortType" originalName="out.width" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="out_height" type="PortType" originalName="out.height" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="Y_scale" type="PortType" originalName="Y_scale" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="12" name="U_scale" type="PortType" originalName="U_scale" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="13" name="V_scale" type="PortType" originalName="V_scale" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="109" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="111" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="113" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="123" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="125" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="128" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="129" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="130" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="135" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="144" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="145" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="146" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="147" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="149" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="152" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="171" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="172" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="174" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="176" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="178" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="179" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="180" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="182" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="237" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="238" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="241" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="242" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="243" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="246" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.5"/>
+  <edges id="247" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.6"/>
+  <edges id="248" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@ports.7"/>
+  <edges id="252" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@ports.8"/>
+  <edges id="256" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@ports.9"/>
+  <edges id="325" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="326" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.6"/>
+  <edges id="327" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="328" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="329" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="330" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="331" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3"/>
+  <edges id="332" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <blocks id="46" name="block_46" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_51</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="V_scale_read" originalName="V_scale" bitwidth="8" opcode="read" nodeLabel="1" m_display="0">
+      <dataInputObjs>V_scale</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="U_scale_read" originalName="U_scale" bitwidth="8" opcode="read" nodeLabel="1" m_display="0">
+      <dataInputObjs>U_scale</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="Y_scale_read" originalName="Y_scale" bitwidth="8" opcode="read" nodeLabel="1" m_display="0">
+      <dataInputObjs>Y_scale</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="p_yuv_channels_ch1" lineNumber="17" originalName="_yuv.channels.ch1" fileName="yuv_filter.c" fileDirectory=".." rtlName="p_yuv_channels_ch1_U" coreName="RAM" contextFuncName="yuv_filter" bitwidth="8" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="17" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="p_yuv_channels_ch2" lineNumber="17" originalName="_yuv.channels.ch2" fileName="yuv_filter.c" fileDirectory=".." rtlName="p_yuv_channels_ch2_U" coreName="RAM" contextFuncName="yuv_filter" bitwidth="8" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="17" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="p_yuv_channels_ch3" lineNumber="17" originalName="_yuv.channels.ch3" fileName="yuv_filter.c" fileDirectory=".." rtlName="p_yuv_channels_ch3_U" coreName="RAM" contextFuncName="yuv_filter" bitwidth="8" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="17" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="p_scale_channels_ch1" lineNumber="18" originalName="_scale.channels.ch1" fileName="yuv_filter.c" fileDirectory=".." rtlName="p_scale_channels_ch1_U" coreName="RAM" contextFuncName="yuv_filter" bitwidth="8" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="18" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="p_scale_channels_ch2" lineNumber="18" originalName="_scale.channels.ch2" fileName="yuv_filter.c" fileDirectory=".." rtlName="p_scale_channels_ch2_U" coreName="RAM" contextFuncName="yuv_filter" bitwidth="8" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="18" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="p_scale_channels_ch3" lineNumber="18" originalName="_scale.channels.ch3" fileName="yuv_filter.c" fileDirectory=".." rtlName="p_scale_channels_ch3_U" coreName="RAM" contextFuncName="yuv_filter" bitwidth="8" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="18" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="in_width_read" lineNumber="23" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_filter" bitwidth="16" opcode="read" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="23" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataInputObjs>in_width</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="in_height_read" lineNumber="23" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_filter" bitwidth="16" opcode="read" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="23" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataInputObjs>in_height</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="call_ret" lineNumber="23" fileName="yuv_filter.c" fileDirectory=".." rtlName="grp_rgb2yuv_fu_244" contextFuncName="yuv_filter" bitwidth="32" opcode="call" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="23" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataInputObjs>in_channels_ch1</dataInputObjs>
+      <dataInputObjs>in_channels_ch2</dataInputObjs>
+      <dataInputObjs>in_channels_ch3</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>rgb2yuv</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="node_45" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="br" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <controlInputObjs>block_51</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>17</validLinenumbers>
+      <validLinenumbers>18</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>129</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="51" name="block_51" type="BlockType">
+    <controlInputObjs>block_46</controlInputObjs>
+    <controlInputObjs>block_99</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>yuv_scale.exit</controlOutputObjs>
+    <controlOutputObjs>block_61</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="x_i" originalName="x" bitwidth="16" opcode="phi" nodeLabel="2" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_46</controlInputObjs>
+      <controlInputObjs>block_99</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="exitcond1_i" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." rtlName="exitcond1_i_fu_299_p2" contextFuncName="yuv_scale" bitwidth="1" opcode="icmp" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="x" lineNumber="129" originalName="x" fileName="yuv_filter.c" fileDirectory=".." rtlName="x_fu_304_p2" contextFuncName="yuv_scale" bitwidth="16" opcode="add" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="node_50" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="br" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_61</controlInputObjs>
+      <controlInputObjs>yuv_scale.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>129</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="61" name="block_61" type="BlockType">
+    <controlInputObjs>block_51</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_66</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_2" lineNumber="142" fileName="yuv_filter.c" fileDirectory=".." rtlName="tmp_2_fu_334_p2" contextFuncName="yuv_scale" bitwidth="23" opcode="add" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="142" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="node_60" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="br" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <controlInputObjs>block_66</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>142</validLinenumbers>
+      <validLinenumbers>132</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="66" name="block_66" type="BlockType">
+    <controlInputObjs>block_61</controlInputObjs>
+    <controlInputObjs>block_96</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_99</controlOutputObjs>
+    <controlOutputObjs>block_96</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="y_i" originalName="y" bitwidth="16" opcode="phi" nodeLabel="3" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_61</controlInputObjs>
+      <controlInputObjs>block_96</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="exitcond_i" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." rtlName="exitcond_i_fu_340_p2" contextFuncName="yuv_scale" bitwidth="1" opcode="icmp" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="y" lineNumber="132" originalName="y" fileName="yuv_filter.c" fileDirectory=".." rtlName="y_fu_345_p2" contextFuncName="yuv_scale" bitwidth="16" opcode="add" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="node_65" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="br" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_96</controlInputObjs>
+      <controlInputObjs>block_99</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>132</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="96" name="block_96" type="BlockType">
+    <controlInputObjs>block_66</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_66</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="tmp_3" lineNumber="142" fileName="yuv_filter.c" fileDirectory=".." rtlName="tmp_3_fu_355_p2" contextFuncName="yuv_scale" bitwidth="23" opcode="add" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="142" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="Y" lineNumber="134" originalName="Y" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" bitwidth="8" opcode="load" nodeLabel="3" nodeLatency="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="134" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="U" lineNumber="135" originalName="U" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" bitwidth="8" opcode="load" nodeLabel="3" nodeLatency="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="135" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="V" lineNumber="136" originalName="V" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" bitwidth="8" opcode="load" nodeLabel="3" nodeLatency="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="136" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="tmp_7_i" lineNumber="137" fileName="yuv_filter.c" fileDirectory=".." rtlName="yuv_filter_mul_8nqcK_U26" contextFuncName="yuv_scale" bitwidth="15" opcode="mul" nodeLabel="7" nodeLatency="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="137" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="tmp_i" lineNumber="138" fileName="yuv_filter.c" fileDirectory=".." rtlName="yuv_filter_mul_8nqcK_U27" contextFuncName="yuv_scale" bitwidth="15" opcode="mul" nodeLabel="7" nodeLatency="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="138" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_8_i" lineNumber="139" fileName="yuv_filter.c" fileDirectory=".." rtlName="yuv_filter_mul_8nqcK_U28" contextFuncName="yuv_scale" bitwidth="15" opcode="mul" nodeLabel="7" nodeLatency="2" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="139" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="node_89" lineNumber="140" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="store" nodeLabel="10" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="140" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="node_91" lineNumber="141" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="store" nodeLabel="10" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="141" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="node_93" lineNumber="142" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="store" nodeLabel="10" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="142" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="node_95" lineNumber="132" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="br" nodeLabel="11" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="132" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <controlInputObjs>block_66</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>142</validLinenumbers>
+      <validLinenumbers>134</validLinenumbers>
+      <validLinenumbers>135</validLinenumbers>
+      <validLinenumbers>136</validLinenumbers>
+      <validLinenumbers>137</validLinenumbers>
+      <validLinenumbers>138</validLinenumbers>
+      <validLinenumbers>139</validLinenumbers>
+      <validLinenumbers>140</validLinenumbers>
+      <validLinenumbers>141</validLinenumbers>
+      <validLinenumbers>132</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="99" name="block_99" type="BlockType">
+    <controlInputObjs>block_66</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_51</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="node_98" lineNumber="129" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_scale" opcode="br" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="24" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="129" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_scale"/>
+      <controlInputObjs>block_51</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>129</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="106" name="yuv_scale.exit" type="BlockType">
+    <controlInputObjs>block_51</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="call_ret1" lineNumber="25" fileName="yuv_filter.c" fileDirectory=".." rtlName="grp_yuv2rgb_fu_264" contextFuncName="yuv_filter" bitwidth="32" opcode="call" nodeLabel="2" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="25" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>out_channels_ch1</dataOutputObjs>
+      <dataOutputObjs>out_channels_ch2</dataOutputObjs>
+      <dataOutputObjs>out_channels_ch3</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>yuv2rgb</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="node_102" lineNumber="25" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_filter" opcode="write" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="25" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>out_width</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="node_104" lineNumber="25" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_filter" opcode="write" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="25" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>out_height</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="node_105" lineNumber="26" fileName="yuv_filter.c" fileDirectory=".." contextFuncName="yuv_filter" opcode="ret" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="yuv_filter.c" linenumber="26" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2" functionName="yuv_filter"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="yuv_filter.c">
+      <validLinenumbers>25</validLinenumbers>
+      <validLinenumbers>26</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <regnodes realName="tmp_i_cast_reg_453">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_reg_476">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="x_reg_471">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="p_yuv_width_reg_441">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_10_i_reg_541">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="yuv_channels_ch1_add_reg_506">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_6_i_cast_reg_526">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="Y_reg_511">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_4_i_cast_reg_536">
+    <nodeIds>86</nodeIds>
+  </regnodes>
+  <regnodes realName="yuv_channels_ch3_add_reg_501">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="y_reg_484">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="V_reg_521">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_cast_reg_489">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="x_i_reg_222">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_12_i_reg_551">
+    <nodeIds>92</nodeIds>
+  </regnodes>
+  <regnodes realName="yuv_channels_ch2_add_reg_496">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_i_cast_reg_463">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_9_i_cast_reg_531">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="in_height_read_reg_436">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_11_i_reg_546">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_channels_ch2_a_reg_566">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_channels_ch1_a_reg_561">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_1_i_cast_reg_458">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="in_width_read_reg_431">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="U_reg_516">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="p_yuv_height_reg_447">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="y_i_reg_233">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="scale_channels_ch3_a_reg_556">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <expressionNodes realName="p_yuv_channels_ch2_alloca_fu_92">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="scale_channels_ch2_a_gep_fu_201">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="scale_channels_ch3_a_gep_fu_189">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_334">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_310">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_fu_345">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_i_phi_fu_237">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_cast_fu_360">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yuv_channels_ch3_add_gep_fu_162">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_yuv_channels_ch3_alloca_fu_96">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_i_cast_fu_383">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_fu_304">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_scale_channels_ch2_alloca_fu_104">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_355">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_yuv_height_fu_283">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_scale_channels_ch3_alloca_fu_108">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond_i_fu_340">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_height_ret_fu_426">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_width_ret_fu_421">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl3_cast_fu_326">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_6_i_cast_fu_367">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_i_cast_fu_351">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond1_i_fu_299">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_scale_channels_ch1_alloca_fu_100">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_i_cast_fu_375">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_322">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_12_i_fu_411">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_i_phi_fu_226">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="scale_channels_ch1_a_gep_fu_195">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_10_i_fu_391">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yuv_channels_ch1_add_gep_fu_168">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_yuv_width_fu_279">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_yuv_channels_ch1_alloca_fu_88">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_i_cast_fu_291">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_i_cast_fu_295">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_i_cast_fu_287">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_11_i_fu_401">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_cast_fu_314">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yuv_channels_ch2_add_gep_fu_156">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_370">
+    <nodeIds>83</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_yuv2rgb_fu_264">
+    <nodeIds>100</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_rgb2yuv_fu_244">
+    <nodeIds>39</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_378">
+    <nodeIds>85</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_386">
+    <nodeIds>87</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="in_height_read_read_fu_118">
+    <nodeIds>38</nodeIds>
+  </ioNodes>
+  <ioNodes realName="U_scale_read_read_fu_130">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_width_read_read_fu_112">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_118_write_fu_149">
+    <nodeIds>104</nodeIds>
+  </ioNodes>
+  <ioNodes realName="V_scale_read_read_fu_124">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_116_write_fu_142">
+    <nodeIds>102</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Y_scale_read_read_fu_136">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="p_scale_channels_ch1">
+    <nodeIds>89</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_scale_channels_ch1" portID="100">
+    <nodeIds>100</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_scale_channels_ch2">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_scale_channels_ch2" portID="100">
+    <nodeIds>100</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_scale_channels_ch3">
+    <nodeIds>93</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_scale_channels_ch3" portID="100">
+    <nodeIds>100</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_yuv_channels_ch1">
+    <nodeIds>79</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_yuv_channels_ch1" portID="100">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_yuv_channels_ch2">
+    <nodeIds>80</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_yuv_channels_ch2" portID="100">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_yuv_channels_ch3">
+    <nodeIds>81</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_yuv_channels_ch3" portID="100">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <ioPorts name="U_scale">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="V_scale">
+    <contents name="read">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Y_scale">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_height">
+    <contents name="read">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_width">
+    <contents name="read">
+      <nodeIds>37</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_height">
+    <contents name="write">
+      <nodeIds>104</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_width">
+    <contents name="write">
+      <nodeIds>102</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="100" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="79" stage="4" latency="4"/>
+      <operations id="80" stage="4" latency="4"/>
+      <operations id="81" stage="4" latency="4"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="79" stage="3" latency="4"/>
+      <operations id="80" stage="3" latency="4"/>
+      <operations id="81" stage="3" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="79" stage="2" latency="4"/>
+      <operations id="80" stage="2" latency="4"/>
+      <operations id="81" stage="2" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="79" stage="1" latency="4"/>
+      <operations id="80" stage="1" latency="4"/>
+      <operations id="81" stage="1" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="3" latency="3"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="3" latency="3"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="3" latency="3"/>
+    </states>
+    <states id="9">
+      <operations id="83" stage="2" latency="3"/>
+      <operations id="85" stage="2" latency="3"/>
+      <operations id="87" stage="2" latency="3"/>
+    </states>
+    <states id="10">
+      <operations id="83" stage="1" latency="3"/>
+      <operations id="85" stage="1" latency="3"/>
+      <operations id="87" stage="1" latency="3"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="89" stage="2" latency="2"/>
+      <operations id="91" stage="2" latency="2"/>
+      <operations id="93" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="2"/>
+      <operations id="91" stage="1" latency="2"/>
+      <operations id="93" stage="1" latency="2"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="100" stage="1" latency="2"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="21"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="23"/>
+    </transitions>
+    <transitions inState="3" outState="13">
+      <condition id="24"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="26"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="27"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="29"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="30"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="31"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="32"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="33"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="34"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="35"/>
+    </transitions>
+    <transitions inState="12" outState="4">
+      <condition id="37"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="39"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="yuv_filter" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="73739525" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="24579842" mMaxLatency="-1">
+      <basicBlocks>46</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="YUV_SCALE_LOOP_X" mII="-1" mDepth="-1" mMinTripCount="200" mMaxTripCount="1920" mMinLatency="22122240" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>51</basicBlocks>
+      <basicBlocks>61</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="YUV_SCALE_LOOP_Y" mII="-1" mDepth="-1" mMinTripCount="200" mMaxTripCount="1280" mMinLatency="11520" mMaxLatency="-1" mType="1">
+      <basicBlocks>66</basicBlocks>
+      <basicBlocks>96</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>99</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="27037442" mMaxLatency="-1">
+      <basicBlocks>106</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

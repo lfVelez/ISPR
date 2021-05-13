@@ -1,0 +1,40 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="rgb2yuv" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="200"/>
+<option name="max" value="1920"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="rgb2yuv" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="200"/>
+<option name="max" value="1280"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="yuv2rgb" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="200"/>
+<option name="max" value="1920"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="yuv2rgb" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="200"/>
+<option name="max" value="1280"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="yuv_scale" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="200"/>
+<option name="max" value="1920"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="yuv_scale" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="200"/>
+<option name="max" value="1280"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

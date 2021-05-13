@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.1
+Project:             yuv_filter.prj
+Solution:            solution3
+Device target:       xc7z010clg400-1
+Report date:         Thu May 13 18:37:18 CEST 2021
+
+#=== Post-Implementation Resource usage ===
+SLICE:          360
+LUT:            808
+FF:            1031
+DSP:             11
+BRAM:             0
+SRL:             87
+#=== Final timing ===
+CP required:    8.000
+CP achieved post-synthesis:    7.833
+CP achieved post-implementation:    7.685
+Timing met

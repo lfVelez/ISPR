@@ -1,0 +1,111 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Thu May 13 18:36:46 2021
+| Host         : lfvelez-Latitude-7290 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : report_control_sets -verbose -file yuv_filter_control_sets_placed.rpt
+| Design       : yuv_filter
+| Device       : xc7z010
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    43 |
+| Unused register locations in slices containing registers |    97 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              43 |           23 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              23 |           12 |
+| Yes          | No                    | No                     |             675 |          175 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             242 |           71 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+
+| Clock Signal |                                             Enable Signal                                            |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+
+|  ap_clk      | yuv_scale_U0/yuv_filter_mul_8ng8j_U25/yuv_filter_mul_8ng8j_Mul3S_0_U/buff0_reg[7]_0                  | ap_rst                              |                3 |              3 |
+|  ap_clk      |                                                                                                      | rgb2yuv11_U0/internal_full_n_reg    |                4 |              4 |
+|  ap_clk      | rgb2yuv11_U0/yuv_filter_mac_mufYi_U6/yuv_filter_mac_mufYi_DSP48_4_U/ap_block_pp0_stage0_flag00011011 | ap_rst                              |                2 |              6 |
+|  ap_clk      | yuv2rgb_U0/yuv_filter_ama_adibs_U42/yuv_filter_ama_adibs_DSP48_5_U/ap_block_pp0_stage0_flag00011011  | ap_rst                              |                2 |              6 |
+|  ap_clk      | p_yuv_width_U/E[0]                                                                                   | ap_rst                              |                2 |              6 |
+|  ap_clk      | yuv2rgb_U0/yuv_filter_mac_mujbC_U43/yuv_filter_mac_mujbC_DSP48_6_U/E[0]                              |                                     |                4 |              8 |
+|  ap_clk      | yuv_scale_U0/E[0]                                                                                    | ap_rst                              |                3 |              9 |
+|  ap_clk      | yuv2rgb_U0/tmp_6_reg_7250                                                                            |                                     |                3 |              9 |
+|  ap_clk      | p_scale_channels_ch3_U/E[0]                                                                          | ap_rst                              |                3 |              9 |
+|  ap_clk      | rgb2yuv11_U0/yuv_filter_mac_mufYi_U6/yuv_filter_mac_mufYi_DSP48_4_U/ap_block_pp0_stage0_flag00011011 |                                     |                5 |             13 |
+|  ap_clk      | rgb2yuv11_U0/tmp_22_reg_6730                                                                         |                                     |                4 |             14 |
+|  ap_clk      | yuv2rgb_U0/tmp_1_reg_6450                                                                            |                                     |                3 |             14 |
+|  ap_clk      | yuv2rgb_U0/indvar_flatten_reg_2020                                                                   |                                     |                4 |             14 |
+|  ap_clk      | rgb2yuv11_U0/indvar_flatten_reg_2610                                                                 |                                     |                3 |             14 |
+|  ap_clk      | rgb2yuv11_U0/mOutPtr_reg[0][0]                                                                       | ap_rst                              |                7 |             15 |
+|  ap_clk      | yuv2rgb_U0/yuv_filter_mac_mukbM_U44/yuv_filter_mac_mukbM_DSP48_7_U/E[0]                              |                                     |                4 |             15 |
+|  ap_clk      | yuv2rgb_U0/tmp_1_reg_6450                                                                            | yuv2rgb_U0/y_mid2_reg_629           |                4 |             16 |
+|  ap_clk      | rgb2yuv11_U0/tmp_22_reg_6730                                                                         | rgb2yuv11_U0/y_i_i_mid2_reg_662     |                4 |             16 |
+|  ap_clk      | yuv2rgb_U0/B_reg_7420                                                                                |                                     |                3 |             16 |
+|  ap_clk      |                                                                                                      | ap_rst                              |                8 |             19 |
+|  ap_clk      | rgb2yuv11_U0/yuv_filter_mac_mufYi_U5/yuv_filter_mac_mufYi_DSP48_4_U/E[0]                             |                                     |                6 |             21 |
+|  ap_clk      | rgb2yuv11_U0/p_8_in                                                                                  |                                     |                7 |             22 |
+|  ap_clk      | yuv_scale_U0/U_reg_3190                                                                              |                                     |                3 |             24 |
+|  ap_clk      | yuv_scale_U0/ce                                                                                      |                                     |                4 |             24 |
+|  ap_clk      | rgb2yuv11_U0/ce_0                                                                                    |                                     |                3 |             24 |
+|  ap_clk      | yuv_scale_U0/tmp_10_i_reg_3440                                                                       |                                     |                6 |             24 |
+|  ap_clk      | yuv2rgb_U0/yuv_filter_mul_9shbi_U40/yuv_filter_mul_9shbi_Mul3S_1_U/E[0]                              |                                     |                8 |             26 |
+|  ap_clk      | yuv2rgb_U0/yuv_filter_mac_mukbM_U44/yuv_filter_mac_mukbM_DSP48_7_U/tmp_17_reg_710_reg[2][0]          |                                     |                7 |             27 |
+|  ap_clk      | rgb2yuv11_U0/yuv_filter_mac_mucud_U2/yuv_filter_mac_mucud_DSP48_1_U/B_reg_7210                       |                                     |                9 |             27 |
+|  ap_clk      | rgb2yuv11_U0/x_i_i_reg_2720                                                                          | rgb2yuv11_U0/x_i_i_reg_272_0        |                8 |             30 |
+|  ap_clk      | yuv2rgb_U0/yuv2rgb_U0_in_channels_ch3_read                                                           | yuv2rgb_U0/x_reg_213_0              |                9 |             30 |
+|  ap_clk      | yuv_scale_U0/indvar_flatten_reg_1630                                                                 | yuv_scale_U0/indvar_flatten_reg_163 |                8 |             32 |
+|  ap_clk      | p_scale_height_U/yuv2rgb_U0_in_height_read                                                           |                                     |                4 |             32 |
+|  ap_clk      | yuv2rgb_U0/indvar_flatten_reg_2020                                                                   | yuv2rgb_U0/indvar_flatten_reg_202   |                8 |             32 |
+|  ap_clk      | yuv2rgb_U0/Q[1]                                                                                      |                                     |                6 |             32 |
+|  ap_clk      | rgb2yuv11_U0/indvar_flatten_reg_2610                                                                 | rgb2yuv11_U0/indvar_flatten_reg_261 |                8 |             32 |
+|  ap_clk      |                                                                                                      |                                     |               23 |             43 |
+|  ap_clk      | yuv2rgb_U0/E_reg_6650                                                                                |                                     |                9 |             46 |
+|  ap_clk      | yuv_scale_U0/ap_CS_fsm_state2                                                                        |                                     |               16 |             56 |
+|  ap_clk      | yuv_scale_U0/yuv_filter_mul_8ng8j_U25/yuv_filter_mul_8ng8j_Mul3S_0_U/E[0]                            |                                     |               32 |             74 |
+|  ap_clk      | p_yuv_width_U/ce                                                                                     |                                     |               14 |             88 |
+|  ap_clk      | rgb2yuv11_U0/ce                                                                                      |                                     |               14 |             88 |
+|  ap_clk      | yuv2rgb_U0/yuv_filter_ama_adibs_U42/yuv_filter_ama_adibs_DSP48_5_U/ap_block_pp0_stage0_flag00011011  |                                     |               18 |             91 |
++--------------+------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 3      |                     1 |
+| 4      |                     1 |
+| 6      |                     3 |
+| 8      |                     1 |
+| 9      |                     3 |
+| 13     |                     1 |
+| 14     |                     4 |
+| 15     |                     2 |
+| 16+    |                    27 |
++--------+-----------------------+
+
+

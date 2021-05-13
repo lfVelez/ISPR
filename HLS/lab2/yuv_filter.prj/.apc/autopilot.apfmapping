@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="yuv_filter.c" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/yuv_filter.c"/>
+  </source>
+  <testbench>
+    <originFiles name="test_data" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/test_data"/>
+    <originFiles name="yuv_filter_test.c" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/yuv_filter_test.c"/>
+    <originFiles name="image_aux.c" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/image_aux.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

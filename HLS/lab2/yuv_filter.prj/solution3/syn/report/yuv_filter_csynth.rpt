@@ -1,0 +1,214 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_filter'
+================================================================
+* Date:           Thu May 13 18:31:54 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        yuv_filter.prj
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.40|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |  min  |   max   |  min  |   max   |   Type   |
+    +-------+---------+-------+---------+----------+
+    |  40022|  2457622|  40011|  2457611| dataflow |
+    +-------+---------+-------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------+-----------+-------+---------+-------+---------+---------+
+        |              |           |     Latency     |     Interval    | Pipeline|
+        |   Instance   |   Module  |  min  |   max   |  min  |   max   |   Type  |
+        +--------------+-----------+-------+---------+-------+---------+---------+
+        |yuv2rgb_U0    |yuv2rgb    |  40010|  2457610|  40010|  2457610|   none  |
+        |rgb2yuv11_U0  |rgb2yuv11  |  40009|  2457609|  40009|  2457609|   none  |
+        |yuv_scale_U0  |yuv_scale  |  40007|  2457607|  40007|  2457607|   none  |
+        +--------------+-----------+-------+---------+-------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      0|      6|
+|FIFO             |        0|      -|      0|     13|
+|Instance         |        -|     11|   1634|   1899|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      -|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|     11|   1634|   1918|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|     13|      4|     10|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------+-----------+---------+-------+-----+-----+
+    |   Instance   |   Module  | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------+-----------+---------+-------+-----+-----+
+    |rgb2yuv11_U0  |rgb2yuv11  |        0|      6|  377|  633|
+    |yuv2rgb_U0    |yuv2rgb    |        0|      4|  782|  760|
+    |yuv_scale_U0  |yuv_scale  |        0|      1|  475|  506|
+    +--------------+-----------+---------+-------+-----+-----+
+    |Total         |           |        0|     11| 1634| 1899|
+    +--------------+-----------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+------+-----+---------+
+    |U_scale_channel_U       |        0|  0|   1|     2|    8|       16|
+    |V_scale_channel_U       |        0|  0|   1|     2|    8|       16|
+    |Y_scale_channel_U       |        0|  0|   1|     2|    8|       16|
+    |p_scale_channels_ch1_U  |        0|  0|   1|     2|    8|       16|
+    |p_scale_channels_ch2_U  |        0|  0|   1|     2|    8|       16|
+    |p_scale_channels_ch3_U  |        0|  0|   1|     2|    8|       16|
+    |p_scale_height_U        |        0|  0|   1|     2|   16|       32|
+    |p_scale_width_U         |        0|  0|   1|     2|   16|       32|
+    |p_yuv_channels_ch1_U    |        0|  0|   1|     2|    8|       16|
+    |p_yuv_channels_ch2_U    |        0|  0|   1|     2|    8|       16|
+    |p_yuv_channels_ch3_U    |        0|  0|   1|     2|    8|       16|
+    |p_yuv_height_U          |        0|  0|   1|     2|   16|       32|
+    |p_yuv_width_U           |        0|  0|   1|     2|   16|       32|
+    +------------------------+---------+---+----+------+-----+---------+
+    |Total                   |        0|  0|  13|    26|  136|      272|
+    +------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |ap_idle                    |    and   |      0|  0|   2|           1|           1|
+    |rgb2yuv11_U0_start_full_n  |    or    |      0|  0|   2|           1|           1|
+    |yuv_scale_U0_start_full_n  |    or    |      0|  0|   2|           1|           1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0|   6|           3|           3|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|in_channels_ch1_address0   | out |   22|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_ce0        | out |    1|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_d0         | out |    8|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_q0         |  in |    8|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_we0        | out |    1|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_address1   | out |   22|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_ce1        | out |    1|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_d1         | out |    8|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_q1         |  in |    8|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch1_we1        | out |    1|  ap_memory |  in_channels_ch1 |     array    |
+|in_channels_ch2_address0   | out |   22|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_ce0        | out |    1|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_d0         | out |    8|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_q0         |  in |    8|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_we0        | out |    1|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_address1   | out |   22|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_ce1        | out |    1|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_d1         | out |    8|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_q1         |  in |    8|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch2_we1        | out |    1|  ap_memory |  in_channels_ch2 |     array    |
+|in_channels_ch3_address0   | out |   22|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_ce0        | out |    1|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_d0         | out |    8|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_q0         |  in |    8|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_we0        | out |    1|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_address1   | out |   22|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_ce1        | out |    1|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_d1         | out |    8|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_q1         |  in |    8|  ap_memory |  in_channels_ch3 |     array    |
+|in_channels_ch3_we1        | out |    1|  ap_memory |  in_channels_ch3 |     array    |
+|in_width                   |  in |   16|   ap_none  |     in_width     |    pointer   |
+|in_height                  |  in |   16|   ap_none  |     in_height    |    pointer   |
+|out_channels_ch1_address0  | out |   22|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_ce0       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_d0        | out |    8|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_q0        |  in |    8|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_we0       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_address1  | out |   22|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_ce1       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_d1        | out |    8|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_q1        |  in |    8|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch1_we1       | out |    1|  ap_memory | out_channels_ch1 |     array    |
+|out_channels_ch2_address0  | out |   22|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_ce0       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_d0        | out |    8|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_q0        |  in |    8|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_we0       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_address1  | out |   22|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_ce1       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_d1        | out |    8|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_q1        |  in |    8|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch2_we1       | out |    1|  ap_memory | out_channels_ch2 |     array    |
+|out_channels_ch3_address0  | out |   22|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_ce0       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_d0        | out |    8|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_q0        |  in |    8|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_we0       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_address1  | out |   22|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_ce1       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_d1        | out |    8|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_q1        |  in |    8|  ap_memory | out_channels_ch3 |     array    |
+|out_channels_ch3_we1       | out |    1|  ap_memory | out_channels_ch3 |     array    |
+|out_width                  | out |   16|   ap_vld   |     out_width    |    pointer   |
+|out_width_ap_vld           | out |    1|   ap_vld   |     out_width    |    pointer   |
+|out_height                 | out |   16|   ap_vld   |    out_height    |    pointer   |
+|out_height_ap_vld          | out |    1|   ap_vld   |    out_height    |    pointer   |
+|Y_scale                    |  in |    8|   ap_none  |      Y_scale     |    scalar    |
+|U_scale                    |  in |    8|   ap_none  |      U_scale     |    scalar    |
+|V_scale                    |  in |    8|   ap_none  |      V_scale     |    scalar    |
+|ap_clk                     |  in |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_done                    | out |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs |    yuv_filter    | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs |    yuv_filter    | return value |
++---------------------------+-----+-----+------------+------------------+--------------+
+

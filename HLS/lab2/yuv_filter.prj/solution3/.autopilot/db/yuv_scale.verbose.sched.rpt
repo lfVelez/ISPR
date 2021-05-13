@@ -1,0 +1,366 @@
+
+
+================================================================
+== Vivado HLS Report for 'yuv_scale'
+================================================================
+* Date:           Thu May 13 18:31:52 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        yuv_filter.prj
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.38|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |  min  |   max   |  min  |   max   |   Type  |
+    +-------+---------+-------+---------+---------+
+    |  40007|  2457607|  40007|  2457607|   none  |
+    +-------+---------+-------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+        |                                     |     Latency     | Iteration|  Initiation Interval  |       Trip      |          |
+        |              Loop Name              |  min  |   max   |  Latency |  achieved |   target  |      Count      | Pipelined|
+        +-------------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+        |- YUV_SCALE_LOOP_X_YUV_SCALE_LOOP_Y  |  40004|  2457604|         6|          1|          1| 40000 ~ 2457600 |    yes   |
+        +-------------------------------------+-------+---------+----------+-----------+-----------+-----------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 9
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 6, States = { 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	9  / (exitcond_flatten)
+	4  / (!exitcond_flatten)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	3  / true
+9 --> 
+* FSM state operations: 
+
+ <State 1>: 4.64ns
+ST_1: Y_scale_read (27)  [1/1] 2.32ns
+entry:13  %Y_scale_read = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %Y_scale)
+
+ST_1: U_scale_read (28)  [1/1] 2.32ns
+entry:14  %U_scale_read = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %U_scale)
+
+ST_1: V_scale_read (29)  [1/1] 2.32ns
+entry:15  %V_scale_read = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %V_scale)
+
+ST_1: width (30)  [1/1] 2.32ns  loc: yuv_filter.c:123
+entry:16  %width = call i16 @_ssdm_op_Read.ap_fifo.i16P(i16* %in_width)
+
+ST_1: height (31)  [1/1] 2.32ns  loc: yuv_filter.c:124
+entry:17  %height = call i16 @_ssdm_op_Read.ap_fifo.i16P(i16* %in_height)
+
+ST_1: StgValue_15 (32)  [1/1] 2.32ns  loc: yuv_filter.c:125
+entry:18  call void @_ssdm_op_Write.ap_fifo.i16P(i16* %out_width, i16 %width)
+
+ST_1: StgValue_16 (33)  [1/1] 2.32ns  loc: yuv_filter.c:126
+entry:19  call void @_ssdm_op_Write.ap_fifo.i16P(i16* %out_height, i16 %height)
+
+
+ <State 2>: 6.38ns
+ST_2: empty (14)  [1/1] 0.00ns
+entry:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(i16* %out_height, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_17 (15)  [1/1] 0.00ns
+entry:1  %empty_17 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %out_width, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_18 (16)  [1/1] 0.00ns
+entry:2  %empty_18 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %out_channels_ch3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_19 (17)  [1/1] 0.00ns
+entry:3  %empty_19 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %out_channels_ch2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_20 (18)  [1/1] 0.00ns
+entry:4  %empty_20 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %out_channels_ch1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_21 (19)  [1/1] 0.00ns
+entry:5  %empty_21 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %in_height, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_22 (20)  [1/1] 0.00ns
+entry:6  %empty_22 = call i32 (...)* @_ssdm_op_SpecInterface(i16* %in_width, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_23 (21)  [1/1] 0.00ns
+entry:7  %empty_23 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %in_channels_ch3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_24 (22)  [1/1] 0.00ns
+entry:8  %empty_24 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %in_channels_ch2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_25 (23)  [1/1] 0.00ns
+entry:9  %empty_25 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %in_channels_ch1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_26 (24)  [1/1] 0.00ns
+entry:10  %empty_26 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %V_scale, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_27 (25)  [1/1] 0.00ns
+entry:11  %empty_27 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %U_scale, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: empty_28 (26)  [1/1] 0.00ns
+entry:12  %empty_28 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %Y_scale, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_2: tmp_cast_i (34)  [1/1] 0.00ns  loc: yuv_filter.c:138
+entry:20  %tmp_cast_i = zext i8 %Y_scale_read to i15
+
+ST_2: tmp_1_cast_i (35)  [1/1] 0.00ns  loc: yuv_filter.c:139
+entry:21  %tmp_1_cast_i = zext i8 %U_scale_read to i15
+
+ST_2: tmp_2_cast_i (36)  [1/1] 0.00ns  loc: yuv_filter.c:129
+entry:22  %tmp_2_cast_i = zext i8 %V_scale_read to i15
+
+ST_2: cast (37)  [1/1] 0.00ns  loc: yuv_filter.c:123
+entry:23  %cast = zext i16 %width to i32
+
+ST_2: cast1 (38)  [1/1] 0.00ns  loc: yuv_filter.c:124
+entry:24  %cast1 = zext i16 %height to i32
+
+ST_2: bound (39)  [1/1] 6.38ns  loc: yuv_filter.c:124
+entry:25  %bound = mul i32 %cast1, %cast
+
+ST_2: StgValue_36 (40)  [1/1] 1.77ns  loc: yuv_filter.c:129
+entry:26  br label %0
+
+
+ <State 3>: 3.44ns
+ST_3: indvar_flatten (42)  [1/1] 0.00ns
+:0  %indvar_flatten = phi i32 [ 0, %entry ], [ %indvar_flatten_next, %.reset ]
+
+ST_3: exitcond_flatten (43)  [1/1] 3.26ns  loc: yuv_filter.c:124
+:1  %exitcond_flatten = icmp eq i32 %indvar_flatten, %bound
+
+ST_3: indvar_flatten_next (44)  [1/1] 3.44ns
+:2  %indvar_flatten_next = add i32 %indvar_flatten, 1
+
+ST_3: StgValue_40 (45)  [1/1] 0.00ns  loc: yuv_filter.c:124
+:3  br i1 %exitcond_flatten, label %.exit, label %.reset
+
+
+ <State 4>: 2.32ns
+ST_4: Y (52)  [1/1] 2.32ns  loc: yuv_filter.c:134
+.reset:5  %Y = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %in_channels_ch1)
+
+ST_4: U (53)  [1/1] 2.32ns  loc: yuv_filter.c:135
+.reset:6  %U = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %in_channels_ch2)
+
+ST_4: V (54)  [1/1] 2.32ns  loc: yuv_filter.c:136
+.reset:7  %V = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %in_channels_ch3)
+
+
+ <State 5>: 5.51ns
+ST_5: tmp_6_cast_i (55)  [1/1] 0.00ns  loc: yuv_filter.c:137
+.reset:8  %tmp_6_cast_i = zext i8 %Y to i15
+
+ST_5: tmp_7_i (56)  [3/3] 5.51ns  loc: yuv_filter.c:137
+.reset:9  %tmp_7_i = mul i15 %tmp_6_cast_i, %tmp_cast_i
+
+ST_5: tmp_9_cast_i (57)  [1/1] 0.00ns  loc: yuv_filter.c:138
+.reset:10  %tmp_9_cast_i = zext i8 %U to i15
+
+ST_5: tmp_i (58)  [3/3] 5.51ns  loc: yuv_filter.c:138
+.reset:11  %tmp_i = mul i15 %tmp_9_cast_i, %tmp_1_cast_i
+
+ST_5: tmp_4_cast_i (59)  [1/1] 0.00ns  loc: yuv_filter.c:139
+.reset:12  %tmp_4_cast_i = zext i8 %V to i15
+
+ST_5: tmp_8_i (60)  [3/3] 5.51ns  loc: yuv_filter.c:139
+.reset:13  %tmp_8_i = mul i15 %tmp_4_cast_i, %tmp_2_cast_i
+
+
+ <State 6>: 5.51ns
+ST_6: tmp_7_i (56)  [2/3] 5.51ns  loc: yuv_filter.c:137
+.reset:9  %tmp_7_i = mul i15 %tmp_6_cast_i, %tmp_cast_i
+
+ST_6: tmp_i (58)  [2/3] 5.51ns  loc: yuv_filter.c:138
+.reset:11  %tmp_i = mul i15 %tmp_9_cast_i, %tmp_1_cast_i
+
+ST_6: tmp_8_i (60)  [2/3] 5.51ns  loc: yuv_filter.c:139
+.reset:13  %tmp_8_i = mul i15 %tmp_4_cast_i, %tmp_2_cast_i
+
+
+ <State 7>: 5.51ns
+ST_7: tmp_7_i (56)  [1/3] 5.51ns  loc: yuv_filter.c:137
+.reset:9  %tmp_7_i = mul i15 %tmp_6_cast_i, %tmp_cast_i
+
+ST_7: tmp_i (58)  [1/3] 5.51ns  loc: yuv_filter.c:138
+.reset:11  %tmp_i = mul i15 %tmp_9_cast_i, %tmp_1_cast_i
+
+ST_7: tmp_8_i (60)  [1/3] 5.51ns  loc: yuv_filter.c:139
+.reset:13  %tmp_8_i = mul i15 %tmp_4_cast_i, %tmp_2_cast_i
+
+ST_7: tmp_10_i (61)  [1/1] 0.00ns  loc: yuv_filter.c:140
+.reset:14  %tmp_10_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_7_i, i32 7, i32 14)
+
+ST_7: tmp_11_i (63)  [1/1] 0.00ns  loc: yuv_filter.c:141
+.reset:16  %tmp_11_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_i, i32 7, i32 14)
+
+ST_7: tmp_12_i (65)  [1/1] 0.00ns  loc: yuv_filter.c:142
+.reset:18  %tmp_12_i = call i8 @_ssdm_op_PartSelect.i8.i15.i32.i32(i15 %tmp_8_i, i32 7, i32 14)
+
+
+ <State 8>: 2.32ns
+ST_8: StgValue_59 (47)  [1/1] 0.00ns
+.reset:0  call void (...)* @_ssdm_op_SpecLoopName([34 x i8]* @YUV_SCALE_LOOP_X_YUV)
+
+ST_8: StgValue_60 (48)  [1/1] 0.00ns
+.reset:1  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 40000, i64 2457600, i64 784400)
+
+ST_8: StgValue_61 (49)  [1/1] 0.00ns  loc: yuv_filter.c:132
+.reset:2  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str6) nounwind
+
+ST_8: tmp_14_i (50)  [1/1] 0.00ns  loc: yuv_filter.c:132
+.reset:3  %tmp_14_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str6)
+
+ST_8: StgValue_63 (51)  [1/1] 0.00ns  loc: yuv_filter.c:133
+.reset:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_8: StgValue_64 (62)  [1/1] 2.32ns  loc: yuv_filter.c:140
+.reset:15  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %out_channels_ch1, i8 %tmp_10_i)
+
+ST_8: StgValue_65 (64)  [1/1] 2.32ns  loc: yuv_filter.c:141
+.reset:17  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %out_channels_ch2, i8 %tmp_11_i)
+
+ST_8: StgValue_66 (66)  [1/1] 2.32ns  loc: yuv_filter.c:142
+.reset:19  call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %out_channels_ch3, i8 %tmp_12_i)
+
+ST_8: empty_29 (67)  [1/1] 0.00ns  loc: yuv_filter.c:143
+.reset:20  %empty_29 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str6, i32 %tmp_14_i)
+
+ST_8: StgValue_68 (68)  [1/1] 0.00ns  loc: yuv_filter.c:132
+.reset:21  br label %0
+
+
+ <State 9>: 0.00ns
+ST_9: StgValue_69 (70)  [1/1] 0.00ns
+.exit:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 4.64ns
+The critical path consists of the following:
+	fifo read on port 'in_width' (yuv_filter.c:123) [30]  (2.32 ns)
+	fifo write on port 'out_width' (yuv_filter.c:125) [32]  (2.32 ns)
+
+ <State 2>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('bound', yuv_filter.c:124) [39]  (6.38 ns)
+
+ <State 3>: 3.44ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [42]  (0 ns)
+	'add' operation ('indvar_flatten_next') [44]  (3.44 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	fifo read on port 'in_channels_ch1' (yuv_filter.c:134) [52]  (2.32 ns)
+
+ <State 5>: 5.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_7_i', yuv_filter.c:137) [56]  (5.51 ns)
+
+ <State 6>: 5.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_7_i', yuv_filter.c:137) [56]  (5.51 ns)
+
+ <State 7>: 5.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_7_i', yuv_filter.c:137) [56]  (5.51 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	fifo write on port 'out_channels_ch1' (yuv_filter.c:140) [62]  (2.32 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

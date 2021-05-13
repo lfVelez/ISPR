@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu May 13 18:35:58 2021
+# Process ID: 52948
+# Current directory: /home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/yuv_filter.prj/solution3/impl/vhdl/project.runs/impl_1
+# Command line: vivado -log yuv_filter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source yuv_filter.tcl -notrace
+# Log file: /home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/yuv_filter.prj/solution3/impl/vhdl/project.runs/impl_1/yuv_filter.vdi
+# Journal file: /home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab2/yuv_filter.prj/solution3/impl/vhdl/project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source yuv_filter.tcl -notrace
