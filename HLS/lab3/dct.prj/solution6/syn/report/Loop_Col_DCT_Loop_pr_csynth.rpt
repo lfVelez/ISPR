@@ -1,0 +1,243 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_Col_DCT_Loop_pr'
+================================================================
+* Date:           Wed May 26 18:08:29 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        dct.prj
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.73|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  121|  121|  121|  121|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                   |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Col_DCT_Loop     |  120|  120|        15|          -|          -|     8|    no    |
+        | + DCT_Outer_Loop  |   12|   12|         6|          1|          1|     8|    yes   |
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      8|       -|      -|
+|Expression       |        -|      -|       0|    145|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        0|      -|     119|     16|
+|Multiplexer      |        -|      -|       -|     72|
+|Register         |        -|      -|     629|     64|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      8|     748|    297|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      3|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    +----------------------------+----------------------+--------------+
+    |          Instance          |        Module        |  Expression  |
+    +----------------------------+----------------------+--------------+
+    |dct_mac_muladd_14kbM_x_U47  |dct_mac_muladd_14kbM  | i0 + i1 * i2 |
+    |dct_mac_muladd_15lbW_x_U48  |dct_mac_muladd_15lbW  | i0 + i1 * i2 |
+    |dct_mac_muladd_15lbW_x_U49  |dct_mac_muladd_15lbW  | i0 + i1 * i2 |
+    |dct_mac_muladd_15lbW_x_U50  |dct_mac_muladd_15lbW  | i0 * i1 + i2 |
+    |dct_mac_muladd_15mb6_x_U51  |dct_mac_muladd_15mb6  | i0 * i1 + i2 |
+    |dct_mul_mul_15s_1jbC_x_U44  |dct_mul_mul_15s_1jbC  |    i0 * i1   |
+    |dct_mul_mul_15s_1jbC_x_U45  |dct_mul_mul_15s_1jbC  |    i0 * i1   |
+    |dct_mul_mul_15s_1jbC_x_U46  |dct_mul_mul_15s_1jbC  |    i0 * i1   |
+    +----------------------------+----------------------+--------------+
+
+    * Memory: 
+    +---------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    |        Memory       |        Module        | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    |dct_coeff_table_0_U  |Loop_Row_DCT_Loopbkb  |        0|  14|   2|     8|   14|     1|          112|
+    |dct_coeff_table_1_U  |Loop_Row_DCT_Loopcud  |        0|  15|   2|     8|   15|     1|          120|
+    |dct_coeff_table_2_U  |Loop_Row_DCT_LoopdEe  |        0|  15|   2|     8|   15|     1|          120|
+    |dct_coeff_table_3_U  |Loop_Row_DCT_LoopeOg  |        0|  15|   2|     8|   15|     1|          120|
+    |dct_coeff_table_4_U  |Loop_Row_DCT_LoopfYi  |        0|  15|   2|     8|   15|     1|          120|
+    |dct_coeff_table_5_U  |Loop_Row_DCT_Loopg8j  |        0|  15|   2|     8|   15|     1|          120|
+    |dct_coeff_table_6_U  |Loop_Row_DCT_Loophbi  |        0|  15|   2|     8|   15|     1|          120|
+    |dct_coeff_table_7_U  |Loop_Row_DCT_Loopibs  |        0|  15|   2|     8|   15|     1|          120|
+    +---------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    |Total                |                      |        0| 119|  16|    64|  119|     8|          952|
+    +---------------------+----------------------+---------+----+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |i_fu_302_p2              |     +    |      0|  0|  13|           4|           1|
+    |k_fu_338_p2              |     +    |      0|  0|  13|           4|           1|
+    |tmp3_fu_412_p2           |     +    |      0|  0|  29|          29|          29|
+    |tmp_3_i_fu_416_p2        |     +    |      0|  0|  29|          29|          29|
+    |tmp_6_fu_355_p2          |     +    |      0|  0|  15|           8|           8|
+    |tmp_fu_408_p2            |     +    |      0|  0|  36|          29|          29|
+    |tmp_2_fu_296_p2          |   icmp   |      0|  0|   2|           4|           5|
+    |tmp_i_fu_332_p2          |   icmp   |      0|  0|   2|           4|           5|
+    |ap_block_state1          |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0            |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1  |    xor   |      0|  0|   2|           1|           2|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |Total                    |          |      0|  0| 145|         114|         112|
+    +-------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  27|          5|    1|          5|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter5  |   9|          2|    1|          2|
+    |i_2_i_reg_274            |   9|          2|    4|          8|
+    |k_i_reg_285              |   9|          2|    4|          8|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  72|         15|   12|         27|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                     |   4|   0|    4|          0|
+    |ap_done_reg                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5       |   1|   0|    1|          0|
+    |col_inbuf_0_addr_reg_506      |   3|   0|    3|          0|
+    |col_inbuf_0_load_reg_644      |  16|   0|   16|          0|
+    |col_inbuf_1_addr_reg_511      |   3|   0|    3|          0|
+    |col_inbuf_1_load_reg_594      |  16|   0|   16|          0|
+    |col_inbuf_2_addr_reg_516      |   3|   0|    3|          0|
+    |col_inbuf_2_load_reg_659      |  16|   0|   16|          0|
+    |col_inbuf_3_addr_reg_521      |   3|   0|    3|          0|
+    |col_inbuf_3_load_reg_609      |  16|   0|   16|          0|
+    |col_inbuf_4_addr_reg_526      |   3|   0|    3|          0|
+    |col_inbuf_4_load_reg_674      |  16|   0|   16|          0|
+    |col_inbuf_5_addr_reg_531      |   3|   0|    3|          0|
+    |col_inbuf_5_load_reg_624      |  16|   0|   16|          0|
+    |col_inbuf_6_addr_reg_536      |   3|   0|    3|          0|
+    |col_inbuf_6_load_reg_689      |  16|   0|   16|          0|
+    |col_inbuf_7_addr_reg_541      |   3|   0|    3|          0|
+    |col_inbuf_7_load_reg_699      |  16|   0|   16|          0|
+    |dct_coeff_table_0_lo_reg_639  |  14|   0|   14|          0|
+    |dct_coeff_table_1_lo_reg_589  |  15|   0|   15|          0|
+    |dct_coeff_table_2_lo_reg_654  |  15|   0|   15|          0|
+    |dct_coeff_table_3_lo_reg_604  |  15|   0|   15|          0|
+    |dct_coeff_table_4_lo_reg_669  |  15|   0|   15|          0|
+    |dct_coeff_table_5_lo_reg_619  |  15|   0|   15|          0|
+    |dct_coeff_table_6_lo_reg_684  |  15|   0|   15|          0|
+    |dct_coeff_table_7_lo_reg_694  |  15|   0|   15|          0|
+    |i_2_i_reg_274                 |   4|   0|    4|          0|
+    |i_reg_496                     |   4|   0|    4|          0|
+    |k_i_reg_285                   |   4|   0|    4|          0|
+    |tmp4_reg_709                  |  29|   0|   29|          0|
+    |tmp5_reg_714                  |  29|   0|   29|          0|
+    |tmp_19_cast_reg_501           |   4|   0|    8|          4|
+    |tmp_5_i_reg_719               |  16|   0|   16|          0|
+    |tmp_6_reg_564                 |   8|   0|    8|          0|
+    |tmp_8_1_i_reg_649             |  29|   0|   29|          0|
+    |tmp_8_3_i_reg_664             |  29|   0|   29|          0|
+    |tmp_8_5_i_reg_679             |  29|   0|   29|          0|
+    |tmp_i_20_reg_555              |   4|   0|   64|         60|
+    |tmp_i_reg_546                 |   1|   0|    1|          0|
+    |tmp_reg_704                   |  29|   0|   29|          0|
+    |tmp_6_reg_564                 |  64|  32|    8|          0|
+    |tmp_i_reg_546                 |  64|  32|    1|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         | 629|  64|  574|         64|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|ap_start               |  in |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|ap_done                | out |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|ap_continue            |  in |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|ap_idle                | out |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|ap_ready               | out |    1| ap_ctrl_hs | Loop_Col_DCT_Loop_pr | return value |
+|col_inbuf_0_address0   | out |    3|  ap_memory |      col_inbuf_0     |     array    |
+|col_inbuf_0_ce0        | out |    1|  ap_memory |      col_inbuf_0     |     array    |
+|col_inbuf_0_q0         |  in |   16|  ap_memory |      col_inbuf_0     |     array    |
+|col_inbuf_1_address0   | out |    3|  ap_memory |      col_inbuf_1     |     array    |
+|col_inbuf_1_ce0        | out |    1|  ap_memory |      col_inbuf_1     |     array    |
+|col_inbuf_1_q0         |  in |   16|  ap_memory |      col_inbuf_1     |     array    |
+|col_inbuf_2_address0   | out |    3|  ap_memory |      col_inbuf_2     |     array    |
+|col_inbuf_2_ce0        | out |    1|  ap_memory |      col_inbuf_2     |     array    |
+|col_inbuf_2_q0         |  in |   16|  ap_memory |      col_inbuf_2     |     array    |
+|col_inbuf_3_address0   | out |    3|  ap_memory |      col_inbuf_3     |     array    |
+|col_inbuf_3_ce0        | out |    1|  ap_memory |      col_inbuf_3     |     array    |
+|col_inbuf_3_q0         |  in |   16|  ap_memory |      col_inbuf_3     |     array    |
+|col_inbuf_4_address0   | out |    3|  ap_memory |      col_inbuf_4     |     array    |
+|col_inbuf_4_ce0        | out |    1|  ap_memory |      col_inbuf_4     |     array    |
+|col_inbuf_4_q0         |  in |   16|  ap_memory |      col_inbuf_4     |     array    |
+|col_inbuf_5_address0   | out |    3|  ap_memory |      col_inbuf_5     |     array    |
+|col_inbuf_5_ce0        | out |    1|  ap_memory |      col_inbuf_5     |     array    |
+|col_inbuf_5_q0         |  in |   16|  ap_memory |      col_inbuf_5     |     array    |
+|col_inbuf_6_address0   | out |    3|  ap_memory |      col_inbuf_6     |     array    |
+|col_inbuf_6_ce0        | out |    1|  ap_memory |      col_inbuf_6     |     array    |
+|col_inbuf_6_q0         |  in |   16|  ap_memory |      col_inbuf_6     |     array    |
+|col_inbuf_7_address0   | out |    3|  ap_memory |      col_inbuf_7     |     array    |
+|col_inbuf_7_ce0        | out |    1|  ap_memory |      col_inbuf_7     |     array    |
+|col_inbuf_7_q0         |  in |   16|  ap_memory |      col_inbuf_7     |     array    |
+|col_outbuf_i_address0  | out |    6|  ap_memory |     col_outbuf_i     |     array    |
+|col_outbuf_i_ce0       | out |    1|  ap_memory |     col_outbuf_i     |     array    |
+|col_outbuf_i_we0       | out |    1|  ap_memory |     col_outbuf_i     |     array    |
+|col_outbuf_i_d0        | out |   16|  ap_memory |     col_outbuf_i     |     array    |
++-----------------------+-----+-----+------------+----------------------+--------------+
+

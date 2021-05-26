@@ -1,0 +1,10 @@
+sv xil_defaultlib "dct_2d.v"
+sv xil_defaultlib "AESL_automem_output_r.v"
+sv xil_defaultlib "dct_1d2_dct_coeffbkb.v"
+sv xil_defaultlib "dct_mac_muladd_15cud.v"
+sv xil_defaultlib "AESL_automem_input_r.v"
+sv xil_defaultlib "dct_1d2.v"
+sv xil_defaultlib "dct.v"
+sv xil_defaultlib "dct.autotb.v"
+sv xil_defaultlib "dct_2d_row_outbuf.v"
+

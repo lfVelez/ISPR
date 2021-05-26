@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dct.c" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/dct.c"/>
+  </source>
+  <testbench>
+    <originFiles name="dct_test.c" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/dct_test.c"/>
+    <originFiles name="in.dat" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/in.dat"/>
+    <originFiles name="out.golden.dat" path="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/out.golden.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

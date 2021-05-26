@@ -1,0 +1,559 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_1d2'
+================================================================
+* Date:           Wed May 26 17:45:09 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        dct.prj
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.73|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   37|   37|   37|   37|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                  |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- DCT_Outer_Loop  |   35|   35|         8|          4|          1|     8|    yes   |
+        +------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 10
+* Pipeline: 1
+  Pipeline-0: II = 4, D = 8, States = { 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	10  / (tmp)
+	3  / (!tmp)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	2  / true
+10 --> 
+* FSM state operations: 
+
+ <State 1>: 1.77ns
+ST_1: tmp_61_read (13)  [1/1] 0.00ns
+:0  %tmp_61_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tmp_61)
+
+ST_1: tmp_6_read (14)  [1/1] 0.00ns
+:1  %tmp_6_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %tmp_6)
+
+ST_1: tmp_15 (15)  [1/1] 0.00ns
+:2  %tmp_15 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_61_read, i3 0)
+
+ST_1: tmp_21_cast (16)  [1/1] 0.00ns
+:3  %tmp_21_cast = zext i7 %tmp_15 to i8
+
+ST_1: tmp_16 (17)  [1/1] 0.00ns
+:4  %tmp_16 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_6_read, i3 0)
+
+ST_1: tmp_17 (18)  [1/1] 0.00ns  loc: dct.c:17
+:5  %tmp_17 = zext i7 %tmp_16 to i64
+
+ST_1: src_addr (19)  [1/1] 0.00ns  loc: dct.c:17
+:6  %src_addr = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_17
+
+ST_1: tmp_18 (20)  [1/1] 0.00ns
+:7  %tmp_18 = or i7 %tmp_16, 1
+
+ST_1: tmp_19 (21)  [1/1] 0.00ns  loc: dct.c:17
+:8  %tmp_19 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_18)
+
+ST_1: src_addr_1 (22)  [1/1] 0.00ns  loc: dct.c:17
+:9  %src_addr_1 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_19
+
+ST_1: tmp_20 (23)  [1/1] 0.00ns
+:10  %tmp_20 = or i7 %tmp_16, 2
+
+ST_1: tmp_21 (24)  [1/1] 0.00ns  loc: dct.c:17
+:11  %tmp_21 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_20)
+
+ST_1: src_addr_2 (25)  [1/1] 0.00ns  loc: dct.c:17
+:12  %src_addr_2 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_21
+
+ST_1: tmp_22 (26)  [1/1] 0.00ns
+:13  %tmp_22 = or i7 %tmp_16, 3
+
+ST_1: tmp_23 (27)  [1/1] 0.00ns  loc: dct.c:17
+:14  %tmp_23 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_22)
+
+ST_1: src_addr_3 (28)  [1/1] 0.00ns  loc: dct.c:17
+:15  %src_addr_3 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_23
+
+ST_1: tmp_24 (29)  [1/1] 0.00ns
+:16  %tmp_24 = or i7 %tmp_16, 4
+
+ST_1: tmp_25 (30)  [1/1] 0.00ns  loc: dct.c:17
+:17  %tmp_25 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_24)
+
+ST_1: src_addr_4 (31)  [1/1] 0.00ns  loc: dct.c:17
+:18  %src_addr_4 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_25
+
+ST_1: tmp_26 (32)  [1/1] 0.00ns
+:19  %tmp_26 = or i7 %tmp_16, 5
+
+ST_1: tmp_27 (33)  [1/1] 0.00ns  loc: dct.c:17
+:20  %tmp_27 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_26)
+
+ST_1: src_addr_5 (34)  [1/1] 0.00ns  loc: dct.c:17
+:21  %src_addr_5 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_27
+
+ST_1: tmp_28 (35)  [1/1] 0.00ns
+:22  %tmp_28 = or i7 %tmp_16, 6
+
+ST_1: tmp_29 (36)  [1/1] 0.00ns  loc: dct.c:17
+:23  %tmp_29 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_28)
+
+ST_1: src_addr_6 (37)  [1/1] 0.00ns  loc: dct.c:17
+:24  %src_addr_6 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_29
+
+ST_1: tmp_30 (38)  [1/1] 0.00ns
+:25  %tmp_30 = or i7 %tmp_16, 7
+
+ST_1: tmp_31 (39)  [1/1] 0.00ns  loc: dct.c:17
+:26  %tmp_31 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_30)
+
+ST_1: src_addr_7 (40)  [1/1] 0.00ns  loc: dct.c:17
+:27  %src_addr_7 = getelementptr [64 x i16]* %src, i64 0, i64 %tmp_31
+
+ST_1: StgValue_39 (41)  [1/1] 1.77ns  loc: dct.c:13
+:28  br label %1
+
+
+ <State 2>: 3.25ns
+ST_2: k (43)  [1/1] 0.00ns
+:0  %k = phi i4 [ 0, %0 ], [ %k_1, %2 ]
+
+ST_2: tmp (44)  [1/1] 3.10ns  loc: dct.c:13
+:1  %tmp = icmp eq i4 %k, -8
+
+ST_2: k_1 (45)  [1/1] 2.62ns  loc: dct.c:13
+:2  %k_1 = add i4 %k, 1
+
+ST_2: StgValue_43 (46)  [1/1] 0.00ns  loc: dct.c:13
+:3  br i1 %tmp, label %3, label %2
+
+ST_2: tmp_s (52)  [1/1] 0.00ns  loc: dct.c:16
+:4  %tmp_s = zext i4 %k to i64
+
+ST_2: tmp_cast (53)  [1/1] 0.00ns  loc: dct.c:19
+:5  %tmp_cast = zext i4 %k to i8
+
+ST_2: tmp_32 (54)  [1/1] 2.75ns  loc: dct.c:19
+:6  %tmp_32 = add i8 %tmp_21_cast, %tmp_cast
+
+ST_2: dct_coeff_table_1_ad (63)  [1/1] 0.00ns  loc: dct.c:16
+:15  %dct_coeff_table_1_ad = getelementptr [8 x i15]* @dct_coeff_table_1, i64 0, i64 %tmp_s
+
+ST_2: dct_coeff_table_1_lo (64)  [2/2] 3.25ns  loc: dct.c:16
+:16  %dct_coeff_table_1_lo = load i15* %dct_coeff_table_1_ad, align 2
+
+ST_2: src_load_1 (66)  [2/2] 3.25ns  loc: dct.c:17
+:18  %src_load_1 = load i16* %src_addr_1, align 2
+
+ST_2: dct_coeff_table_3_ad (75)  [1/1] 0.00ns  loc: dct.c:16
+:27  %dct_coeff_table_3_ad = getelementptr [8 x i15]* @dct_coeff_table_3, i64 0, i64 %tmp_s
+
+ST_2: dct_coeff_table_3_lo (76)  [2/2] 3.25ns  loc: dct.c:16
+:28  %dct_coeff_table_3_lo = load i15* %dct_coeff_table_3_ad, align 2
+
+ST_2: src_load_3 (78)  [2/2] 3.25ns  loc: dct.c:17
+:30  %src_load_3 = load i16* %src_addr_3, align 2
+
+
+ <State 3>: 3.25ns
+ST_3: dct_coeff_table_0_ad (57)  [1/1] 0.00ns  loc: dct.c:16
+:9  %dct_coeff_table_0_ad = getelementptr [8 x i14]* @dct_coeff_table_0, i64 0, i64 %tmp_s
+
+ST_3: dct_coeff_table_0_lo (58)  [2/2] 3.25ns  loc: dct.c:16
+:10  %dct_coeff_table_0_lo = load i14* %dct_coeff_table_0_ad, align 2
+
+ST_3: src_load (60)  [2/2] 3.25ns  loc: dct.c:17
+:12  %src_load = load i16* %src_addr, align 2
+
+ST_3: dct_coeff_table_1_lo (64)  [1/2] 3.25ns  loc: dct.c:16
+:16  %dct_coeff_table_1_lo = load i15* %dct_coeff_table_1_ad, align 2
+
+ST_3: src_load_1 (66)  [1/2] 3.25ns  loc: dct.c:17
+:18  %src_load_1 = load i16* %src_addr_1, align 2
+
+ST_3: dct_coeff_table_2_ad (69)  [1/1] 0.00ns  loc: dct.c:16
+:21  %dct_coeff_table_2_ad = getelementptr [8 x i15]* @dct_coeff_table_2, i64 0, i64 %tmp_s
+
+ST_3: dct_coeff_table_2_lo (70)  [2/2] 3.25ns  loc: dct.c:16
+:22  %dct_coeff_table_2_lo = load i15* %dct_coeff_table_2_ad, align 2
+
+ST_3: dct_coeff_table_3_lo (76)  [1/2] 3.25ns  loc: dct.c:16
+:28  %dct_coeff_table_3_lo = load i15* %dct_coeff_table_3_ad, align 2
+
+ST_3: src_load_3 (78)  [1/2] 3.25ns  loc: dct.c:17
+:30  %src_load_3 = load i16* %src_addr_3, align 2
+
+ST_3: dct_coeff_table_4_ad (81)  [1/1] 0.00ns  loc: dct.c:16
+:33  %dct_coeff_table_4_ad = getelementptr [8 x i15]* @dct_coeff_table_4, i64 0, i64 %tmp_s
+
+ST_3: dct_coeff_table_4_lo (82)  [2/2] 3.25ns  loc: dct.c:16
+:34  %dct_coeff_table_4_lo = load i15* %dct_coeff_table_4_ad, align 2
+
+ST_3: dct_coeff_table_5_ad (87)  [1/1] 0.00ns  loc: dct.c:16
+:39  %dct_coeff_table_5_ad = getelementptr [8 x i15]* @dct_coeff_table_5, i64 0, i64 %tmp_s
+
+ST_3: dct_coeff_table_5_lo (88)  [2/2] 3.25ns  loc: dct.c:16
+:40  %dct_coeff_table_5_lo = load i15* %dct_coeff_table_5_ad, align 2
+
+ST_3: src_load_5 (90)  [2/2] 3.25ns  loc: dct.c:17
+:42  %src_load_5 = load i16* %src_addr_5, align 2
+
+ST_3: dct_coeff_table_6_ad (93)  [1/1] 0.00ns  loc: dct.c:16
+:45  %dct_coeff_table_6_ad = getelementptr [8 x i15]* @dct_coeff_table_6, i64 0, i64 %tmp_s
+
+ST_3: dct_coeff_table_6_lo (94)  [2/2] 3.25ns  loc: dct.c:16
+:46  %dct_coeff_table_6_lo = load i15* %dct_coeff_table_6_ad, align 2
+
+ST_3: dct_coeff_table_7_ad (99)  [1/1] 0.00ns  loc: dct.c:16
+:51  %dct_coeff_table_7_ad = getelementptr [8 x i15]* @dct_coeff_table_7, i64 0, i64 %tmp_s
+
+ST_3: dct_coeff_table_7_lo (100)  [2/2] 3.25ns  loc: dct.c:16
+:52  %dct_coeff_table_7_lo = load i15* %dct_coeff_table_7_ad, align 2
+
+
+ <State 4>: 6.38ns
+ST_4: dct_coeff_table_0_lo (58)  [1/2] 3.25ns  loc: dct.c:16
+:10  %dct_coeff_table_0_lo = load i14* %dct_coeff_table_0_ad, align 2
+
+ST_4: src_load (60)  [1/2] 3.25ns  loc: dct.c:17
+:12  %src_load = load i16* %src_addr, align 2
+
+ST_4: coeff_1_cast (65)  [1/1] 0.00ns  loc: dct.c:17
+:17  %coeff_1_cast = sext i15 %dct_coeff_table_1_lo to i29
+
+ST_4: tmp_17_1_cast (67)  [1/1] 0.00ns  loc: dct.c:17
+:19  %tmp_17_1_cast = sext i16 %src_load_1 to i29
+
+ST_4: tmp_18_1 (68)  [1/1] 6.38ns  loc: dct.c:17
+:20  %tmp_18_1 = mul i29 %tmp_17_1_cast, %coeff_1_cast
+
+ST_4: dct_coeff_table_2_lo (70)  [1/2] 3.25ns  loc: dct.c:16
+:22  %dct_coeff_table_2_lo = load i15* %dct_coeff_table_2_ad, align 2
+
+ST_4: src_load_2 (72)  [2/2] 3.25ns  loc: dct.c:17
+:24  %src_load_2 = load i16* %src_addr_2, align 2
+
+ST_4: coeff_3_cast (77)  [1/1] 0.00ns  loc: dct.c:17
+:29  %coeff_3_cast = sext i15 %dct_coeff_table_3_lo to i29
+
+ST_4: tmp_17_3_cast (79)  [1/1] 0.00ns  loc: dct.c:17
+:31  %tmp_17_3_cast = sext i16 %src_load_3 to i29
+
+ST_4: tmp_18_3 (80)  [1/1] 6.38ns  loc: dct.c:17
+:32  %tmp_18_3 = mul i29 %tmp_17_3_cast, %coeff_3_cast
+
+ST_4: dct_coeff_table_4_lo (82)  [1/2] 3.25ns  loc: dct.c:16
+:34  %dct_coeff_table_4_lo = load i15* %dct_coeff_table_4_ad, align 2
+
+ST_4: src_load_4 (84)  [2/2] 3.25ns  loc: dct.c:17
+:36  %src_load_4 = load i16* %src_addr_4, align 2
+
+ST_4: dct_coeff_table_5_lo (88)  [1/2] 3.25ns  loc: dct.c:16
+:40  %dct_coeff_table_5_lo = load i15* %dct_coeff_table_5_ad, align 2
+
+ST_4: src_load_5 (90)  [1/2] 3.25ns  loc: dct.c:17
+:42  %src_load_5 = load i16* %src_addr_5, align 2
+
+ST_4: dct_coeff_table_6_lo (94)  [1/2] 3.25ns  loc: dct.c:16
+:46  %dct_coeff_table_6_lo = load i15* %dct_coeff_table_6_ad, align 2
+
+ST_4: dct_coeff_table_7_lo (100)  [1/2] 3.25ns  loc: dct.c:16
+:52  %dct_coeff_table_7_lo = load i15* %dct_coeff_table_7_ad, align 2
+
+
+ <State 5>: 6.38ns
+ST_5: coeff_cast (59)  [1/1] 0.00ns  loc: dct.c:17
+:11  %coeff_cast = zext i14 %dct_coeff_table_0_lo to i29
+
+ST_5: tmp_16_cast (61)  [1/1] 0.00ns  loc: dct.c:17
+:13  %tmp_16_cast = sext i16 %src_load to i29
+
+ST_5: tmp_14 (62)  [1/1] 3.36ns  loc: dct.c:17
+:14  %tmp_14 = mul i29 %tmp_16_cast, %coeff_cast
+
+ST_5: src_load_2 (72)  [1/2] 3.25ns  loc: dct.c:17
+:24  %src_load_2 = load i16* %src_addr_2, align 2
+
+ST_5: src_load_4 (84)  [1/2] 3.25ns  loc: dct.c:17
+:36  %src_load_4 = load i16* %src_addr_4, align 2
+
+ST_5: coeff_5_cast (89)  [1/1] 0.00ns  loc: dct.c:17
+:41  %coeff_5_cast = sext i15 %dct_coeff_table_5_lo to i29
+
+ST_5: tmp_17_5_cast (91)  [1/1] 0.00ns  loc: dct.c:17
+:43  %tmp_17_5_cast = sext i16 %src_load_5 to i29
+
+ST_5: tmp_18_5 (92)  [1/1] 6.38ns  loc: dct.c:17
+:44  %tmp_18_5 = mul i29 %tmp_17_5_cast, %coeff_5_cast
+
+ST_5: src_load_6 (96)  [2/2] 3.25ns  loc: dct.c:17
+:48  %src_load_6 = load i16* %src_addr_6, align 2
+
+ST_5: src_load_7 (102)  [2/2] 3.25ns  loc: dct.c:17
+:54  %src_load_7 = load i16* %src_addr_7, align 2
+
+ST_5: tmp2 (105)  [1/1] 3.02ns  loc: dct.c:19
+:57  %tmp2 = add i29 %tmp_18_1, %tmp_14
+
+
+ <State 6>: 9.73ns
+ST_6: coeff_2_cast (71)  [1/1] 0.00ns  loc: dct.c:17
+:23  %coeff_2_cast = sext i15 %dct_coeff_table_2_lo to i29
+
+ST_6: tmp_17_2_cast (73)  [1/1] 0.00ns  loc: dct.c:17
+:25  %tmp_17_2_cast = sext i16 %src_load_2 to i29
+
+ST_6: tmp_18_2 (74)  [1/1] 3.36ns  loc: dct.c:17
+:26  %tmp_18_2 = mul i29 %tmp_17_2_cast, %coeff_2_cast
+
+ST_6: coeff_4_cast (83)  [1/1] 0.00ns  loc: dct.c:17
+:35  %coeff_4_cast = sext i15 %dct_coeff_table_4_lo to i29
+
+ST_6: tmp_17_4_cast (85)  [1/1] 0.00ns  loc: dct.c:17
+:37  %tmp_17_4_cast = sext i16 %src_load_4 to i29
+
+ST_6: tmp_18_4 (86)  [1/1] 3.36ns  loc: dct.c:17
+:38  %tmp_18_4 = mul i29 %tmp_17_4_cast, %coeff_4_cast
+
+ST_6: src_load_6 (96)  [1/2] 3.25ns  loc: dct.c:17
+:48  %src_load_6 = load i16* %src_addr_6, align 2
+
+ST_6: src_load_7 (102)  [1/2] 3.25ns  loc: dct.c:17
+:54  %src_load_7 = load i16* %src_addr_7, align 2
+
+ST_6: tmp3 (106)  [1/1] 3.02ns  loc: dct.c:19
+:58  %tmp3 = add i29 %tmp_18_3, %tmp_18_2
+
+ST_6: tmp1 (107)  [1/1] 3.35ns  loc: dct.c:19
+:59  %tmp1 = add i29 %tmp2, %tmp3
+
+ST_6: tmp5 (108)  [1/1] 3.02ns  loc: dct.c:19
+:60  %tmp5 = add i29 %tmp_18_5, %tmp_18_4
+
+
+ <State 7>: 9.40ns
+ST_7: coeff_6_cast (95)  [1/1] 0.00ns  loc: dct.c:17
+:47  %coeff_6_cast = sext i15 %dct_coeff_table_6_lo to i29
+
+ST_7: tmp_17_6_cast (97)  [1/1] 0.00ns  loc: dct.c:17
+:49  %tmp_17_6_cast = sext i16 %src_load_6 to i29
+
+ST_7: tmp_18_6 (98)  [1/1] 3.36ns  loc: dct.c:17
+:50  %tmp_18_6 = mul i29 %tmp_17_6_cast, %coeff_6_cast
+
+ST_7: coeff_7_cast (101)  [1/1] 0.00ns  loc: dct.c:17
+:53  %coeff_7_cast = sext i15 %dct_coeff_table_7_lo to i29
+
+ST_7: tmp_17_7_cast (103)  [1/1] 0.00ns  loc: dct.c:17
+:55  %tmp_17_7_cast = sext i16 %src_load_7 to i29
+
+ST_7: tmp_18_7 (104)  [1/1] 3.36ns  loc: dct.c:17
+:56  %tmp_18_7 = mul i29 %tmp_17_7_cast, %coeff_7_cast
+
+ST_7: tmp7 (109)  [1/1] 3.02ns  loc: dct.c:19
+:61  %tmp7 = add i29 %tmp_18_7, 4096
+
+ST_7: tmp6 (110)  [1/1] 3.02ns  loc: dct.c:19
+:62  %tmp6 = add i29 %tmp_18_6, %tmp7
+
+
+ <State 8>: 4.28ns
+ST_8: tmp4 (111)  [1/1] 2.14ns  loc: dct.c:19
+:63  %tmp4 = add i29 %tmp5, %tmp6
+
+ST_8: tmp_11 (112)  [1/1] 2.14ns  loc: dct.c:19
+:64  %tmp_11 = add i29 %tmp1, %tmp4
+
+ST_8: tmp_13 (113)  [1/1] 0.00ns  loc: dct.c:19
+:65  %tmp_13 = call i16 @_ssdm_op_PartSelect.i16.i29.i32.i32(i29 %tmp_11, i32 13, i32 28)
+
+
+ <State 9>: 3.25ns
+ST_9: empty (48)  [1/1] 0.00ns
+:0  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_9: StgValue_121 (49)  [1/1] 0.00ns  loc: dct.c:13
+:1  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str) nounwind
+
+ST_9: tmp_12 (50)  [1/1] 0.00ns  loc: dct.c:13
+:2  %tmp_12 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str) nounwind
+
+ST_9: StgValue_123 (51)  [1/1] 0.00ns  loc: dct.c:14
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_9: tmp_38_cast (55)  [1/1] 0.00ns  loc: dct.c:19
+:7  %tmp_38_cast = zext i8 %tmp_32 to i64
+
+ST_9: dst_addr (56)  [1/1] 0.00ns  loc: dct.c:19
+:8  %dst_addr = getelementptr [64 x i16]* %dst, i64 0, i64 %tmp_38_cast
+
+ST_9: StgValue_126 (114)  [1/1] 3.25ns  loc: dct.c:19
+:66  store i16 %tmp_13, i16* %dst_addr, align 2
+
+ST_9: empty_10 (115)  [1/1] 0.00ns  loc: dct.c:20
+:67  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str, i32 %tmp_12) nounwind
+
+ST_9: StgValue_128 (116)  [1/1] 0.00ns  loc: dct.c:13
+:68  br label %1
+
+
+ <State 10>: 0.00ns
+ST_10: StgValue_129 (118)  [1/1] 0.00ns  loc: dct.c:21
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', dct.c:13) [43]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', dct.c:13) [43]  (0 ns)
+	'getelementptr' operation ('dct_coeff_table_3_ad', dct.c:16) [75]  (0 ns)
+	'load' operation ('dct_coeff_table_3_lo', dct.c:16) on array 'dct_coeff_table_3' [76]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dct_coeff_table_0_ad', dct.c:16) [57]  (0 ns)
+	'load' operation ('dct_coeff_table_0_lo', dct.c:16) on array 'dct_coeff_table_0' [58]  (3.25 ns)
+
+ <State 4>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_18_1', dct.c:17) [68]  (6.38 ns)
+
+ <State 5>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_18_5', dct.c:17) [92]  (6.38 ns)
+
+ <State 6>: 9.73ns
+The critical path consists of the following:
+	'mul' operation ('tmp_18_2', dct.c:17) [74]  (3.36 ns)
+	'add' operation ('tmp3', dct.c:19) [106]  (3.02 ns)
+	'add' operation ('tmp1', dct.c:19) [107]  (3.35 ns)
+
+ <State 7>: 9.4ns
+The critical path consists of the following:
+	'mul' operation ('tmp_18_7', dct.c:17) [104]  (3.36 ns)
+	'add' operation ('tmp7', dct.c:19) [109]  (3.02 ns)
+	'add' operation ('tmp6', dct.c:19) [110]  (3.02 ns)
+
+ <State 8>: 4.28ns
+The critical path consists of the following:
+	'add' operation ('tmp4', dct.c:19) [111]  (2.14 ns)
+	'add' operation ('tmp_11', dct.c:19) [112]  (2.14 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst_addr', dct.c:19) [56]  (0 ns)
+	'store' operation (dct.c:19) of variable 'tmp_13', dct.c:19 on array 'dst' [114]  (3.25 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

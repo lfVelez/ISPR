@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct'
+================================================================
+* Date:           Wed May 26 18:04:06 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        dct.prj
+* Solution:       solution5
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.73|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  528|  528|  393|  393| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: buf_2d_in_0 (15)  [1/1] 0.00ns  loc: dct.c:81
+:4  %buf_2d_in_0 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_1 (16)  [1/1] 0.00ns  loc: dct.c:81
+:5  %buf_2d_in_1 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_2 (17)  [1/1] 0.00ns  loc: dct.c:81
+:6  %buf_2d_in_2 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_3 (18)  [1/1] 0.00ns  loc: dct.c:81
+:7  %buf_2d_in_3 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_4 (19)  [1/1] 0.00ns  loc: dct.c:81
+:8  %buf_2d_in_4 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_5 (20)  [1/1] 0.00ns  loc: dct.c:81
+:9  %buf_2d_in_5 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_6 (21)  [1/1] 0.00ns  loc: dct.c:81
+:10  %buf_2d_in_6 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_7 (22)  [1/1] 0.00ns  loc: dct.c:81
+:11  %buf_2d_in_7 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_out (23)  [1/1] 0.00ns  loc: dct.c:82
+:12  %buf_2d_out = alloca [64 x i16], align 2
+
+ST_1: StgValue_16 (24)  [2/2] 0.00ns  loc: dct.c:85
+:13  call fastcc void @read_data([64 x i16]* %input_r, [8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7) nounwind
+
+
+ <State 2>: 0.00ns
+ST_2: StgValue_17 (24)  [1/2] 0.00ns  loc: dct.c:85
+:13  call fastcc void @read_data([64 x i16]* %input_r, [8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7) nounwind
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_18 (25)  [2/2] 0.00ns  loc: dct.c:87
+:14  call fastcc void @dct_2d([8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7, [64 x i16]* %buf_2d_out) nounwind
+
+
+ <State 4>: 0.00ns
+ST_4: StgValue_19 (25)  [1/2] 0.00ns  loc: dct.c:87
+:14  call fastcc void @dct_2d([8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7, [64 x i16]* %buf_2d_out) nounwind
+
+
+ <State 5>: 0.00ns
+ST_5: StgValue_20 (26)  [2/2] 0.00ns  loc: dct.c:90
+:15  call fastcc void @write_data([64 x i16]* %buf_2d_out, [64 x i16]* %output_r) nounwind
+
+
+ <State 6>: 0.00ns
+ST_6: StgValue_21 (11)  [1/1] 0.00ns  loc: dct.c:80
+:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1) nounwind
+
+ST_6: StgValue_22 (12)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([64 x i16]* %input_r) nounwind, !map !19
+
+ST_6: StgValue_23 (13)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x i16]* %output_r) nounwind, !map !25
+
+ST_6: StgValue_24 (14)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @dct_str) nounwind
+
+ST_6: StgValue_25 (26)  [1/2] 0.00ns  loc: dct.c:90
+:15  call fastcc void @write_data([64 x i16]* %buf_2d_out, [64 x i16]* %output_r) nounwind
+
+ST_6: StgValue_26 (27)  [1/1] 0.00ns  loc: dct.c:91
+:16  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

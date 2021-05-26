@@ -1,0 +1,245 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'lfvelez' on host 'lfvelez-Latitude-7290' (Linux_x86_64 version 5.8.0-53-generic) on Wed May 26 18:13:42 CEST 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3'
+INFO: [HLS 200-10] Opening project '/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/dct.prj'.
+INFO: [HLS 200-10] Adding design file 'dct.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'dct_test.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'in.dat' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.golden.dat' to the project
+INFO: [HLS 200-10] Opening solution '/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/dct.prj/solution7'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-10] Analyzing design file 'dct.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 325.777 ; gain = 12.582 ; free physical = 203 ; free virtual = 4321
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 325.777 ; gain = 12.582 ; free physical = 202 ; free virtual = 4318
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'dct_2d' into 'dct' (dct.c:87).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 325.777 ; gain = 12.582 ; free physical = 199 ; free virtual = 4318
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 325.777 ; gain = 12.582 ; free physical = 199 ; free virtual = 4318
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'DCT_Outer_Loop' (dct.c:13) in function 'dct_1d' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'DCT_Inner_Loop' (dct.c:15) in function 'dct_1d' completely.
+INFO: [XFORM 203-131] Reshaping array 'buf_2d_in' (dct.c:81) in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'col_inbuf' (dct.c:27) in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'dct_coeff_table'  in dimension 2 completely.
+INFO: [XFORM 203-721] Changing loop 'Loop_Row_DCT_Loop_proc' (dct.c:32) to a process function for dataflow in function 'dct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:38) to a process function for dataflow in function 'dct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_Col_DCT_Loop_proc' (dct.c:43) to a process function for dataflow in function 'dct'.
+INFO: [XFORM 203-721] Changing loop 'Loop_Xpose_Col_Outer_Loop_proc' (dct.c:49) to a process function for dataflow in function 'dct'.
+WARNING: [XFORM 203-713] All the elements of global array 'col_outbuf.i' should be updated in process function 'Loop_Col_DCT_Loop_proc' (dct.c:43:61), otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'row_outbuf.i' should be updated in process function 'Loop_Row_DCT_Loop_proc' (dct.c:32:60), otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'buf_2d_in' (dct.c:81) should be updated in process function 'read_data' (dct.c:54), otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'col_inbuf' (dct.c:27) should be updated in process function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63), otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'dct' (dct.c:78), detected/extracted 6 process function(s):
+	 'read_data'
+	 'Loop_Row_DCT_Loop_proc'
+	 'Loop_Xpose_Row_Outer_Loop_proc'
+	 'Loop_Col_DCT_Loop_proc'
+	 'Loop_Xpose_Col_Outer_Loop_proc'
+	 'write_data'.
+INFO: [XFORM 203-602] Inlining function 'dct_1d' into 'Loop_Row_DCT_Loop_proc' automatically.
+INFO: [XFORM 203-602] Inlining function 'dct_1d' into 'Loop_Col_DCT_Loop_proc' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'Loop_Row_DCT_Loop_proc' (dct.c:13:61)...8 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'Loop_Col_DCT_Loop_proc' (dct.c:13:61)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 453.777 ; gain = 140.582 ; free physical = 176 ; free virtual = 4298
+INFO: [XFORM 203-541] Flattening a loop nest 'WR_Loop_Row' (dct.c:71:67) in function 'write_data'.
+INFO: [XFORM 203-541] Flattening a loop nest 'RD_Loop_Row' (dct.c:59:67) in function 'read_data'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Xpose_Row_Outer_Loop' (dct.c:38:1) in function 'Loop_Xpose_Row_Outer_Loop_proc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Xpose_Col_Outer_Loop' (dct.c:49:1) in function 'Loop_Xpose_Col_Outer_Loop_proc'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Row_DCT_Loop' (dct.c:32:66) in function 'Loop_Row_DCT_Loop_proc' : 
+WARNING: [XFORM 203-542] the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Col_DCT_Loop' (dct.c:43:67) in function 'Loop_Col_DCT_Loop_proc' : 
+WARNING: [XFORM 203-542] the outer loop is not a perfect loop.
+WARNING: [XFORM 203-631] Renaming function 'Loop_Row_DCT_Loop_proc' (dct.c:13:61) into Loop_Row_DCT_Loop_pr.
+WARNING: [XFORM 203-631] Renaming function 'Loop_Xpose_Row_Outer_Loop_proc' (dct.c:37:63) into Loop_Xpose_Row_Outer.
+WARNING: [XFORM 203-631] Renaming function 'Loop_Col_DCT_Loop_proc' (dct.c:13:61) into Loop_Col_DCT_Loop_pr.
+WARNING: [XFORM 203-631] Renaming function 'Loop_Xpose_Col_Outer_Loop_proc' (dct.c:48:63) into Loop_Xpose_Col_Outer.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 453.777 ; gain = 140.582 ; free physical = 132 ; free virtual = 4254
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dct' ...
+WARNING: [SYN 201-107] Renaming port name 'dct/input' to 'dct/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'dct/output' to 'dct/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'read_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RD_Loop_Row_RD_Loop_Col'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (dct.c:62) of variable 'tmp_26', dct.c:62 on array 'buf_r' and 'load' operation ('buf_load', dct.c:62) on array 'buf_r'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 2, Depth: 6.
+WARNING: [SCHED 204-21] Estimated clock period (8.58ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('buf_load', dct.c:62) on array 'buf_r' (3.25 ns)
+	'and' operation ('tmp_24', dct.c:62) (0 ns)
+	'or' operation ('tmp_26', dct.c:62) (2.07 ns)
+	'store' operation (dct.c:62) of variable 'tmp_26', dct.c:62 on array 'buf_r' (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.5 seconds; current allocated memory: 119.051 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 119.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Loop_Row_DCT_Loop_pr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DCT_Outer_Loop'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 6.
+WARNING: [SCHED 204-21] Estimated clock period (9.73ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'mul' operation ('tmp_8_5_i', dct.c:17) (3.36 ns)
+	'add' operation ('tmp5', dct.c:19) (3.02 ns)
+	'add' operation ('tmp4', dct.c:19) (3.35 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 119.748 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 120.084 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Loop_Xpose_Row_Outer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Xpose_Row_Outer_Loop_Xpose_Row_Inner_Loop'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (dct.c:40->dct.c:87) of variable 'tmp_48', dct.c:40->dct.c:87 on array 'col_inbuf' and 'load' operation ('col_inbuf_load', dct.c:40->dct.c:87) on array 'col_inbuf'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 2, Depth: 6.
+WARNING: [SCHED 204-21] Estimated clock period (8.58ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('col_inbuf_load', dct.c:40->dct.c:87) on array 'col_inbuf' (3.25 ns)
+	'and' operation ('tmp_46', dct.c:40->dct.c:87) (0 ns)
+	'or' operation ('tmp_48', dct.c:40->dct.c:87) (2.07 ns)
+	'store' operation (dct.c:40->dct.c:87) of variable 'tmp_48', dct.c:40->dct.c:87 on array 'col_inbuf' (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 120.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 120.601 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Loop_Col_DCT_Loop_pr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DCT_Outer_Loop'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 6.
+WARNING: [SCHED 204-21] Estimated clock period (9.73ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'mul' operation ('tmp_8_5_i', dct.c:17) (3.36 ns)
+	'add' operation ('tmp4', dct.c:19) (3.02 ns)
+	'add' operation ('tmp3', dct.c:19) (3.35 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 120.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 121.230 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'Loop_Xpose_Col_Outer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Xpose_Col_Outer_Loop_Xpose_Col_Inner_Loop'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 121.458 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 121.591 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'write_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'WR_Loop_Row_WR_Loop_Col'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 121.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 121.877 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 121.983 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 122.158 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 122.744 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_Row_DCT_Loop_pr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_Row_DCT_Loop_pr_dct_coeff_table' to 'Loop_Row_DCT_Loopbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dct_mul_mul_16s_16s_29_1' to 'dct_mul_mul_16s_1cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dct_mac_muladd_16s_16s_29s_29_1' to 'dct_mac_muladd_16dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dct_mac_muladd_16s_15s_14ns_29_1' to 'dct_mac_muladd_16eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_16dEe': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_16eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dct_mul_mul_16s_1cud': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_Row_DCT_Loop_pr'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 124.377 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_Xpose_Row_Outer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_Xpose_Row_Outer'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 126.028 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_Col_DCT_Loop_pr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Loop_Col_DCT_Loop_pr_dct_coeff_table' to 'Loop_Col_DCT_LoopfYi' due to the length limit 20
+WARNING: [RTGEN 206-101] RTL name 'dct_mul_mul_16s_1cud' is changed to 'dct_mul_mul_16s_1cud_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'dct_mac_muladd_16dEe' is changed to 'dct_mac_muladd_16dEe_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'dct_mac_muladd_16eOg' is changed to 'dct_mac_muladd_16eOg_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_16dEe': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_16eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dct_mul_mul_16s_1cud': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_Col_DCT_Loop_pr'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 127.650 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_Xpose_Col_Outer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_Xpose_Col_Outer'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 129.170 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 129.970 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dct' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 131.217 MB.
+INFO: [RTMG 210-279] Implementing memory 'Loop_Row_DCT_Loopbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'dct_row_outbuf_i_memcore_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dct_col_inbuf_memcore_ram' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 517.777 ; gain = 204.582 ; free physical = 123 ; free virtual = 4236
+INFO: [SYSC 207-301] Generating SystemC RTL for dct.
+INFO: [VHDL 208-304] Generating VHDL RTL for dct.
+INFO: [VLOG 209-307] Generating Verilog RTL for dct.
+INFO: [HLS 200-112] Total elapsed time: 7.68 seconds; peak allocated memory: 131.217 MB.

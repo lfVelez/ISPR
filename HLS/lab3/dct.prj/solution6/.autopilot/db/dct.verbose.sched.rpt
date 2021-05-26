@@ -1,0 +1,299 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct'
+================================================================
+* Date:           Wed May 26 18:08:28 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        dct.prj
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.73|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  515|  515|  122|  122| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 12
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 12, States = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: row_outbuf_i (14)  [1/1] 0.00ns
+codeRepl:3  %row_outbuf_i = alloca [64 x i16], align 2
+
+ST_1: col_outbuf_i (15)  [1/1] 0.00ns
+codeRepl:4  %col_outbuf_i = alloca [64 x i16], align 2
+
+ST_1: col_inbuf_0 (16)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:5  %col_inbuf_0 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_1 (17)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:6  %col_inbuf_1 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_2 (18)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:7  %col_inbuf_2 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_3 (19)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:8  %col_inbuf_3 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_4 (20)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:9  %col_inbuf_4 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_5 (21)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:10  %col_inbuf_5 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_6 (22)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:11  %col_inbuf_6 = alloca [8 x i16], align 2
+
+ST_1: col_inbuf_7 (23)  [1/1] 0.00ns  loc: dct.c:27->dct.c:87
+codeRepl:12  %col_inbuf_7 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_0 (25)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:14  %buf_2d_in_0 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_1 (26)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:15  %buf_2d_in_1 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_2 (27)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:16  %buf_2d_in_2 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_3 (28)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:17  %buf_2d_in_3 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_4 (29)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:18  %buf_2d_in_4 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_5 (30)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:19  %buf_2d_in_5 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_6 (31)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:20  %buf_2d_in_6 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_in_7 (32)  [1/1] 0.00ns  loc: dct.c:81
+codeRepl:21  %buf_2d_in_7 = alloca [8 x i16], align 2
+
+ST_1: buf_2d_out (33)  [1/1] 0.00ns  loc: dct.c:82
+codeRepl:22  %buf_2d_out = alloca [64 x i16], align 2
+
+ST_1: StgValue_32 (34)  [2/2] 0.00ns  loc: dct.c:85
+codeRepl:23  call fastcc void @read_data([64 x i16]* %input_r, [8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7) nounwind
+
+
+ <State 2>: 0.00ns
+ST_2: StgValue_33 (34)  [1/2] 0.00ns  loc: dct.c:85
+codeRepl:23  call fastcc void @read_data([64 x i16]* %input_r, [8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7) nounwind
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_34 (35)  [2/2] 0.00ns
+codeRepl:24  call fastcc void @Loop_Row_DCT_Loop_pr([8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7, [64 x i16]* %row_outbuf_i)
+
+
+ <State 4>: 0.00ns
+ST_4: StgValue_35 (35)  [1/2] 0.00ns
+codeRepl:24  call fastcc void @Loop_Row_DCT_Loop_pr([8 x i16]* %buf_2d_in_0, [8 x i16]* %buf_2d_in_1, [8 x i16]* %buf_2d_in_2, [8 x i16]* %buf_2d_in_3, [8 x i16]* %buf_2d_in_4, [8 x i16]* %buf_2d_in_5, [8 x i16]* %buf_2d_in_6, [8 x i16]* %buf_2d_in_7, [64 x i16]* %row_outbuf_i)
+
+
+ <State 5>: 0.00ns
+ST_5: StgValue_36 (36)  [2/2] 0.00ns
+codeRepl:25  call fastcc void @Loop_Xpose_Row_Outer([64 x i16]* %row_outbuf_i, [8 x i16]* %col_inbuf_0, [8 x i16]* %col_inbuf_1, [8 x i16]* %col_inbuf_2, [8 x i16]* %col_inbuf_3, [8 x i16]* %col_inbuf_4, [8 x i16]* %col_inbuf_5, [8 x i16]* %col_inbuf_6, [8 x i16]* %col_inbuf_7)
+
+
+ <State 6>: 0.00ns
+ST_6: StgValue_37 (36)  [1/2] 0.00ns
+codeRepl:25  call fastcc void @Loop_Xpose_Row_Outer([64 x i16]* %row_outbuf_i, [8 x i16]* %col_inbuf_0, [8 x i16]* %col_inbuf_1, [8 x i16]* %col_inbuf_2, [8 x i16]* %col_inbuf_3, [8 x i16]* %col_inbuf_4, [8 x i16]* %col_inbuf_5, [8 x i16]* %col_inbuf_6, [8 x i16]* %col_inbuf_7)
+
+
+ <State 7>: 0.00ns
+ST_7: StgValue_38 (37)  [2/2] 0.00ns
+codeRepl:26  call fastcc void @Loop_Col_DCT_Loop_pr([8 x i16]* %col_inbuf_0, [8 x i16]* %col_inbuf_1, [8 x i16]* %col_inbuf_2, [8 x i16]* %col_inbuf_3, [8 x i16]* %col_inbuf_4, [8 x i16]* %col_inbuf_5, [8 x i16]* %col_inbuf_6, [8 x i16]* %col_inbuf_7, [64 x i16]* %col_outbuf_i)
+
+
+ <State 8>: 0.00ns
+ST_8: StgValue_39 (37)  [1/2] 0.00ns
+codeRepl:26  call fastcc void @Loop_Col_DCT_Loop_pr([8 x i16]* %col_inbuf_0, [8 x i16]* %col_inbuf_1, [8 x i16]* %col_inbuf_2, [8 x i16]* %col_inbuf_3, [8 x i16]* %col_inbuf_4, [8 x i16]* %col_inbuf_5, [8 x i16]* %col_inbuf_6, [8 x i16]* %col_inbuf_7, [64 x i16]* %col_outbuf_i)
+
+
+ <State 9>: 0.00ns
+ST_9: StgValue_40 (38)  [2/2] 0.00ns
+codeRepl:27  call fastcc void @Loop_Xpose_Col_Outer([64 x i16]* %col_outbuf_i, [64 x i16]* %buf_2d_out)
+
+
+ <State 10>: 0.00ns
+ST_10: StgValue_41 (38)  [1/2] 0.00ns
+codeRepl:27  call fastcc void @Loop_Xpose_Col_Outer([64 x i16]* %col_outbuf_i, [64 x i16]* %buf_2d_out)
+
+
+ <State 11>: 0.00ns
+ST_11: StgValue_42 (39)  [2/2] 0.00ns  loc: dct.c:90
+codeRepl:28  call fastcc void @write_data([64 x i16]* %buf_2d_out, [64 x i16]* %output_r) nounwind
+
+
+ <State 12>: 0.00ns
+ST_12: StgValue_43 (11)  [1/1] 0.00ns  loc: dct.c:80
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1) nounwind
+
+ST_12: StgValue_44 (12)  [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([64 x i16]* %input_r) nounwind, !map !19
+
+ST_12: StgValue_45 (13)  [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([64 x i16]* %output_r) nounwind, !map !25
+
+ST_12: StgValue_46 (24)  [1/1] 0.00ns
+codeRepl:13  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @dct_str) nounwind
+
+ST_12: StgValue_47 (39)  [1/2] 0.00ns  loc: dct.c:90
+codeRepl:28  call fastcc void @write_data([64 x i16]* %buf_2d_out, [64 x i16]* %output_r) nounwind
+
+ST_12: StgValue_48 (40)  [1/1] 0.00ns  loc: dct.c:91
+codeRepl:29  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

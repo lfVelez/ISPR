@@ -1,0 +1,514 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_2d'
+================================================================
+* Date:           Wed May 26 17:34:10 2021
+
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
+* Project:        dct.prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.60|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1720|  1720|  1720|  1720|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |                  Loop Name                  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_DCT_Loop                               |  792|  792|        99|          -|          -|     8|    no    |
+        |- Xpose_Row_Outer_Loop_Xpose_Row_Inner_Loop  |   65|   65|         3|          1|          1|    64|    yes   |
+        |- Col_DCT_Loop                               |  792|  792|        99|          -|          -|     8|    no    |
+        |- Xpose_Col_Outer_Loop_Xpose_Col_Inner_Loop  |   65|   65|         3|          1|          1|    64|    yes   |
+        +---------------------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+  * Pipeline-1: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 13
+* Pipeline: 2
+  Pipeline-0: II = 1, D = 3, States = { 4 5 6 }
+  Pipeline-1: II = 1, D = 3, States = { 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp)
+	4  / (tmp)
+3 --> 
+	2  / true
+4 --> 
+	7  / (exitcond_flatten)
+	5  / (!exitcond_flatten)
+5 --> 
+	6  / true
+6 --> 
+	4  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / (!tmp_4)
+	10  / (tmp_4)
+9 --> 
+	8  / true
+10 --> 
+	13  / (exitcond_flatten1)
+	11  / (!exitcond_flatten1)
+11 --> 
+	12  / true
+12 --> 
+	10  / true
+13 --> 
+* FSM state operations: 
+
+ <State 1>: 1.77ns
+ST_1: row_outbuf (4)  [1/1] 0.00ns
+:0  %row_outbuf = alloca [64 x i16], align 2
+
+ST_1: col_outbuf (5)  [1/1] 0.00ns
+:1  %col_outbuf = alloca [64 x i16], align 2
+
+ST_1: col_inbuf (6)  [1/1] 0.00ns  loc: dct.c:27
+:2  %col_inbuf = alloca [64 x i16], align 2
+
+ST_1: StgValue_17 (7)  [1/1] 1.77ns  loc: dct.c:32
+:3  br label %1
+
+
+ <State 2>: 5.17ns
+ST_2: i (9)  [1/1] 0.00ns
+:0  %i = phi i4 [ 0, %0 ], [ %i_4, %2 ]
+
+ST_2: tmp (10)  [1/1] 3.10ns  loc: dct.c:32
+:1  %tmp = icmp eq i4 %i, -8
+
+ST_2: empty (11)  [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_2: i_4 (12)  [1/1] 2.62ns  loc: dct.c:32
+:3  %i_4 = add i4 %i, 1
+
+ST_2: StgValue_22 (13)  [1/1] 0.00ns  loc: dct.c:32
+:4  br i1 %tmp, label %.preheader2.preheader.preheader, label %2
+
+ST_2: StgValue_23 (16)  [2/2] 1.77ns  loc: dct.c:33
+:1  call fastcc void @dct_1d2([64 x i16]* %in_block, i4 %i, [64 x i16]* %row_outbuf, i4 %i)
+
+ST_2: StgValue_24 (19)  [1/1] 1.77ns
+.preheader2.preheader.preheader:0  br label %.preheader2.preheader
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_25 (15)  [1/1] 0.00ns  loc: dct.c:32
+:0  call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str3) nounwind
+
+ST_3: StgValue_26 (16)  [1/2] 0.00ns  loc: dct.c:33
+:1  call fastcc void @dct_1d2([64 x i16]* %in_block, i4 %i, [64 x i16]* %row_outbuf, i4 %i)
+
+ST_3: StgValue_27 (17)  [1/1] 0.00ns  loc: dct.c:32
+:2  br label %1
+
+
+ <State 4>: 5.17ns
+ST_4: indvar_flatten (21)  [1/1] 0.00ns
+.preheader2.preheader:0  %indvar_flatten = phi i7 [ %indvar_flatten_next, %.preheader2 ], [ 0, %.preheader2.preheader.preheader ]
+
+ST_4: j (22)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2.preheader:1  %j = phi i4 [ %tmp_3_mid2_v, %.preheader2 ], [ 0, %.preheader2.preheader.preheader ]
+
+ST_4: i_1 (23)  [1/1] 0.00ns
+.preheader2.preheader:2  %i_1 = phi i4 [ %i_6, %.preheader2 ], [ 0, %.preheader2.preheader.preheader ]
+
+ST_4: exitcond_flatten (24)  [1/1] 2.91ns
+.preheader2.preheader:3  %exitcond_flatten = icmp eq i7 %indvar_flatten, -64
+
+ST_4: indvar_flatten_next (25)  [1/1] 2.75ns
+.preheader2.preheader:4  %indvar_flatten_next = add i7 %indvar_flatten, 1
+
+ST_4: StgValue_33 (26)  [1/1] 0.00ns
+.preheader2.preheader:5  br i1 %exitcond_flatten, label %.preheader1.preheader, label %.preheader2
+
+ST_4: j_2 (28)  [1/1] 2.62ns  loc: dct.c:37
+.preheader2:0  %j_2 = add i4 %j, 1
+
+ST_4: tmp_1 (31)  [1/1] 3.10ns  loc: dct.c:39
+.preheader2:3  %tmp_1 = icmp eq i4 %i_1, -8
+
+ST_4: i_1_mid2 (32)  [1/1] 2.07ns  loc: dct.c:39
+.preheader2:4  %i_1_mid2 = select i1 %tmp_1, i4 0, i4 %i_1
+
+ST_4: tmp_3_mid2_v (33)  [1/1] 2.07ns  loc: dct.c:40
+.preheader2:5  %tmp_3_mid2_v = select i1 %tmp_1, i4 %j_2, i4 %j
+
+
+ <State 5>: 6.01ns
+ST_5: tmp_3_mid2_cast (34)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:6  %tmp_3_mid2_cast = zext i4 %tmp_3_mid2_v to i8
+
+ST_5: tmp_8 (41)  [1/1] 0.00ns  loc: dct.c:39
+.preheader2:13  %tmp_8 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_1_mid2, i3 0)
+
+ST_5: tmp_9_cast (42)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:14  %tmp_9_cast = zext i7 %tmp_8 to i8
+
+ST_5: tmp_3 (43)  [1/1] 2.75ns  loc: dct.c:40
+.preheader2:15  %tmp_3 = add i8 %tmp_3_mid2_cast, %tmp_9_cast
+
+ST_5: tmp_11_cast (44)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:16  %tmp_11_cast = zext i8 %tmp_3 to i64
+
+ST_5: row_outbuf_addr (45)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:17  %row_outbuf_addr = getelementptr [64 x i16]* %row_outbuf, i64 0, i64 %tmp_11_cast
+
+ST_5: row_outbuf_load (49)  [2/2] 3.25ns  loc: dct.c:40
+.preheader2:21  %row_outbuf_load = load i16* %row_outbuf_addr, align 2
+
+ST_5: i_6 (52)  [1/1] 2.62ns  loc: dct.c:39
+.preheader2:24  %i_6 = add i4 %i_1_mid2, 1
+
+
+ <State 6>: 6.51ns
+ST_6: StgValue_46 (29)  [1/1] 0.00ns
+.preheader2:1  call void (...)* @_ssdm_op_SpecLoopName([42 x i8]* @Xpose_Row_Outer_Loop)
+
+ST_6: empty_5 (30)  [1/1] 0.00ns
+.preheader2:2  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)
+
+ST_6: tmp_2 (35)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:7  %tmp_2 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_3_mid2_v, i3 0)
+
+ST_6: tmp_3_cast (36)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:8  %tmp_3_cast = zext i7 %tmp_2 to i8
+
+ST_6: StgValue_50 (37)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:9  call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str5) nounwind
+
+ST_6: tmp_6 (38)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:10  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @p_str5)
+
+ST_6: StgValue_52 (39)  [1/1] 0.00ns  loc: dct.c:41
+.preheader2:11  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_6: tmp_7_cast (40)  [1/1] 0.00ns  loc: dct.c:39
+.preheader2:12  %tmp_7_cast = zext i4 %i_1_mid2 to i8
+
+ST_6: tmp_5 (46)  [1/1] 2.75ns  loc: dct.c:40
+.preheader2:18  %tmp_5 = add i8 %tmp_7_cast, %tmp_3_cast
+
+ST_6: tmp_13_cast (47)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:19  %tmp_13_cast = zext i8 %tmp_5 to i64
+
+ST_6: col_inbuf_addr (48)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:20  %col_inbuf_addr = getelementptr [64 x i16]* %col_inbuf, i64 0, i64 %tmp_13_cast
+
+ST_6: row_outbuf_load (49)  [1/2] 3.25ns  loc: dct.c:40
+.preheader2:21  %row_outbuf_load = load i16* %row_outbuf_addr, align 2
+
+ST_6: StgValue_58 (50)  [1/1] 3.25ns  loc: dct.c:40
+.preheader2:22  store i16 %row_outbuf_load, i16* %col_inbuf_addr, align 2
+
+ST_6: empty_6 (51)  [1/1] 0.00ns  loc: dct.c:40
+.preheader2:23  %empty_6 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @p_str5, i32 %tmp_6)
+
+ST_6: StgValue_60 (53)  [1/1] 0.00ns
+.preheader2:25  br label %.preheader2.preheader
+
+
+ <State 7>: 1.77ns
+ST_7: StgValue_61 (55)  [1/1] 1.77ns  loc: dct.c:43
+.preheader1.preheader:0  br label %.preheader1
+
+
+ <State 8>: 5.17ns
+ST_8: i_2 (57)  [1/1] 0.00ns
+.preheader1:0  %i_2 = phi i4 [ %i_5, %3 ], [ 0, %.preheader1.preheader ]
+
+ST_8: tmp_4 (58)  [1/1] 3.10ns  loc: dct.c:43
+.preheader1:1  %tmp_4 = icmp eq i4 %i_2, -8
+
+ST_8: empty_7 (59)  [1/1] 0.00ns
+.preheader1:2  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_8: i_5 (60)  [1/1] 2.62ns  loc: dct.c:43
+.preheader1:3  %i_5 = add i4 %i_2, 1
+
+ST_8: StgValue_66 (61)  [1/1] 0.00ns  loc: dct.c:43
+.preheader1:4  br i1 %tmp_4, label %.preheader.preheader.preheader, label %3
+
+ST_8: StgValue_67 (64)  [2/2] 1.77ns  loc: dct.c:44
+:1  call fastcc void @dct_1d2([64 x i16]* %col_inbuf, i4 %i_2, [64 x i16]* %col_outbuf, i4 %i_2)
+
+ST_8: StgValue_68 (67)  [1/1] 1.77ns
+.preheader.preheader.preheader:0  br label %.preheader.preheader
+
+
+ <State 9>: 0.00ns
+ST_9: StgValue_69 (63)  [1/1] 0.00ns  loc: dct.c:43
+:0  call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str6) nounwind
+
+ST_9: StgValue_70 (64)  [1/2] 0.00ns  loc: dct.c:44
+:1  call fastcc void @dct_1d2([64 x i16]* %col_inbuf, i4 %i_2, [64 x i16]* %col_outbuf, i4 %i_2)
+
+ST_9: StgValue_71 (65)  [1/1] 0.00ns  loc: dct.c:43
+:2  br label %.preheader1
+
+
+ <State 10>: 5.17ns
+ST_10: indvar_flatten1 (69)  [1/1] 0.00ns
+.preheader.preheader:0  %indvar_flatten1 = phi i7 [ %indvar_flatten_next1, %.preheader ], [ 0, %.preheader.preheader.preheader ]
+
+ST_10: j_1 (70)  [1/1] 0.00ns  loc: dct.c:51
+.preheader.preheader:1  %j_1 = phi i4 [ %tmp_9_mid2_v, %.preheader ], [ 0, %.preheader.preheader.preheader ]
+
+ST_10: i_3 (71)  [1/1] 0.00ns
+.preheader.preheader:2  %i_3 = phi i4 [ %i_7, %.preheader ], [ 0, %.preheader.preheader.preheader ]
+
+ST_10: exitcond_flatten1 (72)  [1/1] 2.91ns
+.preheader.preheader:3  %exitcond_flatten1 = icmp eq i7 %indvar_flatten1, -64
+
+ST_10: indvar_flatten_next1 (73)  [1/1] 2.75ns
+.preheader.preheader:4  %indvar_flatten_next1 = add i7 %indvar_flatten1, 1
+
+ST_10: StgValue_77 (74)  [1/1] 0.00ns
+.preheader.preheader:5  br i1 %exitcond_flatten1, label %4, label %.preheader
+
+ST_10: j_3 (76)  [1/1] 2.62ns  loc: dct.c:48
+.preheader:0  %j_3 = add i4 %j_1, 1
+
+ST_10: tmp_7 (79)  [1/1] 3.10ns  loc: dct.c:50
+.preheader:3  %tmp_7 = icmp eq i4 %i_3, -8
+
+ST_10: i_3_mid2 (80)  [1/1] 2.07ns  loc: dct.c:50
+.preheader:4  %i_3_mid2 = select i1 %tmp_7, i4 0, i4 %i_3
+
+ST_10: tmp_9_mid2_v (81)  [1/1] 2.07ns  loc: dct.c:51
+.preheader:5  %tmp_9_mid2_v = select i1 %tmp_7, i4 %j_3, i4 %j_1
+
+
+ <State 11>: 6.01ns
+ST_11: tmp_9_mid2_cast (82)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:6  %tmp_9_mid2_cast = zext i4 %tmp_9_mid2_v to i8
+
+ST_11: tmp_11 (92)  [1/1] 0.00ns  loc: dct.c:50
+.preheader:16  %tmp_11 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %i_3_mid2, i3 0)
+
+ST_11: tmp_18_cast (93)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:17  %tmp_18_cast = zext i7 %tmp_11 to i8
+
+ST_11: tmp_12 (94)  [1/1] 2.75ns  loc: dct.c:51
+.preheader:18  %tmp_12 = add i8 %tmp_9_mid2_cast, %tmp_18_cast
+
+ST_11: tmp_19_cast (95)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:19  %tmp_19_cast = zext i8 %tmp_12 to i64
+
+ST_11: col_outbuf_addr (96)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:20  %col_outbuf_addr = getelementptr [64 x i16]* %col_outbuf, i64 0, i64 %tmp_19_cast
+
+ST_11: col_outbuf_load (97)  [2/2] 3.25ns  loc: dct.c:51
+.preheader:21  %col_outbuf_load = load i16* %col_outbuf_addr, align 2
+
+ST_11: i_7 (100)  [1/1] 2.62ns  loc: dct.c:50
+.preheader:24  %i_7 = add i4 %i_3_mid2, 1
+
+
+ <State 12>: 6.51ns
+ST_12: StgValue_90 (77)  [1/1] 0.00ns
+.preheader:1  call void (...)* @_ssdm_op_SpecLoopName([42 x i8]* @Xpose_Col_Outer_Loop)
+
+ST_12: empty_8 (78)  [1/1] 0.00ns
+.preheader:2  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)
+
+ST_12: tmp_9 (83)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:7  %tmp_9 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_9_mid2_v, i3 0)
+
+ST_12: tmp_15_cast (84)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:8  %tmp_15_cast = zext i7 %tmp_9 to i8
+
+ST_12: StgValue_94 (85)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:9  call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str8) nounwind
+
+ST_12: tmp_s (86)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:10  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @p_str8)
+
+ST_12: StgValue_96 (87)  [1/1] 0.00ns  loc: dct.c:52
+.preheader:11  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_12: tmp_10_cast (88)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:12  %tmp_10_cast = zext i4 %i_3_mid2 to i8
+
+ST_12: tmp_10 (89)  [1/1] 2.75ns  loc: dct.c:51
+.preheader:13  %tmp_10 = add i8 %tmp_10_cast, %tmp_15_cast
+
+ST_12: tmp_16_cast (90)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:14  %tmp_16_cast = zext i8 %tmp_10 to i64
+
+ST_12: out_block_addr (91)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:15  %out_block_addr = getelementptr [64 x i16]* %out_block, i64 0, i64 %tmp_16_cast
+
+ST_12: col_outbuf_load (97)  [1/2] 3.25ns  loc: dct.c:51
+.preheader:21  %col_outbuf_load = load i16* %col_outbuf_addr, align 2
+
+ST_12: StgValue_102 (98)  [1/1] 3.25ns  loc: dct.c:51
+.preheader:22  store i16 %col_outbuf_load, i16* %out_block_addr, align 2
+
+ST_12: empty_9 (99)  [1/1] 0.00ns  loc: dct.c:51
+.preheader:23  %empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @p_str8, i32 %tmp_s)
+
+ST_12: StgValue_104 (101)  [1/1] 0.00ns
+.preheader:25  br label %.preheader.preheader
+
+
+ <State 13>: 0.00ns
+ST_13: StgValue_105 (103)  [1/1] 0.00ns  loc: dct.c:52
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', dct.c:32) [9]  (1.77 ns)
+
+ <State 2>: 5.17ns
+The critical path consists of the following:
+	'icmp' operation ('tmp', dct.c:32) [10]  (3.1 ns)
+	blocking operation 2.07 ns on control path)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 5.17ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', dct.c:39) [23]  (0 ns)
+	'icmp' operation ('tmp_1', dct.c:39) [31]  (3.1 ns)
+	'select' operation ('i_1_mid2', dct.c:39) [32]  (2.07 ns)
+
+ <State 5>: 6.01ns
+The critical path consists of the following:
+	'add' operation ('tmp_3', dct.c:40) [43]  (2.75 ns)
+	'getelementptr' operation ('row_outbuf_addr', dct.c:40) [45]  (0 ns)
+	'load' operation ('row_outbuf_load', dct.c:40) on array 'row_outbuf' [49]  (3.25 ns)
+
+ <State 6>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('row_outbuf_load', dct.c:40) on array 'row_outbuf' [49]  (3.25 ns)
+	'store' operation (dct.c:40) of variable 'row_outbuf_load', dct.c:40 on array 'col_inbuf', dct.c:27 [50]  (3.25 ns)
+
+ <State 7>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', dct.c:43) [57]  (1.77 ns)
+
+ <State 8>: 5.17ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_4', dct.c:43) [58]  (3.1 ns)
+	blocking operation 2.07 ns on control path)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 5.17ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', dct.c:50) [71]  (0 ns)
+	'icmp' operation ('tmp_7', dct.c:50) [79]  (3.1 ns)
+	'select' operation ('i_3_mid2', dct.c:50) [80]  (2.07 ns)
+
+ <State 11>: 6.01ns
+The critical path consists of the following:
+	'add' operation ('tmp_12', dct.c:51) [94]  (2.75 ns)
+	'getelementptr' operation ('col_outbuf_addr', dct.c:51) [96]  (0 ns)
+	'load' operation ('col_outbuf_load', dct.c:51) on array 'col_outbuf' [97]  (3.25 ns)
+
+ <State 12>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('col_outbuf_load', dct.c:51) on array 'col_outbuf' [97]  (3.25 ns)
+	'store' operation (dct.c:51) of variable 'col_outbuf_load', dct.c:51 on array 'out_block' [98]  (3.25 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

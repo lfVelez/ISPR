@@ -1,0 +1,21 @@
+   Build using "/opt/Xilinx/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_dct.cpp
+   Compiling (apcc) dct_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'lfvelez' on host 'lfvelez-Latitude-7290' (Linux_x86_64 version 5.8.0-53-generic) on Wed May 26 17:28:30 CEST 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/dct.prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_lfvelez/288361622042910894401
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) dct.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'lfvelez' on host 'lfvelez-Latitude-7290' (Linux_x86_64 version 5.8.0-53-generic) on Wed May 26 17:28:32 CEST 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3/dct.prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_lfvelez/288811622042912243941
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1622045311000">
+  <ports id="1" name="input_r" type="PortType" originalName="input" coreName="RAM" bitwidth="16" iftype="IfTypeRegister" arraysize="64">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="output_r" type="PortType" originalName="output" coreName="RAM" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="64">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="64" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="70" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="71" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@ports.1"/>
+  <edges id="114" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="115" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="116" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="117" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="118" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="119" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="120" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="121" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="122" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="123" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="124" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="125" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="126" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="127" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="128" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="129" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="410" RegionName="dct">
+    <basic_blocks id="41" name="dct" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="row_outbuf_i" rtlName="row_outbuf_i_U" coreName="RAM" bitwidth="16" opcode="alloca" m_display="0">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="col_outbuf_i" rtlName="col_outbuf_i_U" coreName="RAM" bitwidth="16" opcode="alloca" m_display="0">
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="col_inbuf_0" lineNumber="27" originalName="col_inbuf[0]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_0_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="col_inbuf_1" lineNumber="27" originalName="col_inbuf[1]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_1_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="col_inbuf_2" lineNumber="27" originalName="col_inbuf[2]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_2_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="col_inbuf_3" lineNumber="27" originalName="col_inbuf[3]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_3_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="col_inbuf_4" lineNumber="27" originalName="col_inbuf[4]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_4_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="col_inbuf_5" lineNumber="27" originalName="col_inbuf[5]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_5_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="col_inbuf_6" lineNumber="27" originalName="col_inbuf[6]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_6_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="col_inbuf_7" lineNumber="27" originalName="col_inbuf[7]" fileName="dct.c" fileDirectory=".." rtlName="col_inbuf_7_U" coreName="RAM" contextFuncName="dct_2d" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="87" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <inlineStackInfo fileName="dct.c" linenumber="27" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct_2d"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="buf_2d_in_0" lineNumber="81" originalName="buf_2d_in[0]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_0_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="buf_2d_in_1" lineNumber="81" originalName="buf_2d_in[1]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_1_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="buf_2d_in_2" lineNumber="81" originalName="buf_2d_in[2]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_2_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="buf_2d_in_3" lineNumber="81" originalName="buf_2d_in[3]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_3_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="buf_2d_in_4" lineNumber="81" originalName="buf_2d_in[4]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_4_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="buf_2d_in_5" lineNumber="81" originalName="buf_2d_in[5]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_5_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="buf_2d_in_6" lineNumber="81" originalName="buf_2d_in[6]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_6_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="buf_2d_in_7" lineNumber="81" originalName="buf_2d_in[7]" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_in_7_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="81" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="buf_2d_out" lineNumber="82" originalName="buf_2d_out" fileName="dct.c" fileDirectory=".." rtlName="buf_2d_out_U" coreName="RAM" contextFuncName="dct" bitwidth="16" opcode="alloca" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="82" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="node_34" lineNumber="85" fileName="dct.c" fileDirectory=".." rtlName="read_data_U0" contextFuncName="dct" opcode="call" nodeLatency="1" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="85" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataInputObjs>input_r</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>read_data</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="node_35" rtlName="Loop_Row_DCT_Loop_pr_U0" opcode="call" nodeLabel="2" nodeLatency="1" m_display="0">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_Row_DCT_Loop_pr</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="node_36" rtlName="Loop_Xpose_Row_Outer_U0" opcode="call" nodeLabel="4" nodeLatency="1" m_display="0">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_Xpose_Row_Outer</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="node_37" rtlName="Loop_Col_DCT_Loop_pr_U0" opcode="call" nodeLabel="6" nodeLatency="1" m_display="0">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_Col_DCT_Loop_pr</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="node_38" rtlName="Loop_Xpose_Col_Outer_U0" opcode="call" nodeLabel="8" nodeLatency="1" m_display="0">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_Xpose_Col_Outer</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="node_39" lineNumber="90" fileName="dct.c" fileDirectory=".." rtlName="write_data_U0" contextFuncName="dct" opcode="call" nodeLabel="10" nodeLatency="1" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="90" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>output_r</dataOutputObjs>
+        <constName>write_data</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="node_40" lineNumber="91" fileName="dct.c" fileDirectory=".." contextFuncName="dct" opcode="ret" nodeLabel="11" m_display="0">
+        <inlineStackInfo fileName="dct.c" linenumber="91" fileDirectory="/home/lfvelez/Documentos/ISPR/HLS/labsource/labs/lab3" functionName="dct"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="dct.c">
+        <validLinenumbers>27</validLinenumbers>
+        <validLinenumbers>81</validLinenumbers>
+        <validLinenumbers>82</validLinenumbers>
+        <validLinenumbers>85</validLinenumbers>
+        <validLinenumbers>90</validLinenumbers>
+        <validLinenumbers>91</validLinenumbers>
+        <validLinenumbers>87</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <expressionNodes realName="buf_2d_in_3_alloca_fu_98">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_outbuf_i_alloca_fu_46">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_0_alloca_fu_86">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_7_alloca_fu_114">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_7_alloca_fu_82">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_5_alloca_fu_74">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_5_alloca_fu_106">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_3_alloca_fu_66">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_1_alloca_fu_90">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_6_alloca_fu_110">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_1_alloca_fu_58">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_0_alloca_fu_54">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_6_alloca_fu_78">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_4_alloca_fu_70">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_2_alloca_fu_94">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_in_4_alloca_fu_102">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_inbuf_2_alloca_fu_62">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_2d_out_alloca_fu_118">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_outbuf_i_alloca_fu_50">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Loop_Row_DCT_Loop_pr_fu_122">
+    <nodeIds>35</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_Xpose_Col_Outer_fu_187">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_Xpose_Row_Outer_fu_215">
+    <nodeIds>36</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_read_data_fu_193">
+    <nodeIds>34</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_write_data_fu_180">
+    <nodeIds>39</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_Col_DCT_Loop_pr_fu_151">
+    <nodeIds>37</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="dct_coeff_table_0" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_1" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_2" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_3" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_4" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_5" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_6" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="dct_coeff_table_7" portID="100">
+    <nodeIds>35</nodeIds>
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <fsm>
+    <states id="1">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="34" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="35" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="35" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="36" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="36" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="37" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="37" stage="1" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="38" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="38" stage="1" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="39" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="2"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="3"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="4"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="5"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="6"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="7"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="8"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="9"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="10"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dct" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="515" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.4/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.5/@pins.0/@inst">
+        <processe_list name="read_data_U0" ssdmobj_id="34">
+          <pins>
+            <port name="input" dir="DirInOut"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_0" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_1" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_2" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_3" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_4" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_5" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_6" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+          <pins>
+            <port name="buf_7" dir="DirInOut" type="BUSType"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35">
+          <pins>
+            <port name="buf_2d_in_0" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_1" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_2" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_3" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_4" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_5" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_6" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_in_7" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="row_outbuf_i" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_0" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_1" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_2" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_3" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_4" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_5" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_6" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_7" dir="DirInOut"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36">
+          <pins>
+            <port name="row_outbuf_i" dir="DirInOut"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_0" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_1" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_2" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_3" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_4" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_5" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_6" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_7" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37">
+          <pins>
+            <port name="col_inbuf_0" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_1" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_2" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_3" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_4" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_5" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_6" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_inbuf_7" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="col_outbuf_i" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_0" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_1" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_2" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_3" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_4" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_5" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_6" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+          <pins>
+            <port name="dct_coeff_table_7" dir="DirInOut"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_Xpose_Col_Outer_U0" ssdmobj_id="38">
+          <pins>
+            <port name="col_outbuf_i" dir="DirInOut"/>
+            <inst name="Loop_Xpose_Col_Outer_U0" ssdmobj_id="38" object_id="_245"/>
+          </pins>
+          <pins>
+            <port name="buf_2d_out" dir="DirInOut" type="BUSType"/>
+            <inst name="Loop_Xpose_Col_Outer_U0" ssdmobj_id="38" object_id="_245"/>
+          </pins>
+        </processe_list>
+        <processe_list name="write_data_U0" ssdmobj_id="39">
+          <pins>
+            <port name="buf" dir="DirInOut"/>
+            <inst name="write_data_U0" ssdmobj_id="39" object_id="_251"/>
+          </pins>
+          <pins>
+            <port name="output" dir="DirInOut" type="BUSType"/>
+            <inst name="write_data_U0" ssdmobj_id="39" object_id="_251"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_0" ssdmobj_id="25">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_1" ssdmobj_id="26">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_2" ssdmobj_id="27">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_3" ssdmobj_id="28">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_4" ssdmobj_id="29">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_5" ssdmobj_id="30">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_6" ssdmobj_id="31">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_in_7" ssdmobj_id="32">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="read_data_U0" ssdmobj_id="34" object_id="_133"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="row_outbuf_i" ssdmobj_id="14">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Row_DCT_Loop_pr_U0" ssdmobj_id="35" object_id="_153"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_0" ssdmobj_id="16">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_1" ssdmobj_id="17">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_2" ssdmobj_id="18">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_3" ssdmobj_id="19">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_4" ssdmobj_id="20">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_5" ssdmobj_id="21">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_6" ssdmobj_id="22">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_inbuf_7" ssdmobj_id="23">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Row_Outer_U0" ssdmobj_id="36" object_id="_189"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="col_outbuf_i" ssdmobj_id="15">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Col_DCT_Loop_pr_U0" ssdmobj_id="37" object_id="_209"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_Xpose_Col_Outer_U0" ssdmobj_id="38" object_id="_245"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="0" bitwidth="0" type="PIPO" name="buf_2d_out" ssdmobj_id="33">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_Xpose_Col_Outer_U0" ssdmobj_id="38" object_id="_245"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="write_data_U0" ssdmobj_id="39" object_id="_251"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
