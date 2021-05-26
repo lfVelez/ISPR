@@ -39,4 +39,5 @@
 # Do not ignore block diagram files
 !/**/*srcs/**/bd/**
 # ignore labsource file
-/**/labsource/*
+**/labsource/*
+
