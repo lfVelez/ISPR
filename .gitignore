@@ -40,4 +40,4 @@
 !/**/*srcs/**/bd/**
 # ignore labsource file
 **/labsource/*
-
+/HLS/labsource/*
