@@ -1,0 +1,325 @@
+
+
+================================================================
+== Vivado HLS Report for 'fir'
+================================================================
+* Date:           Sat May 29 09:01:12 2021
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        fir.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      7.38|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   63|   63|   64|   64|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop    |   58|   58|         3|          1|          1|    57|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 8
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 3, States = { 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	8  / (tmp_3)
+	6  / (!tmp_3)
+6 --> 
+	7  / true
+7 --> 
+	5  / true
+8 --> 
+* FSM state operations: 
+
+ <State 1>: 2.32ns
+ST_1: shift_reg_load (12)  [2/2] 2.32ns  loc: fir.c:16
+:7  %shift_reg_load = load i16* getelementptr inbounds ([58 x i16]* @shift_reg, i32 0, i32 57), align 2
+
+
+ <State 2>: 2.32ns
+ST_2: shift_reg_load (12)  [1/2] 2.32ns  loc: fir.c:16
+:7  %shift_reg_load = load i16* getelementptr inbounds ([58 x i16]* @shift_reg, i32 0, i32 57), align 2
+
+
+ <State 3>: 6.38ns
+ST_3: tmp_1_cast (13)  [1/1] 0.00ns  loc: fir.c:16
+:8  %tmp_1_cast = sext i16 %shift_reg_load to i26
+
+ST_3: acc (14)  [1/1] 6.38ns  loc: fir.c:16
+:9  %acc = mul i26 %tmp_1_cast, -378
+
+
+ <State 4>: 1.59ns
+ST_4: StgValue_13 (5)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i16* %y) nounwind, !map !7
+
+ST_4: StgValue_14 (6)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i16 %x) nounwind, !map !13
+
+ST_4: StgValue_15 (7)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @fir_str) nounwind
+
+ST_4: x_read (8)  [1/1] 1.00ns
+:3  %x_read = call i16 @_ssdm_op_Read.s_axilite.i16(i16 %x) nounwind
+
+ST_4: StgValue_17 (9)  [1/1] 0.00ns  loc: fir.c:7
+:4  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [7 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_4: StgValue_18 (10)  [1/1] 0.00ns  loc: fir.c:7
+:5  call void (...)* @_ssdm_op_SpecInterface(i16* %y, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [7 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_4: StgValue_19 (11)  [1/1] 0.00ns  loc: fir.c:7
+:6  call void (...)* @_ssdm_op_SpecInterface(i16 %x, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [7 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_4: acc_cast (15)  [1/1] 0.00ns  loc: fir.c:16
+:10  %acc_cast = sext i26 %acc to i37
+
+ST_4: StgValue_21 (16)  [1/1] 1.59ns  loc: fir.c:17
+:11  br label %1
+
+
+ <State 5>: 5.95ns
+ST_5: acc1 (18)  [1/1] 0.00ns
+:0  %acc1 = phi i37 [ %acc_cast, %0 ], [ %acc_2, %2 ]
+
+ST_5: i (19)  [1/1] 0.00ns
+:1  %i = phi i6 [ -7, %0 ], [ %i_1, %2 ]
+
+ST_5: tmp_3 (20)  [1/1] 3.88ns  loc: fir.c:17
+:2  %tmp_3 = icmp eq i6 %i, 0
+
+ST_5: StgValue_25 (21)  [1/1] 0.00ns  loc: fir.c:17
+:3  br i1 %tmp_3, label %3, label %2
+
+ST_5: i_cast1 (23)  [1/1] 0.00ns  loc: fir.c:17
+:0  %i_cast1 = zext i6 %i to i32
+
+ST_5: i_1 (28)  [1/1] 2.31ns  loc: fir.c:18
+:5  %i_1 = add i6 %i, -1
+
+ST_5: i_1_cast (29)  [1/1] 0.00ns  loc: fir.c:18
+:6  %i_1_cast = zext i6 %i_1 to i32
+
+ST_5: shift_reg_addr (30)  [1/1] 0.00ns  loc: fir.c:18
+:7  %shift_reg_addr = getelementptr inbounds [58 x i16]* @shift_reg, i32 0, i32 %i_1_cast
+
+ST_5: shift_reg_load_1 (31)  [2/2] 2.32ns  loc: fir.c:18
+:8  %shift_reg_load_1 = load i16* %shift_reg_addr, align 2
+
+ST_5: c_addr (33)  [1/1] 0.00ns  loc: fir.c:18
+:10  %c_addr = getelementptr inbounds [59 x i16]* @c, i32 0, i32 %i_cast1
+
+ST_5: c_load (34)  [2/2] 3.25ns  loc: fir.c:18
+:11  %c_load = load i16* %c_addr, align 2
+
+
+ <State 6>: 4.64ns
+ST_6: shift_reg_load_1 (31)  [1/2] 2.32ns  loc: fir.c:18
+:8  %shift_reg_load_1 = load i16* %shift_reg_addr, align 2
+
+ST_6: c_load (34)  [1/2] 3.25ns  loc: fir.c:18
+:11  %c_load = load i16* %c_addr, align 2
+
+ST_6: shift_reg_addr_1 (39)  [1/1] 0.00ns  loc: fir.c:19
+:16  %shift_reg_addr_1 = getelementptr inbounds [58 x i16]* @shift_reg, i32 0, i32 %i_cast1
+
+ST_6: StgValue_36 (40)  [1/1] 2.32ns  loc: fir.c:19
+:17  store i16 %shift_reg_load_1, i16* %shift_reg_addr_1, align 2
+
+
+ <State 7>: 6.38ns
+ST_7: empty (24)  [1/1] 0.00ns
+:1  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 57, i64 57, i64 57) nounwind
+
+ST_7: StgValue_38 (25)  [1/1] 0.00ns  loc: fir.c:17
+:2  call void (...)* @_ssdm_op_SpecLoopName([5 x i8]* @p_str3) nounwind
+
+ST_7: tmp (26)  [1/1] 0.00ns  loc: fir.c:17
+:3  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([5 x i8]* @p_str3) nounwind
+
+ST_7: StgValue_40 (27)  [1/1] 0.00ns  loc: fir.c:18
+:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_7: tmp_cast (32)  [1/1] 0.00ns  loc: fir.c:18
+:9  %tmp_cast = sext i16 %shift_reg_load_1 to i32
+
+ST_7: tmp_2_cast (35)  [1/1] 0.00ns  loc: fir.c:18
+:12  %tmp_2_cast = sext i16 %c_load to i32
+
+ST_7: tmp_6 (36)  [1/1] 3.36ns  loc: fir.c:18
+:13  %tmp_6 = mul i32 %tmp_2_cast, %tmp_cast
+
+ST_7: tmp_6_cast (37)  [1/1] 0.00ns  loc: fir.c:18
+:14  %tmp_6_cast = sext i32 %tmp_6 to i37
+
+ST_7: acc_2 (38)  [1/1] 3.02ns  loc: fir.c:18
+:15  %acc_2 = add i37 %tmp_6_cast, %acc1
+
+ST_7: empty_4 (41)  [1/1] 0.00ns  loc: fir.c:20
+:18  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([5 x i8]* @p_str3, i32 %tmp) nounwind
+
+ST_7: StgValue_47 (42)  [1/1] 0.00ns  loc: fir.c:17
+:19  br label %1
+
+
+ <State 8>: 7.38ns
+ST_8: tmp_1 (44)  [1/1] 0.00ns  loc: fir.c:17
+:0  %tmp_1 = trunc i37 %acc1 to i31
+
+ST_8: tmp_4_cast (45)  [1/1] 0.00ns  loc: fir.c:21
+:1  %tmp_4_cast = sext i16 %x_read to i26
+
+ST_8: tmp_5 (46)  [1/1] 3.36ns  loc: fir.c:21
+:2  %tmp_5 = mul i26 -378, %tmp_4_cast
+
+ST_8: tmp_5_cast (47)  [1/1] 0.00ns  loc: fir.c:21
+:3  %tmp_5_cast = sext i26 %tmp_5 to i31
+
+ST_8: acc_1 (48)  [1/1] 3.02ns  loc: fir.c:21
+:4  %acc_1 = add i31 %tmp_5_cast, %tmp_1
+
+ST_8: StgValue_53 (49)  [1/1] 2.32ns  loc: fir.c:22
+:5  store i16 %x_read, i16* getelementptr inbounds ([58 x i16]* @shift_reg, i32 0, i32 0), align 2
+
+ST_8: tmp_8 (50)  [1/1] 0.00ns  loc: fir.c:23
+:6  %tmp_8 = call i16 @_ssdm_op_PartSelect.i16.i31.i32.i32(i31 %acc_1, i32 15, i32 30)
+
+ST_8: StgValue_55 (51)  [1/1] 1.00ns  loc: fir.c:23
+:7  call void @_ssdm_op_Write.s_axilite.i16P(i16* %y, i16 %tmp_8) nounwind
+
+ST_8: StgValue_56 (52)  [1/1] 0.00ns  loc: fir.c:24
+:8  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('shift_reg_load', fir.c:16) on array 'shift_reg' [12]  (2.32 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('shift_reg_load', fir.c:16) on array 'shift_reg' [12]  (2.32 ns)
+
+ <State 3>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('acc', fir.c:16) [14]  (6.38 ns)
+
+ <State 4>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('acc') with incoming values : ('acc_cast', fir.c:16) ('acc', fir.c:18) [18]  (1.59 ns)
+
+ <State 5>: 5.95ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_3', fir.c:17) [20]  (3.88 ns)
+	blocking operation 2.07 ns on control path)
+
+ <State 6>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('shift_reg_load_1', fir.c:18) on array 'shift_reg' [31]  (2.32 ns)
+	'store' operation (fir.c:19) of variable 'shift_reg_load_1', fir.c:18 on array 'shift_reg' [40]  (2.32 ns)
+
+ <State 7>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_6', fir.c:18) [36]  (3.36 ns)
+	'add' operation ('acc', fir.c:18) [38]  (3.02 ns)
+
+ <State 8>: 7.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', fir.c:21) [46]  (3.36 ns)
+	'add' operation ('acc', fir.c:21) [48]  (3.02 ns)
+	s_axi write on port 'y' (fir.c:23) [51]  (1 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

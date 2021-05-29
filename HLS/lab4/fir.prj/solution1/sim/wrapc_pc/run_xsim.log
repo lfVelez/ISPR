@@ -1,0 +1,415 @@
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0
+
+C:\Users\luisf\Documents\PROYECTOS\labs\lab4\fir.prj\solution1\sim\verilog>call C:/Xilinx/Vivado/2017.2/bin/xelab xil_defaultlib.apatb_fir_top -prj fir.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s fir  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_fir_top -prj fir.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s fir 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fir_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_c_rom
+INFO: [VRFC 10-311] analyzing module fir_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir_mac_muladd_10dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_10dEe_DSP48_2
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_10dEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir_mac_muladd_16cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_16cud_DSP48_1
+INFO: [VRFC 10-311] analyzing module fir_mac_muladd_16cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir_mul_mul_16s_1bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_mul_mul_16s_1bkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module fir_mul_mul_16s_1bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir_shift_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_shift_reg_ram
+INFO: [VRFC 10-311] analyzing module fir_shift_reg
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fir_shift_reg_ram
+Compiling module xil_defaultlib.fir_shift_reg(DataWidth=16,Addre...
+Compiling module xil_defaultlib.fir_c_rom
+Compiling module xil_defaultlib.fir_c(DataWidth=16,AddressRange=...
+Compiling module xil_defaultlib.fir_mul_mul_16s_1bkb_DSP48_0
+Compiling module xil_defaultlib.fir_mul_mul_16s_1bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.fir_mac_muladd_16cud_DSP48_1
+Compiling module xil_defaultlib.fir_mac_muladd_16cud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.fir_mac_muladd_10dEe_DSP48_2
+Compiling module xil_defaultlib.fir_mac_muladd_10dEe(ID=1,NUM_ST...
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.apatb_fir_top
+Built simulation snapshot fir
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/xsim.dir/fir/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat May 29 08:55:31 2021...
+
+****** xsim v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/fir/xsim_script.tcl
+# xsim {fir} -autoloadwcfg -tclbatch {fir.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source fir.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 68 [0.00%] @ "116000"
+// RTL Simulation : 1 / 68 [0.00%] @ "636000"
+// RTL Simulation : 2 / 68 [0.00%] @ "1148000"
+// RTL Simulation : 3 / 68 [0.00%] @ "1660000"
+// RTL Simulation : 4 / 68 [0.00%] @ "2172000"
+// RTL Simulation : 5 / 68 [0.00%] @ "2684000"
+// RTL Simulation : 6 / 68 [0.00%] @ "3196000"
+// RTL Simulation : 7 / 68 [0.00%] @ "3708000"
+// RTL Simulation : 8 / 68 [0.00%] @ "4220000"
+// RTL Simulation : 9 / 68 [0.00%] @ "4732000"
+// RTL Simulation : 10 / 68 [0.00%] @ "5244000"
+// RTL Simulation : 11 / 68 [0.00%] @ "5756000"
+// RTL Simulation : 12 / 68 [0.00%] @ "6268000"
+// RTL Simulation : 13 / 68 [0.00%] @ "6780000"
+// RTL Simulation : 14 / 68 [0.00%] @ "7292000"
+// RTL Simulation : 15 / 68 [0.00%] @ "7804000"
+// RTL Simulation : 16 / 68 [0.00%] @ "8316000"
+// RTL Simulation : 17 / 68 [0.00%] @ "8828000"
+// RTL Simulation : 18 / 68 [0.00%] @ "9340000"
+// RTL Simulation : 19 / 68 [0.00%] @ "9852000"
+// RTL Simulation : 20 / 68 [0.00%] @ "10364000"
+// RTL Simulation : 21 / 68 [0.00%] @ "10876000"
+// RTL Simulation : 22 / 68 [0.00%] @ "11388000"
+// RTL Simulation : 23 / 68 [0.00%] @ "11900000"
+// RTL Simulation : 24 / 68 [0.00%] @ "12412000"
+// RTL Simulation : 25 / 68 [0.00%] @ "12924000"
+// RTL Simulation : 26 / 68 [0.00%] @ "13436000"
+// RTL Simulation : 27 / 68 [0.00%] @ "13948000"
+// RTL Simulation : 28 / 68 [0.00%] @ "14460000"
+// RTL Simulation : 29 / 68 [0.00%] @ "14972000"
+// RTL Simulation : 30 / 68 [0.00%] @ "15484000"
+// RTL Simulation : 31 / 68 [0.00%] @ "15996000"
+// RTL Simulation : 32 / 68 [0.00%] @ "16508000"
+// RTL Simulation : 33 / 68 [0.00%] @ "17020000"
+// RTL Simulation : 34 / 68 [0.00%] @ "17532000"
+// RTL Simulation : 35 / 68 [0.00%] @ "18044000"
+// RTL Simulation : 36 / 68 [0.00%] @ "18556000"
+// RTL Simulation : 37 / 68 [0.00%] @ "19068000"
+// RTL Simulation : 38 / 68 [0.00%] @ "19580000"
+// RTL Simulation : 39 / 68 [0.00%] @ "20092000"
+// RTL Simulation : 40 / 68 [0.00%] @ "20604000"
+// RTL Simulation : 41 / 68 [0.00%] @ "21116000"
+// RTL Simulation : 42 / 68 [0.00%] @ "21628000"
+// RTL Simulation : 43 / 68 [0.00%] @ "22140000"
+// RTL Simulation : 44 / 68 [0.00%] @ "22652000"
+// RTL Simulation : 45 / 68 [0.00%] @ "23164000"
+// RTL Simulation : 46 / 68 [0.00%] @ "23676000"
+// RTL Simulation : 47 / 68 [0.00%] @ "24188000"
+// RTL Simulation : 48 / 68 [0.00%] @ "24700000"
+// RTL Simulation : 49 / 68 [0.00%] @ "25212000"
+// RTL Simulation : 50 / 68 [0.00%] @ "25724000"
+// RTL Simulation : 51 / 68 [0.00%] @ "26236000"
+// RTL Simulation : 52 / 68 [0.00%] @ "26748000"
+// RTL Simulation : 53 / 68 [0.00%] @ "27260000"
+// RTL Simulation : 54 / 68 [0.00%] @ "27772000"
+// RTL Simulation : 55 / 68 [0.00%] @ "28284000"
+// RTL Simulation : 56 / 68 [0.00%] @ "28796000"
+// RTL Simulation : 57 / 68 [0.00%] @ "29308000"
+// RTL Simulation : 58 / 68 [0.00%] @ "29820000"
+// RTL Simulation : 59 / 68 [0.00%] @ "30332000"
+// RTL Simulation : 60 / 68 [0.00%] @ "30844000"
+// RTL Simulation : 61 / 68 [0.00%] @ "31356000"
+// RTL Simulation : 62 / 68 [0.00%] @ "31868000"
+// RTL Simulation : 63 / 68 [0.00%] @ "32380000"
+// RTL Simulation : 64 / 68 [0.00%] @ "32892000"
+// RTL Simulation : 65 / 68 [0.00%] @ "33404000"
+// RTL Simulation : 66 / 68 [0.00%] @ "33916000"
+// RTL Simulation : 67 / 68 [0.00%] @ "34428000"
+// RTL Simulation : 68 / 68 [0.00%] @ "34940000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 34972 ns : File "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir.autotb.v" Line 284
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat May 29 08:55:35 2021...
+0 -32768 378
+1 0 73
+2 0 -27
+3 0 -170
+4 0 -298
+5 0 -352
+6 0 -302
+7 0 -168
+8 0 -14
+9 0 80
+10 0 64
+11 0 -53
+12 0 -186
+13 0 -216
+14 0 -40
+15 0 356
+16 0 867
+17 0 1283
+18 0 1366
+19 0 954
+20 0 51
+21 0 -1132
+22 0 -2227
+23 0 -2829
+24 0 -2647
+25 0 -1633
+26 0 -25
+27 0 1712
+28 0 3042
+29 0 -29229
+30 0 3042
+31 0 1712
+32 0 -25
+33 0 -1633
+34 0 -2647
+35 0 -2829
+36 0 -2227
+37 0 -1132
+38 0 51
+39 0 954
+40 0 1366
+41 0 1283
+42 0 867
+43 0 356
+44 0 -40
+45 0 -216
+46 0 -186
+47 0 -53
+48 0 64
+49 0 80
+50 0 -14
+51 0 -168
+52 0 -302
+53 0 -352
+54 0 -298
+55 0 -170
+56 0 -27
+57 0 73
+58 0 378
+59 0 0
+60 0 0
+61 0 0
+62 0 0
+63 0 0
+64 0 0
+65 0 0
+66 0 0
+67 0 0

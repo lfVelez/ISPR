@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat May 29 08:55:31 2021
+# Process ID: 6088
+# Current directory: C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
+# Log file: C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/fir/xsim_script.tcl
+# xsim {fir} -autoloadwcfg -tclbatch {fir.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source fir.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 68 [0.00%] @ "116000"
+// RTL Simulation : 1 / 68 [0.00%] @ "636000"
+// RTL Simulation : 2 / 68 [0.00%] @ "1148000"
+// RTL Simulation : 3 / 68 [0.00%] @ "1660000"
+// RTL Simulation : 4 / 68 [0.00%] @ "2172000"
+// RTL Simulation : 5 / 68 [0.00%] @ "2684000"
+// RTL Simulation : 6 / 68 [0.00%] @ "3196000"
+// RTL Simulation : 7 / 68 [0.00%] @ "3708000"
+// RTL Simulation : 8 / 68 [0.00%] @ "4220000"
+// RTL Simulation : 9 / 68 [0.00%] @ "4732000"
+// RTL Simulation : 10 / 68 [0.00%] @ "5244000"
+// RTL Simulation : 11 / 68 [0.00%] @ "5756000"
+// RTL Simulation : 12 / 68 [0.00%] @ "6268000"
+// RTL Simulation : 13 / 68 [0.00%] @ "6780000"
+// RTL Simulation : 14 / 68 [0.00%] @ "7292000"
+// RTL Simulation : 15 / 68 [0.00%] @ "7804000"
+// RTL Simulation : 16 / 68 [0.00%] @ "8316000"
+// RTL Simulation : 17 / 68 [0.00%] @ "8828000"
+// RTL Simulation : 18 / 68 [0.00%] @ "9340000"
+// RTL Simulation : 19 / 68 [0.00%] @ "9852000"
+// RTL Simulation : 20 / 68 [0.00%] @ "10364000"
+// RTL Simulation : 21 / 68 [0.00%] @ "10876000"
+// RTL Simulation : 22 / 68 [0.00%] @ "11388000"
+// RTL Simulation : 23 / 68 [0.00%] @ "11900000"
+// RTL Simulation : 24 / 68 [0.00%] @ "12412000"
+// RTL Simulation : 25 / 68 [0.00%] @ "12924000"
+// RTL Simulation : 26 / 68 [0.00%] @ "13436000"
+// RTL Simulation : 27 / 68 [0.00%] @ "13948000"
+// RTL Simulation : 28 / 68 [0.00%] @ "14460000"
+// RTL Simulation : 29 / 68 [0.00%] @ "14972000"
+// RTL Simulation : 30 / 68 [0.00%] @ "15484000"
+// RTL Simulation : 31 / 68 [0.00%] @ "15996000"
+// RTL Simulation : 32 / 68 [0.00%] @ "16508000"
+// RTL Simulation : 33 / 68 [0.00%] @ "17020000"
+// RTL Simulation : 34 / 68 [0.00%] @ "17532000"
+// RTL Simulation : 35 / 68 [0.00%] @ "18044000"
+// RTL Simulation : 36 / 68 [0.00%] @ "18556000"
+// RTL Simulation : 37 / 68 [0.00%] @ "19068000"
+// RTL Simulation : 38 / 68 [0.00%] @ "19580000"
+// RTL Simulation : 39 / 68 [0.00%] @ "20092000"
+// RTL Simulation : 40 / 68 [0.00%] @ "20604000"
+// RTL Simulation : 41 / 68 [0.00%] @ "21116000"
+// RTL Simulation : 42 / 68 [0.00%] @ "21628000"
+// RTL Simulation : 43 / 68 [0.00%] @ "22140000"
+// RTL Simulation : 44 / 68 [0.00%] @ "22652000"
+// RTL Simulation : 45 / 68 [0.00%] @ "23164000"
+// RTL Simulation : 46 / 68 [0.00%] @ "23676000"
+// RTL Simulation : 47 / 68 [0.00%] @ "24188000"
+// RTL Simulation : 48 / 68 [0.00%] @ "24700000"
+// RTL Simulation : 49 / 68 [0.00%] @ "25212000"
+// RTL Simulation : 50 / 68 [0.00%] @ "25724000"
+// RTL Simulation : 51 / 68 [0.00%] @ "26236000"
+// RTL Simulation : 52 / 68 [0.00%] @ "26748000"
+// RTL Simulation : 53 / 68 [0.00%] @ "27260000"
+// RTL Simulation : 54 / 68 [0.00%] @ "27772000"
+// RTL Simulation : 55 / 68 [0.00%] @ "28284000"
+// RTL Simulation : 56 / 68 [0.00%] @ "28796000"
+// RTL Simulation : 57 / 68 [0.00%] @ "29308000"
+// RTL Simulation : 58 / 68 [0.00%] @ "29820000"
+// RTL Simulation : 59 / 68 [0.00%] @ "30332000"
+// RTL Simulation : 60 / 68 [0.00%] @ "30844000"
+// RTL Simulation : 61 / 68 [0.00%] @ "31356000"
+// RTL Simulation : 62 / 68 [0.00%] @ "31868000"
+// RTL Simulation : 63 / 68 [0.00%] @ "32380000"
+// RTL Simulation : 64 / 68 [0.00%] @ "32892000"
+// RTL Simulation : 65 / 68 [0.00%] @ "33404000"
+// RTL Simulation : 66 / 68 [0.00%] @ "33916000"
+// RTL Simulation : 67 / 68 [0.00%] @ "34428000"
+// RTL Simulation : 68 / 68 [0.00%] @ "34940000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 34972 ns : File "C:/Users/luisf/Documents/PROYECTOS/labs/lab4/fir.prj/solution1/sim/verilog/fir.autotb.v" Line 284
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat May 29 08:55:35 2021...
